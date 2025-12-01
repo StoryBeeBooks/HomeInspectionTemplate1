@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TO Inspect Ltd. 专业验房服务。购房前验房、卖房前验房、Tarion保修验房及多伦多地区专业检测服务。">
+    <meta name="keywords" content="验房服务, 房屋检验, 购房前验房, Tarion保修, 多伦多验房">
+    
+    <title>服务项目 | TO Inspect Ltd.</title>
+    
+    <!-- Fonts - Elegant Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- Services Page Styles - Luxury Aesthetic -->
+    <style>
+        /* ===== PAGE-SPECIFIC OVERRIDES ===== */
+        
+        /* Elegant Page Hero */
+        .services-hero {
+            background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-warm-white) 100%);
+            padding: 100px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .services-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232d2d2d' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        
+        .services-hero__content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .services-hero__eyebrow {
+            font-family: var(--font-body);
+            font-size: var(--text-xs);
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .services-hero__eyebrow::before,
+        .services-hero__eyebrow::after {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background: var(--color-secondary);
+        }
+        
+        .services-hero__title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 400;
+            color: var(--color-charcoal);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .services-hero__subtitle {
+            font-family: var(--font-body);
+            font-size: var(--text-lg);
+            color: var(--color-text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+        
+        /* Refined Quick Jump Navigation */
+        .services-nav {
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.02);
+        }
+        
+        .services-nav__list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem 2rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .services-nav__link {
+            font-family: var(--font-body);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: var(--text-sm);
+            letter-spacing: 0.5px;
+            padding: 0.5rem 1rem;
+            border-radius: 0;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        /* Colored navigation links matching category icons */
+        .services-nav__list li:nth-child(1) .services-nav__link { color: #9B7A8E; } /* Mauve */
+        .services-nav__list li:nth-child(2) .services-nav__link { color: #6A9AA0; } /* Teal */
+        .services-nav__list li:nth-child(3) .services-nav__link { color: #A89B7A; } /* Sand */
+        .services-nav__list li:nth-child(4) .services-nav__link { color: #7A9B85; } /* Sage */
+        .services-nav__list li:nth-child(5) .services-nav__link { color: #8E7A9B; } /* Lavender */
+        .services-nav__list li:nth-child(6) .services-nav__link { color: #7A8A9B; } /* Sky - Pricing */
+        
+        .services-nav__list li:nth-child(1) .services-nav__link:hover { color: #7A5A6E; }
+        .services-nav__list li:nth-child(2) .services-nav__link:hover { color: #4A7A80; }
+        .services-nav__list li:nth-child(3) .services-nav__link:hover { color: #887B5A; }
+        .services-nav__list li:nth-child(4) .services-nav__link:hover { color: #5A7B65; }
+        .services-nav__list li:nth-child(5) .services-nav__link:hover { color: #6E5A7B; }
+        .services-nav__list li:nth-child(6) .services-nav__link:hover { color: #5A6A7B; }
+        
+        .services-nav__link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        /* Colored underlines matching text */
+        .services-nav__list li:nth-child(1) .services-nav__link::after { background: #9B7A8E; }
+        .services-nav__list li:nth-child(2) .services-nav__link::after { background: #6A9AA0; }
+        .services-nav__list li:nth-child(3) .services-nav__link::after { background: #A89B7A; }
+        .services-nav__list li:nth-child(4) .services-nav__link::after { background: #7A9B85; }
+        .services-nav__list li:nth-child(5) .services-nav__link::after { background: #8E7A9B; }
+        .services-nav__list li:nth-child(6) .services-nav__link::after { background: #7A8A9B; }
+        
+        .services-nav__link:hover::after {
+            width: 100%;
+        }
+        
+        /* Service Category Card - Elegant Design with Pastel Headers */
+        .service-category {
+            background: white;
+            border-radius: 2px;
+            box-shadow: 0 4px 40px rgba(0, 0, 0, 0.05);
+            margin-bottom: 3rem;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        
+        .service-category__header {
+            background: #fafafa;
+            color: var(--color-charcoal);
+            padding: 2rem 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            position: relative;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        
+        .service-category__icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-2xl);
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1;
+            color: #3d3d3d;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-category:hover .service-category__icon {
+            transform: scale(1.05);
+        }
+        
+        /* Pastel colors for each service category */
+        .service-category:nth-child(1) .service-category__icon {
+            background: linear-gradient(135deg, #E8D5E2 0%, #F2E6EE 100%); /* Soft Mauve */
+        }
+        .service-category:nth-child(2) .service-category__icon {
+            background: linear-gradient(135deg, #D5E5E8 0%, #E6F0F2 100%); /* Soft Teal */
+        }
+        .service-category:nth-child(3) .service-category__icon {
+            background: linear-gradient(135deg, #E8E2D5 0%, #F2EDE6 100%); /* Soft Sand */
+        }
+        .service-category:nth-child(4) .service-category__icon {
+            background: linear-gradient(135deg, #D5E8DE 0%, #E6F2EB 100%); /* Soft Sage */
+        }
+        .service-category:nth-child(5) .service-category__icon {
+            background: linear-gradient(135deg, #E2D5E8 0%, #EDE6F2 100%); /* Soft Lavender */
+        }
+        .service-category:nth-child(6) .service-category__icon {
+            background: linear-gradient(135deg, #D5DEE8 0%, #E6EBF2 100%); /* Soft Sky */
+        }
+        
+        .service-category__title {
+            font-family: var(--font-display);
+            color: var(--color-charcoal);
+            margin: 0 0 0.35rem 0;
+            font-size: var(--text-2xl);
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .service-category__tagline {
+            font-family: var(--font-body);
+            margin: 0;
+            color: var(--color-text-muted);
+            font-size: var(--text-sm);
+            font-weight: 300;
+            letter-spacing: 0.3px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .service-category__body {
+            padding: 0;
+            background: var(--color-warm-white);
+        }
+        
+        .service-category__description {
+            margin: 0;
+            padding: 1.5rem 2rem;
+            color: var(--color-text-muted);
+            line-height: 1.8;
+            font-family: var(--font-body);
+            font-weight: 300;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        
+        /* ===== SPLIT PANEL LAYOUT - Option 2 ===== */
+        .service-split-container {
+            display: grid;
+            grid-template-columns: 340px 1fr;
+            gap: 0;
+            min-height: 450px;
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        
+        /* Left Panel - Service Tabs */
+        .service-tabs {
+            background: var(--color-warm-white);
+            border-right: 1px solid rgba(0, 0, 0, 0.08);
+            overflow-y: auto;
+            max-height: 550px;
+        }
+        
+        .service-tab {
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            gap: 0.875rem;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            transition: all 0.25s ease;
+            position: relative;
+        }
+        
+        .service-tab::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--color-primary);
+            transform: scaleY(0);
+            transition: transform 0.25s ease;
+        }
+        
+        .service-tab:hover {
+            background: rgba(255, 255, 255, 0.7);
+        }
+        
+        .service-tab.active {
+            background: white;
+        }
+        
+        .service-tab.active::before {
+            transform: scaleY(1);
+        }
+        
+        .service-tab__icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-sm);
+            flex-shrink: 0;
+            transition: transform 0.25s ease;
+            color: #3d3d3d;
+        }
+        
+        .service-tab.active .service-tab__icon {
+            transform: scale(1.05);
+        }
+        
+        /* Service tab icons inherit category pastel colors */
+        .service-category:nth-child(1) .service-tab__icon {
+            background: linear-gradient(135deg, #E8D5E2 0%, #F2E6EE 100%); /* Mauve */
+        }
+        .service-category:nth-child(2) .service-tab__icon {
+            background: linear-gradient(135deg, #D5E5E8 0%, #E6F0F2 100%); /* Teal */
+        }
+        .service-category:nth-child(3) .service-tab__icon {
+            background: linear-gradient(135deg, #E8E2D5 0%, #F2EDE6 100%); /* Sand */
+        }
+        .service-category:nth-child(4) .service-tab__icon {
+            background: linear-gradient(135deg, #D5E8DE 0%, #E6F2EB 100%); /* Sage */
+        }
+        .service-category:nth-child(5) .service-tab__icon {
+            background: linear-gradient(135deg, #E2D5E8 0%, #EDE6F2 100%); /* Lavender */
+        }
+        .service-category:nth-child(6) .service-tab__icon {
+            background: linear-gradient(135deg, #D5DEE8 0%, #E6EBF2 100%); /* Sky */
+        }
+        
+        .service-tab__info {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .service-tab__title {
+            font-family: var(--font-display);
+            font-weight: 500;
+            color: var(--color-charcoal);
+            font-size: var(--text-sm);
+            margin: 0 0 0.15rem 0;
+            letter-spacing: -0.01em;
+            line-height: 1.3;
+        }
+        
+        .service-tab__subtitle {
+            font-family: var(--font-body);
+            font-size: var(--text-xs);
+            color: var(--color-text-muted);
+            font-weight: 400;
+            letter-spacing: 0.2px;
+            text-transform: uppercase;
+        }
+        
+        .service-tab__arrow {
+            color: var(--color-text-muted);
+            font-size: var(--text-xs);
+            opacity: 0;
+            transform: translateX(-5px);
+            transition: all 0.25s ease;
+        }
+        
+        .service-tab.active .service-tab__arrow,
+        .service-tab:hover .service-tab__arrow {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        /* Right Panel - Detail Preview */
+        .service-preview {
+            padding: 2rem;
+            overflow-y: auto;
+            max-height: 550px;
+            position: relative;
+        }
+        
+        .service-preview__placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            min-height: 300px;
+            text-align: center;
+            color: var(--color-text-muted);
+        }
+        
+        .service-preview__placeholder-icon {
+            font-size: var(--text-4xl);
+            margin-bottom: 1rem;
+            opacity: 0.3;
+        }
+        
+        .service-preview__placeholder-text {
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            font-weight: 300;
+        }
+        
+        .service-preview__content {
+            animation: fadeSlideIn 0.35s ease;
+        }
+        
+        @keyframes fadeSlideIn {
+            from {
+                opacity: 0;
+                transform: translateX(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .service-preview__header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        
+        .service-preview__icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-xl);
+            flex-shrink: 0;
+            color: #3d3d3d;
+        }
+        
+        /* Service preview icons inherit category pastel colors */
+        .service-category:nth-child(1) .service-preview__icon {
+            background: linear-gradient(135deg, #E8D5E2 0%, #F2E6EE 100%); /* Mauve */
+        }
+        .service-category:nth-child(2) .service-preview__icon {
+            background: linear-gradient(135deg, #D5E5E8 0%, #E6F0F2 100%); /* Teal */
+        }
+        .service-category:nth-child(3) .service-preview__icon {
+            background: linear-gradient(135deg, #E8E2D5 0%, #F2EDE6 100%); /* Sand */
+        }
+        .service-category:nth-child(4) .service-preview__icon {
+            background: linear-gradient(135deg, #D5E8DE 0%, #E6F2EB 100%); /* Sage */
+        }
+        .service-category:nth-child(5) .service-preview__icon {
+            background: linear-gradient(135deg, #E2D5E8 0%, #EDE6F2 100%); /* Lavender */
+        }
+        .service-category:nth-child(6) .service-preview__icon {
+            background: linear-gradient(135deg, #D5DEE8 0%, #E6EBF2 100%); /* Sky */
+        }
+        
+        .service-preview__title {
+            font-family: var(--font-display);
+            font-weight: 500;
+            color: var(--color-charcoal);
+            font-size: var(--text-2xl);
+            margin: 0 0 0.35rem 0;
+            letter-spacing: -0.02em;
+        }
+        
+        .service-preview__tag {
+            font-family: var(--font-body);
+            font-size: var(--text-xs);
+            color: #1a1a1a;
+            background: white;
+            border: 1px solid #1a1a1a;
+            font-weight: 500;
+            padding: 0.25rem 0.65rem;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            border-radius: 2px;
+            display: inline-block;
+        }
+        
+        .service-preview__summary {
+            font-family: var(--font-body);
+            font-size: var(--text-base);
+            color: var(--color-text-muted);
+            line-height: 1.75;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+        
+        .service-preview__details h4 {
+            font-family: var(--font-display);
+            color: var(--color-charcoal);
+            margin: 1.5rem 0 0.75rem 0;
+            font-size: var(--text-base);
+            font-weight: 500;
+        }
+        
+        .service-preview__details h4:first-child {
+            margin-top: 0;
+        }
+        
+        .service-preview__details p {
+            font-family: var(--font-body);
+            margin-bottom: 0.75rem;
+            line-height: 1.75;
+            font-weight: 300;
+            color: var(--color-text-muted);
+            font-size: var(--text-sm);
+        }
+        
+        .service-preview__details ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.75rem 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 0.35rem 1.25rem;
+        }
+        
+        .service-preview__details li {
+            font-family: var(--font-body);
+            padding: 0.35rem 0;
+            padding-left: 1.35rem;
+            position: relative;
+            line-height: 1.6;
+            font-weight: 300;
+            color: var(--color-text-muted);
+            font-size: var(--text-sm);
+        }
+        
+        .service-preview__details li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--color-primary);
+            font-weight: 600;
+            font-size: var(--text-sm);
+        }
+        
+        .service-preview__details .highlight-box {
+            background: var(--color-warm-white);
+            border-left: 3px solid var(--color-secondary);
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+            border-radius: 0 2px 2px 0;
+            font-style: italic;
+            font-size: var(--text-sm);
+        }
+        
+        /* Hide old elements */
+        .service-item__toggle,
+        .service-item__title-row,
+        .service-list {
+            display: none;
+        }
+        
+        /* Responsive - Stack on Mobile */
+        @media (max-width: 900px) {
+            .service-split-container {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+            
+            .service-tabs {
+                border-right: none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+                max-height: none;
+                display: flex;
+                overflow-x: auto;
+                overflow-y: hidden;
+            }
+            
+            .service-tab {
+                flex-direction: column;
+                text-align: center;
+                padding: 0.875rem 1rem;
+                min-width: 100px;
+                border-bottom: none;
+                border-right: 1px solid rgba(0, 0, 0, 0.06);
+            }
+            
+            .service-tab::before {
+                top: auto;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: auto;
+                height: 3px;
+                transform: scaleX(0);
+            }
+            
+            .service-tab.active::before {
+                transform: scaleX(1);
+            }
+            
+            .service-tab__arrow {
+                display: none;
+            }
+            
+            .service-tab__title {
+                font-size: var(--text-xs);
+            }
+            
+            .service-tab__subtitle {
+                display: none;
+            }
+            
+            .service-preview {
+                padding: 1.5rem;
+                max-height: none;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .service-tab {
+                min-width: 80px;
+                padding: 0.75rem 0.5rem;
+            }
+            
+            .service-tab__icon {
+                width: 32px;
+                height: 32px;
+                font-size: var(--text-xs);
+            }
+            
+            .service-tab__title {
+                font-size: var(--text-xs);
+            }
+            
+            .service-preview__header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .service-preview__details ul {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Additional Services Grid - Luxury Cards */
+        .additional-services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .additional-service-card {
+            background: white;
+            border-radius: 2px;
+            padding: 2rem;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+        }
+        
+        .additional-service-card:hover {
+            border-color: rgba(0, 0, 0, 0.2);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .additional-service-card__header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .additional-service-card__icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #2d2d2d 0%, #4a4a4a 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: var(--text-lg);
+            flex-shrink: 0;
+        }
+        
+        .additional-service-card__title {
+            font-family: var(--font-display);
+            color: var(--color-charcoal);
+            margin: 0;
+            font-size: var(--text-lg);
+            font-weight: 500;
+        }
+        
+        .additional-service-card__text {
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            color: var(--color-text-muted);
+            line-height: 1.7;
+            margin: 0;
+            font-weight: 300;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .services-hero {
+                padding: 80px 0 60px;
+            }
+            
+            .service-category__header {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem 1.25rem;
+                gap: 1rem;
+            }
+            
+            .service-category__icon {
+                width: 56px;
+                height: 56px;
+                font-size: var(--text-xl);
+            }
+            
+            .service-category__title {
+                font-size: var(--text-xl);
+            }
+            
+            .service-item__header {
+                flex-direction: column;
+                padding: 1.5rem;
+            }
+            
+            .service-item__title-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+            }
+            
+            .service-category__body {
+                padding: 0;
+            }
+            
+            .services-nav__list {
+                gap: 0.25rem 1rem;
+            }
+            
+            .services-nav__link {
+                font-size: var(--text-xs);
+                padding: 0.4rem 0.75rem;
+            }
+            
+            .additional-services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* ===== PRICING SECTION - Luxury Aesthetic ===== */
+        .pricing-section {
+            background: var(--color-cream);
+            padding: 5rem 0;
+            position: relative;
+        }
+        
+        .pricing-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--color-secondary), transparent);
+        }
+        
+        .pricing-section__header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .pricing-section__eyebrow {
+            font-family: var(--font-body);
+            font-size: var(--text-xs);
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            margin-bottom: 0.75rem;
+        }
+        
+        .pricing-section__title {
+            font-family: var(--font-display);
+            color: var(--color-charcoal);
+            margin-bottom: 0.75rem;
+            font-size: var(--text-3xl);
+            font-weight: 400;
+        }
+        
+        .pricing-section__subtitle {
+            font-family: var(--font-body);
+            color: var(--color-text-muted);
+            font-size: var(--text-base);
+            font-weight: 300;
+        }
+        
+        .pricing-tables {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+        }
+        
+        .pricing-card__header {
+            background: #fafafa;
+            color: var(--color-charcoal);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        
+        .pricing-card__icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-base);
+            color: #3d3d3d;
+            transition: transform 0.3s ease;
+        }
+        
+        .pricing-card:hover .pricing-card__icon {
+            transform: scale(1.05);
+        }
+        
+        /* Pastel colors for each pricing card - matching service categories */
+        .pricing-card:nth-child(1) .pricing-card__icon {
+            background: linear-gradient(135deg, #E8D5E2 0%, #F2E6EE 100%); /* Soft Mauve - Residential */
+        }
+        .pricing-card:nth-child(2) .pricing-card__icon {
+            background: linear-gradient(135deg, #E8E2D5 0%, #F2EDE6 100%); /* Soft Sand - Specialized */
+        }
+        .pricing-card--contact .pricing-card__icon {
+            background: linear-gradient(135deg, #D5E8DE 0%, #E6F2EB 100%); /* Soft Sage - Custom Quote */
+        }
+        
+        .pricing-card__title {
+            font-family: var(--font-display);
+            color: var(--color-charcoal);
+            margin: 0;
+            font-size: var(--text-lg);
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+        
+        .pricing-card__body {
+            padding: 0;
+        }
+        
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .pricing-table tr {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        
+        .pricing-table tr:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-table td {
+            font-family: var(--font-body);
+            padding: 0.875rem 1.5rem;
+            vertical-align: middle;
+            font-weight: 300;
+            font-size: var(--text-sm);
+            line-height: 1.5;
+        }
+        
+        .pricing-table td:first-child {
+            color: var(--color-text-muted);
+        }
+        
+        .pricing-table td:last-child {
+            text-align: right;
+            font-weight: 500;
+            color: var(--color-charcoal);
+            white-space: nowrap;
+        }
+        
+        .pricing-table .pricing-row--main {
+            background: rgba(0, 0, 0, 0.02);
+        }
+        
+        .pricing-table .pricing-row--main td:first-child {
+            font-weight: 500;
+            color: var(--color-charcoal);
+            font-size: var(--text-sm);
+        }
+        
+        .pricing-table .pricing-row--main td:last-child {
+            font-size: var(--text-base);
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+        
+        .pricing-table .pricing-row--sub td:first-child {
+            padding-left: 2rem;
+            font-size: var(--text-sm);
+        }
+        
+        .pricing-table .pricing-row--sub td:last-child {
+            font-size: var(--text-sm);
+            color: #666666;
+        }
+        
+        .pricing-table .pricing-row--contact td:last-child {
+            color: var(--color-text-muted);
+            font-style: italic;
+            font-weight: 400;
+        }
+        
+        /* Combined Contact Services Card */
+        .pricing-card--contact {
+            grid-column: 1 / -1;
+        }
+        
+        .pricing-contact-intro {
+            padding: 1.25rem 1.5rem;
+            background: rgba(0, 0, 0, 0.02);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        
+        .pricing-contact-intro p {
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            color: var(--color-text-muted);
+            margin: 0;
+            font-weight: 300;
+            text-align: center;
+        }
+        
+        .pricing-contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0;
+        }
+        
+        .pricing-contact-category {
+            padding: 1.5rem;
+            border-right: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        
+        .pricing-contact-category:last-child {
+            border-right: none;
+        }
+        
+        .pricing-contact-category h4 {
+            font-family: var(--font-display);
+            font-size: var(--text-sm);
+            font-weight: 500;
+            color: var(--color-charcoal);
+            margin: 0 0 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+        }
+        
+        .pricing-contact-category h4 i {
+            color: var(--color-text-muted);
+            font-size: var(--text-sm);
+        }
+        
+        .pricing-contact-category ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .pricing-contact-category li {
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            color: var(--color-text-muted);
+            padding: 0.5rem 0;
+            padding-left: 1.25rem;
+            position: relative;
+            font-weight: 300;
+            line-height: 1.5;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+        }
+        
+        .pricing-contact-category li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-contact-category li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--color-secondary);
+            font-weight: 600;
+        }
+        
+        .pricing-contact-cta {
+            padding: 1.25rem 1.5rem;
+            text-align: center;
+            background: #fafafa;
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        
+        .pricing-contact-cta .btn--sm {
+            padding: 0.6rem 1.5rem;
+            font-size: var(--text-sm);
+        }
+        
+        @media (max-width: 900px) {
+            .pricing-tables {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .pricing-contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-contact-category {
+                border-right: none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            }
+            
+            .pricing-contact-category:last-child {
+                border-bottom: none;
+            }
+        }
+        
+        .pricing-note {
+            text-align: center;
+            color: var(--color-text-muted);
+            font-size: var(--text-sm);
+            margin-bottom: 2.5rem;
+            font-family: var(--font-body);
+            font-weight: 300;
+        }
+        
+        .pricing-note i {
+            color: var(--color-primary);
+            margin-right: 0.5rem;
+        }
+        
+        .pricing-cta {
+            text-align: center;
+            padding: 2.5rem;
+            background: white;
+            border-radius: 2px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        
+        .pricing-cta__text {
+            font-family: var(--font-body);
+            font-size: var(--text-lg);
+            color: var(--color-text-muted);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+        
+        .pricing-cta__text strong {
+            color: var(--color-charcoal);
+            font-weight: 500;
+        }
+        
+        .pricing-cta__buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        @media (max-width: 768px) {
+            .pricing-section {
+                padding: 3rem 0;
+            }
+            
+            .pricing-tables {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-table td {
+                padding: 0.75rem 1rem;
+                font-size: var(--text-sm);
+            }
+            
+            .pricing-table .pricing-row--sub td:first-child {
+                padding-left: 1.5rem;
+            }
+            
+            .pricing-cta {
+                padding: 2rem 1.5rem;
+            }
+        }
+        
+        /* ===== ELEGANT CTA SECTION ===== */
+        .services-cta {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .services-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .services-cta__content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .services-cta__title {
+            font-family: var(--font-display);
+            color: white;
+            font-size: var(--text-3xl);
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+        
+        .services-cta__text {
+            font-family: var(--font-body);
+            color: rgba(255, 255, 255, 0.85);
+            font-size: var(--text-lg);
+            margin-bottom: 2rem;
+            font-weight: 300;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Component -->
+    <div id="header-placeholder"></div>
+    
+    <!-- Elegant Page Hero -->
+    <section class="services-hero">
+        <div class="container">
+            <div class="services-hero__content">
+                <p class="services-hero__eyebrow">专业卓越</p>
+                <h1 class="services-hero__title">服务项目</h1>
+                <p class="services-hero__subtitle">
+                    全方位的验房服务，专为保护您最重要的投资而设计，每一处细节都精益求精。
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Refined Quick Jump Navigation -->
+    <nav class="services-nav">
+        <div class="container">
+            <ul class="services-nav__list" id="services-nav-list">
+                <!-- Dynamically populated -->
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="section">
+            <div class="container" id="services-container">
+                <!-- Services will be dynamically loaded here -->
+                <div style="text-align: center; padding: var(--space-2xl);">
+                    <i class="fas fa-spinner fa-spin" style="font-size: 2rem; color: var(--color-primary);"></i>
+                    <p>正在加载服务项目...</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Pricing Section -->
+        <section class="pricing-section" id="pricing">
+            <div class="container">
+                <div class="pricing-section__header">
+                    <p class="pricing-section__eyebrow">为安心投资</p>
+                    <h2 class="pricing-section__title">服务价格</h2>
+                    <p class="pricing-section__subtitle">透明定价，无隐藏费用。所有价格均需加收HST税。</p>
+                </div>
+                
+                <div class="pricing-tables">
+                    <!-- Residential Inspections Pricing -->
+                    <div class="pricing-card">
+                        <div class="pricing-card__header">
+                            <div class="pricing-card__icon"><i class="fas fa-home"></i></div>
+                            <h3 class="pricing-card__title">住宅验房</h3>
+                        </div>
+                        <div class="pricing-card__body">
+                            <table class="pricing-table">
+                                <tr class="pricing-row--main">
+                                    <td>高层公寓 <span style="font-weight: 400; font-size: 0.85em;">（2000平方尺以内）</span></td>
+                                    <td>$300.00</td>
+                                </tr>
+                                <tr class="pricing-row--sub">
+                                    <td>每增加500平方尺</td>
+                                    <td>+ $20.00</td>
+                                </tr>
+                                <tr class="pricing-row--main">
+                                    <td>独立屋 <span style="font-weight: 400; font-size: 0.85em;">（2000平方尺以内）</span></td>
+                                    <td>$400.00</td>
+                                </tr>
+                                <tr class="pricing-row--sub">
+                                    <td>每增加500平方尺</td>
+                                    <td>+ $50.00</td>
+                                </tr>
+                                <tr class="pricing-row--sub">
+                                    <td>装修过的地下室或爬行空间</td>
+                                    <td>+ $50.00</td>
+                                </tr>
+                                <tr class="pricing-row--sub">
+                                    <td>房龄超过20年</td>
+                                    <td>+ $50.00</td>
+                                </tr>
+                                <tr class="pricing-row--sub">
+                                    <td>房龄超过50年</td>
+                                    <td>+ $75.00</td>
+                                </tr>
+                                <tr class="pricing-row--main">
+                                    <td>多单元住宅 <span style="font-weight: 400; font-size: 0.85em;">（第一单元）</span></td>
+                                    <td>$500.00</td>
+                                </tr>
+                                <tr class="pricing-row--sub">
+                                    <td>每增加一个单元</td>
+                                    <td>+ $125.00</td>
+                                </tr>
+                                <tr class="pricing-row--sub">
+                                    <td>多单元住宅房龄超过20年</td>
+                                    <td>+ $50.00</td>
+                                </tr>
+                                <tr class="pricing-row--sub">
+                                    <td>多单元住宅房龄超过50年</td>
+                                    <td>+ $75.00</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <!-- Specialized Services Pricing -->
+                    <div class="pricing-card">
+                        <div class="pricing-card__header">
+                            <div class="pricing-card__icon"><i class="fas fa-microscope"></i></div>
+                            <h3 class="pricing-card__title">专业检测服务</h3>
+                        </div>
+                        <div class="pricing-card__body">
+                            <table class="pricing-table">
+                                <tr class="pricing-row--main">
+                                    <td>独立WETT壁炉检测</td>
+                                    <td>$200.00</td>
+                                </tr>
+                                <tr class="pricing-row--sub">
+                                    <td>附加WETT检测 <span style="font-size: 0.85em;">（与验房同时）</span></td>
+                                    <td>+ $100.00</td>
+                                </tr>
+                                <tr class="pricing-row--main">
+                                    <td>独立红外热成像检测</td>
+                                    <td>起价 $250.00</td>
+                                </tr>
+                                <tr class="pricing-row--main">
+                                    <td>霉菌/空气质量检测</td>
+                                    <td>$350.00</td>
+                                </tr>
+                                <tr class="pricing-row--sub">
+                                    <td>附加服务 <span style="font-size: 0.85em;">（与验房同时）</span></td>
+                                    <td>$325.00</td>
+                                </tr>
+                                <tr class="pricing-row--sub">
+                                    <td>每增加一个空气样本</td>
+                                    <td>+ $125.00</td>
+                                </tr>
+                                <tr class="pricing-row--main">
+                                    <td>井水实验室检测 <span style="font-size: 0.85em;">（仅限附加）</span></td>
+                                    <td>+ $25.00</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <!-- Custom Quote Services (Combined Tarion + Additional) -->
+                    <div class="pricing-card pricing-card--contact">
+                        <div class="pricing-card__header">
+                            <div class="pricing-card__icon"><i class="fas fa-comments"></i></div>
+                            <h3 class="pricing-card__title">需要报价的服务</h3>
+                        </div>
+                        <div class="pricing-card__body">
+                            <div class="pricing-contact-intro">
+                                <p>以下服务需要根据房产具体情况提供个性化报价：</p>
+                            </div>
+                            <div class="pricing-contact-grid">
+                                <div class="pricing-contact-category">
+                                    <h4><i class="fas fa-shield-alt"></i> Tarion保修验房</h4>
+                                    <ul>
+                                        <li>交房前验房 (PDI)</li>
+                                        <li>30天保修验房</li>
+                                        <li>1年保修验房</li>
+                                        <li>2年保修验房</li>
+                                        <li>7年结构保修</li>
+                                    </ul>
+                                </div>
+                                <div class="pricing-contact-category">
+                                    <h4><i class="fas fa-building"></i> 商业及特殊检测</h4>
+                                    <ul>
+                                        <li>商业建筑检查 (PCA)</li>
+                                        <li>氡气检测</li>
+                                        <li>下水道管道检查</li>
+                                        <li>第一阶段环境评估</li>
+                                        <li>远程费用（服务区域外）</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="pricing-contact-cta">
+                                <a href="quote.html" class="btn btn--secondary btn--sm">
+                                    <i class="fas fa-envelope"></i> 获取专属报价
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="pricing-note">
+                    <i class="fas fa-info-circle"></i> 
+                    价格可能会有变动。最终报价将在预约时根据房产具体情况确定。
+                </p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <!-- Services Data Loader -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load services data from JSON
+            fetch('data/services.json')
+                .then(response => response.json())
+                .then(data => {
+                    window.servicesDataCache = data; // Cache for preview updates
+                    renderServices(data);
+                    initializeToggles();
+                    initializeNavigation();
+                })
+                .catch(error => {
+                    console.error('Error loading services:', error);
+                    document.getElementById('services-container').innerHTML = 
+                        '<p style="text-align: center; color: var(--color-accent);">加载服务失败，请刷新页面重试。</p>';
+                });
+        });
+        
+        function renderServices(data) {
+            const container = document.getElementById('services-container');
+            const navList = document.getElementById('services-nav-list');
+            
+            let servicesHTML = '';
+            let navHTML = '';
+            
+            data.categories.forEach(category => {
+                // Build navigation
+                navHTML += `<li><a href="#${category.id}" class="services-nav__link">${category.title.split(' ')[0]}</a></li>`;
+                
+                // Build category card
+                servicesHTML += `
+                    <div class="service-category" id="${category.id}">
+                        <div class="service-category__header">
+                            <div class="service-category__icon">
+                                <i class="fas ${category.icon}"></i>
+                            </div>
+                            <div>
+                                <h2 class="service-category__title">${category.title}</h2>
+                                <p class="service-category__tagline">${category.tagline}</p>
+                            </div>
+                        </div>
+                        <div class="service-category__body">
+                            ${category.description ? `<p class="service-category__description">${category.description}</p>` : ''}
+                            ${category.isCardLayout ? renderAdditionalServices(category.services) : renderServiceItems(category.services)}
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = servicesHTML;
+            navList.innerHTML = navHTML + '<li><a href="#pricing" class="services-nav__link">Pricing</a></li>';
+        }
+        
+        function renderServiceItems(services) {
+            const tabsHTML = services.map((service, index) => `
+                <div class="service-tab${index === 0 ? ' active' : ''}" data-service-index="${index}">
+                    <div class="service-tab__icon">
+                        <i class="fas ${service.icon}"></i>
+                    </div>
+                    <div class="service-tab__info">
+                        <h3 class="service-tab__title">${service.title}</h3>
+                        ${service.subtitle ? `<span class="service-tab__subtitle">${service.subtitle}</span>` : ''}
+                    </div>
+                    <i class="fas fa-chevron-right service-tab__arrow"></i>
+                </div>
+            `).join('');
+            
+            // Store services data for preview panel
+            window.currentCategoryServices = services;
+            
+            const firstService = services[0];
+            const previewHTML = firstService ? renderServicePreview(firstService) : `
+                <div class="service-preview__placeholder">
+                    <div class="service-preview__placeholder-icon"><i class="fas fa-hand-pointer"></i></div>
+                    <p class="service-preview__placeholder-text">选择一项服务查看详情</p>
+                </div>
+            `;
+            
+            return `
+                <div class="service-split-container">
+                    <div class="service-tabs">${tabsHTML}</div>
+                    <div class="service-preview" id="service-preview">${previewHTML}</div>
+                </div>
+            `;
+        }
+        
+        function renderServicePreview(service) {
+            return `
+                <div class="service-preview__content">
+                    <div class="service-preview__header">
+                        <div class="service-preview__icon">
+                            <i class="fas ${service.icon}"></i>
+                        </div>
+                        <div>
+                            <h3 class="service-preview__title">${service.title}</h3>
+                            ${service.subtitle ? `<span class="service-preview__tag">${service.subtitle}</span>` : ''}
+                        </div>
+                    </div>
+                    <p class="service-preview__summary">${service.summary}</p>
+                    ${service.details ? `<div class="service-preview__details">${service.details}</div>` : ''}
+                </div>
+            `;
+        }
+        
+        function renderAdditionalServices(services) {
+            return `
+                <div class="additional-services-grid">
+                    ${services.map(service => `
+                        <div class="additional-service-card">
+                            <div class="additional-service-card__header">
+                                <div class="additional-service-card__icon">
+                                    <i class="fas ${service.icon}"></i>
+                                </div>
+                                <h4 class="additional-service-card__title">${service.title}</h4>
+                            </div>
+                            <p class="additional-service-card__text">${service.summary}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+        
+        function initializeToggles() {
+            // Handle split panel tab clicks
+            document.querySelectorAll('.service-split-container').forEach(container => {
+                const tabs = container.querySelectorAll('.service-tab');
+                const preview = container.querySelector('.service-preview');
+                
+                // Get the category's services from parent
+                const categoryBody = container.closest('.service-category__body');
+                const categoryEl = categoryBody?.closest('.service-category');
+                const categoryId = categoryEl?.id;
+                
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', function() {
+                        const index = parseInt(this.dataset.serviceIndex);
+                        
+                        // Update active tab
+                        tabs.forEach(t => t.classList.remove('active'));
+                        this.classList.add('active');
+                        
+                        // Update preview panel
+                        if (window.servicesDataCache && categoryId) {
+                            const category = window.servicesDataCache.categories.find(c => c.id === categoryId);
+                            if (category && category.services[index]) {
+                                preview.innerHTML = renderServicePreview(category.services[index]);
+                            }
+                        }
+                    });
+                });
+            });
+        }
+        
+        function initializeNavigation() {
+            const navLinks = document.querySelectorAll('.services-nav__link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const navHeight = document.querySelector('.services-nav').offsetHeight;
+                        const targetPosition = targetElement.offsetTop - navHeight - 20;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>

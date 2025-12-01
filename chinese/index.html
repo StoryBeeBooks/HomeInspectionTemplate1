@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TO Inspect Ltd. - 多伦多及大多伦多地区专业验房服务。Michael Heart，注册验房师（RHI）。当日报告、红外热成像、Tarion保修专家。">
+    <meta name="keywords" content="多伦多验房, RHI, 大多伦多验房师, 房屋检验, Michael Heart, Tarion验房, 红外热成像, 商业验房">
+    <meta name="author" content="TO Inspect Ltd.">
+    
+    <title>TO Inspect Ltd. | 多伦多及大多伦多地区专业验房服务</title>
+    
+    <!-- Fonts - Elegant Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- Home Page Specific Styles -->
+    <style>
+        /* Hero Section - Vivid Image with Readable Text */
+        .home-hero {
+            min-height: 90vh;
+            background: url('../Image Assets/index1.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .home-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.1) 100%);
+        }
+        
+        .home-hero__container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 750px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .home-hero__content {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: var(--space-2xl) var(--space-3xl);
+            border-radius: 4px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            color: #1a1a1a;
+        }
+        
+        .home-hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            background: rgba(0, 0, 0, 0.06);
+            color: #666666;
+            padding: var(--space-xs) var(--space-md);
+            border-radius: var(--radius-full);
+            font-size: var(--text-sm);
+            font-weight: 500;
+            margin-bottom: var(--space-lg);
+            letter-spacing: 1px;
+        }
+        
+        .home-hero__title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: var(--space-lg);
+            letter-spacing: -0.02em;
+            color: #1a1a1a;
+        }
+        
+        .home-hero__title span {
+            color: #666666;
+        }
+        
+        .home-hero__text {
+            font-family: var(--font-body);
+            font-size: var(--text-lg);
+            line-height: 1.8;
+            color: #4a4a4a;
+            margin-bottom: var(--space-xl);
+            font-weight: 300;
+        }
+        
+        .home-hero__actions {
+            display: flex;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+        }
+        
+        .home-hero__actions .btn--outline {
+            background: transparent;
+            border: 1px solid #1a1a1a;
+            color: #1a1a1a;
+        }
+        
+        .home-hero__actions .btn--outline:hover {
+            background: #1a1a1a;
+            color: #ffffff;
+            border-color: #1a1a1a;
+        }
+        
+        .home-hero__stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+            margin-top: var(--space-2xl);
+            padding-top: var(--space-xl);
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .home-hero__stat {
+            text-align: center;
+        }
+        
+        .home-hero__stat-number {
+            font-family: var(--font-display);
+            font-size: var(--text-3xl);
+            font-weight: 500;
+            color: #1a1a1a;
+        }
+        
+        .home-hero__stat-label {
+            font-size: var(--text-sm);
+            color: #888888;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+        
+        @media (max-width: 992px) {
+            .home-hero__container {
+                text-align: center;
+            }
+            
+            .home-hero__actions {
+                justify-content: center;
+            }
+            
+            .home-hero {
+                background-attachment: scroll;
+            }
+        }
+        
+        /* About Mike Section - Refined Monochromatic */
+        .about-mike {
+            padding: var(--space-3xl) 0;
+            background: var(--color-white);
+        }
+        
+        .about-mike__grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: var(--space-3xl);
+            align-items: center;
+        }
+        
+        .about-mike__image {
+            position: relative;
+        }
+        
+        .about-mike__photo {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background: url('../Image Assets/index3.jpeg');
+            background-size: cover;
+            background-position: center top;
+            border-radius: 2px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            color: #ffffff;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-mike__photo::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40%;
+            background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
+        }
+        
+        .about-mike__photo span {
+            position: relative;
+            z-index: 1;
+            padding-bottom: var(--space-md);
+            font-weight: 500;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        .about-mike__photo i {
+            display: none;
+        }
+        
+        .about-mike__credentials {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1a1a1a;
+            color: var(--color-white);
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: 0;
+            font-weight: 500;
+            font-size: var(--text-sm);
+            white-space: nowrap;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            letter-spacing: 1px;
+        }
+        
+        .about-mike__content h2 {
+            font-family: var(--font-display);
+            font-size: var(--text-3xl);
+            color: #1a1a1a;
+            margin-bottom: var(--space-md);
+            font-weight: 400;
+        }
+        
+        .about-mike__content h2 span {
+            color: #4a4a4a;
+        }
+        
+        .about-mike__subtitle {
+            font-family: var(--font-body);
+            font-size: var(--text-lg);
+            color: #888888;
+            margin-bottom: var(--space-lg);
+            font-weight: 300;
+        }
+        
+        .about-mike__text {
+            font-family: var(--font-body);
+            font-size: var(--text-base);
+            line-height: 1.9;
+            color: #4a4a4a;
+            margin-bottom: var(--space-lg);
+            font-weight: 300;
+        }
+        
+        .about-mike__badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .about-mike__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            background: #f5f5f5;
+            padding: var(--space-xs) var(--space-md);
+            border-radius: 0;
+            font-size: var(--text-sm);
+            font-weight: 400;
+            color: #4a4a4a;
+        }
+        
+        .about-mike__badge i {
+            color: #1a1a1a;
+        }
+        
+        @media (max-width: 768px) {
+            .about-mike__grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .about-mike__image {
+                max-width: 250px;
+                margin: 0 auto var(--space-xl);
+            }
+            
+            .about-mike__badges {
+                justify-content: center;
+            }
+        }
+        
+        /* Services Overview Section - Elegant Monochromatic */
+        .services-overview {
+            padding: var(--space-3xl) 0;
+            background: #fafafa;
+        }
+        
+        .services-overview__header {
+            text-align: center;
+            margin-bottom: var(--space-3xl);
+        }
+        
+        .services-overview__header h2 {
+            font-family: var(--font-display);
+            font-size: var(--text-3xl);
+            color: #1a1a1a;
+            margin-bottom: var(--space-md);
+            font-weight: 400;
+        }
+        
+        .services-overview__header p {
+            font-family: var(--font-body);
+            font-size: var(--text-lg);
+            color: #888888;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+            margin-bottom: var(--space-2xl);
+        }
+        
+        .service-card {
+            background: var(--color-white);
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card__icon {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Pastel colors for each service card */
+        .service-card:nth-child(1) .service-card__icon {
+            background: linear-gradient(135deg, #E8D5E2 0%, #F2E6EE 100%); /* Soft Mauve */
+        }
+        .service-card:nth-child(2) .service-card__icon {
+            background: linear-gradient(135deg, #D5E5E8 0%, #E6F0F2 100%); /* Soft Teal */
+        }
+        .service-card:nth-child(3) .service-card__icon {
+            background: linear-gradient(135deg, #E8E2D5 0%, #F2EDE6 100%); /* Soft Sand */
+        }
+        .service-card:nth-child(4) .service-card__icon {
+            background: linear-gradient(135deg, #D5E8DE 0%, #E6F2EB 100%); /* Soft Sage */
+        }
+        .service-card:nth-child(5) .service-card__icon {
+            background: linear-gradient(135deg, #E2D5E8 0%, #EDE6F2 100%); /* Soft Lavender */
+        }
+        .service-card:nth-child(6) .service-card__icon {
+            background: linear-gradient(135deg, #D5DEE8 0%, #E6EBF2 100%); /* Soft Sky */
+        }
+        
+        .service-card__icon i {
+            font-size: 2.5rem;
+            color: #3d3d3d;
+        }
+        
+        .service-card__content {
+            padding: var(--space-xl);
+        }
+        
+        .service-card__title {
+            font-family: var(--font-display);
+            font-size: var(--text-xl);
+            color: #1a1a1a;
+            margin-bottom: var(--space-sm);
+            font-weight: 500;
+        }
+        
+        .service-card__text {
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            color: #666666;
+            line-height: 1.8;
+            margin-bottom: var(--space-md);
+            font-weight: 300;
+        }
+        
+        .service-card__link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: #1a1a1a;
+            font-weight: 500;
+            font-size: var(--text-sm);
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+        
+        .service-card__link:hover {
+            color: #666666;
+            gap: var(--space-sm);
+        }
+        
+        .services-overview__cta {
+            text-align: center;
+        }
+        
+        /* Features Strip - Light Cream Background (matching Services Hero) */
+        .features-strip {
+            background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-warm-white) 100%);
+            padding: var(--space-xl) 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .features-strip::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232d2d2d' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        
+        .features-strip__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-xl);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .features-strip__item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            color: #1a1a1a;
+        }
+        
+        .features-strip__icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(26, 26, 26, 0.08);
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .features-strip__icon i {
+            font-size: var(--text-xl);
+            color: #1a1a1a;
+        }
+        
+        .features-strip__text {
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            font-weight: 500;
+            line-height: 1.4;
+            letter-spacing: 0.5px;
+            color: #4a4a4a;
+        }
+        
+        /* Reviews Section - Refined Monochromatic */
+        .reviews-section {
+            padding: var(--space-3xl) 0;
+            background: var(--color-white);
+        }
+        
+        .reviews-section__header {
+            text-align: center;
+            margin-bottom: var(--space-3xl);
+        }
+        
+        .reviews-section__header h2 {
+            font-family: var(--font-display);
+            font-size: var(--text-3xl);
+            color: #1a1a1a;
+            margin-bottom: var(--space-md);
+            font-weight: 400;
+        }
+        
+        .reviews-section__header p {
+            font-family: var(--font-body);
+            font-size: var(--text-lg);
+            color: #888888;
+            font-weight: 300;
+        }
+        
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--space-xl);
+        }
+        
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--space-xl);
+            align-items: stretch;
+        }
+        
+        .review-card {
+            background: #fafafa;
+            border-radius: 2px;
+            padding: var(--space-xl);
+            position: relative;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .review-card::before {
+            content: '"';
+            position: absolute;
+            top: var(--space-md);
+            right: var(--space-lg);
+            font-family: var(--font-display);
+            font-size: 5rem;
+            color: #d4d4d4;
+            line-height: 1;
+        }
+        
+        .review-card__stars {
+            margin-bottom: var(--space-md);
+        }
+        
+        .review-card__stars i {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.1rem;
+            position: relative;
+            margin-right: 2px;
+        }
+        
+        .review-card__stars i::before {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);
+        }
+        
+        .review-card__text {
+            font-family: var(--font-body);
+            font-size: var(--text-base);
+            line-height: 1.8;
+            color: #4a4a4a;
+            margin-bottom: var(--space-lg);
+            position: relative;
+            z-index: 1;
+            font-weight: 300;
+            flex-grow: 1;
+        }
+        
+        .review-card__author {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-top: auto;
+            padding-top: var(--space-md);
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        
+        .review-card__avatar {
+            width: 50px;
+            height: 50px;
+            background: #1a1a1a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-weight: 500;
+            font-size: var(--text-lg);
+        }
+        
+        .review-card__name {
+            font-weight: 500;
+            color: #1a1a1a;
+        }
+        
+        .review-card__location {
+            font-size: var(--text-sm);
+            color: #888888;
+        }
+        
+        .review-card__type {
+            font-size: var(--text-xs);
+            color: #666666;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        /* CTA Section - Matching Areas Preview */
+        .home-cta {
+            background: #fafafa;
+            padding: var(--space-3xl) 0;
+            text-align: center;
+            color: #1a1a1a;
+        }
+        
+        .home-cta h2 {
+            font-family: var(--font-display);
+            font-size: var(--text-3xl);
+            margin-bottom: var(--space-md);
+            font-weight: 400;
+            color: #1a1a1a;
+        }
+        
+        .home-cta p {
+            font-family: var(--font-body);
+            font-size: var(--text-lg);
+            color: #666666;
+            max-width: 600px;
+            margin: 0 auto var(--space-xl);
+            font-weight: 300;
+        }
+        
+        .home-cta__actions {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+        }
+        
+        .home-cta__phone {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            background: transparent;
+            border: 1px solid #1a1a1a;
+            color: #1a1a1a;
+            padding: var(--space-sm) var(--space-xl);
+            border-radius: 0;
+            font-size: var(--text-lg);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+        
+        .home-cta__phone:hover {
+            background: #1a1a1a;
+            color: #ffffff;
+            border-color: #1a1a1a;
+        }
+        
+        /* Service Areas Preview - Refined Monochromatic */
+        .areas-preview {
+            background: #fafafa;
+            padding: var(--space-2xl) 0;
+        }
+        
+        .areas-preview__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: var(--space-lg);
+        }
+        
+        .areas-preview__text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-md);
+        }
+        
+        .areas-preview__icon {
+            width: 50px;
+            height: 50px;
+            background: transparent;
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .areas-preview__icon i {
+            color: var(--color-red);
+            font-size: 2.5rem;
+        }
+        
+        .areas-preview h3 {
+            font-family: var(--font-display);
+            color: #1a1a1a;
+            margin-bottom: 2px;
+            font-weight: 500;
+        }
+        
+        .areas-preview p {
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            color: #888888;
+            font-weight: 300;
+        }
+        
+        .areas-preview__list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            justify-content: center;
+        }
+        
+        .areas-preview__tag {
+            background: var(--color-white);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: 0;
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            color: #4a4a4a;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        
+        /* Inspection Portfolio Section */
+        .portfolio-section {
+            padding: var(--space-3xl) 0;
+            background: #fafafa;
+        }
+        
+        .portfolio-section__header {
+            text-align: center;
+            margin-bottom: var(--space-2xl);
+        }
+        
+        .portfolio-section__header h2 {
+            font-family: var(--font-display);
+            font-size: var(--text-3xl);
+            color: #1a1a1a;
+            margin-bottom: var(--space-md);
+            font-weight: 400;
+        }
+        
+        .portfolio-section__header p {
+            font-family: var(--font-body);
+            font-size: var(--text-lg);
+            color: #888888;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-md);
+        }
+        
+        .portfolio-item {
+            position: relative;
+            aspect-ratio: 1;
+            overflow: hidden;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.08);
+        }
+        
+        .portfolio-item__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: var(--space-md);
+        }
+        
+        .portfolio-item:hover .portfolio-item__overlay {
+            opacity: 1;
+        }
+        
+        .portfolio-item__label {
+            color: #ffffff;
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            font-weight: 500;
+        }
+        
+        @media (max-width: 992px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Component -->
+    <div id="header-placeholder"></div>
+    
+    <!-- Hero Section -->
+    <section class="home-hero">
+        <div class="container">
+            <div class="home-hero__container">
+                <div class="home-hero__content">
+                    <span class="home-hero__badge">
+                        <i class="fas fa-shield-alt" style="color: #2d5a3d;"></i> 值得信赖的多伦多验房师
+                    </span>
+                    <h1 class="home-hero__title">
+                        您<span>房产置业</span>的可靠伙伴
+                    </h1>
+                    <p class="home-hero__text">
+                        在多伦多购买或维护房产是一项重大投资。我们提供的不仅仅是一份检查清单，更是让您安心的保障。无论您是购买二手房、接收新建公寓，还是管理商业物业，我们的验房服务都严谨、公正，并严格遵循行业最高标准（OAHI和ASTM）。
+                    </p>
+                    <div class="home-hero__actions">
+                        <a href="quote.html" class="btn btn--primary">获取报价</a>
+                        <a href="services.html" class="btn btn--outline">查看服务项目</a>
+                    </div>
+                    
+                    <div class="home-hero__stats">
+                        <div class="home-hero__stat">
+                            <div class="home-hero__stat-number" style="color: var(--color-red);">1000+</div>
+                            <div class="home-hero__stat-label">验房案例</div>
+                        </div>
+                        <div class="home-hero__stat">
+                            <div class="home-hero__stat-number" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">5.0</div>
+                            <div class="home-hero__stat-label">Google评分</div>
+                        </div>
+                        <div class="home-hero__stat">
+                            <div class="home-hero__stat-number">当日</div>
+                            <div class="home-hero__stat-label">报告交付</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Strip -->
+    <section class="features-strip">
+        <div class="container">
+            <div class="features-strip__grid">
+                <div class="features-strip__item">
+                    <div class="features-strip__icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="features-strip__text">当日电子报告</div>
+                </div>
+                <div class="features-strip__item">
+                    <div class="features-strip__icon">
+                        <i class="fas fa-thermometer-half"></i>
+                    </div>
+                    <div class="features-strip__text">专业红外热成像</div>
+                </div>
+                <div class="features-strip__item">
+                    <div class="features-strip__icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="features-strip__text">RHI & OAHI认证</div>
+                </div>
+                <div class="features-strip__item">
+                    <div class="features-strip__icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div class="features-strip__text">中英双语服务</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- About Mike Section -->
+        <section class="about-mike">
+            <div class="container">
+                <div class="about-mike__grid">
+                    <div class="about-mike__image">
+                        <div class="about-mike__photo">
+                            <span>Michael Heart</span>
+                        </div>
+                        <span class="about-mike__credentials">
+                            <i class="fas fa-certificate"></i> RHI认证验房师
+                        </span>
+                    </div>
+                    
+                    <div class="about-mike__content">
+                        <h2>认识<span>Michael Heart</span>，RHI</h2>
+                        <p class="about-mike__subtitle">注册验房师 & TO Inspect Ltd. 创始人</p>
+                        <p class="about-mike__text">
+                            凭借多年建筑和装修领域的实战经验，Michael为每一次验房带来独特的专业视角。作为注册验房师（RHI）和安大略省验房师协会（OAHI）的成员，他致力于提供全面、公正的评估，帮助您自信地做出房产决策。
+                        </p>
+                        <p class="about-mike__text">
+                            Michael是公认的Tarion保修专家，已为大多伦多地区数百位新房买家进行过交房前验房（PDI）。他的理念很简单：知情的业主才是有话语权的业主。
+                        </p>
+                        
+                        <div class="about-mike__badges">
+                            <span class="about-mike__badge"><i class="fas fa-award"></i> OAHI会员</span>
+                            <span class="about-mike__badge"><i class="fas fa-fire"></i> WETT认证</span>
+                            <span class="about-mike__badge"><i class="fas fa-thermometer-half"></i> 红外热成像</span>
+                            <span class="about-mike__badge"><i class="fas fa-home"></i> Tarion专家</span>
+                        </div>
+                        
+                        <a href="about.html" class="btn btn--secondary">了解更多关于Michael</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Overview Section -->
+        <section class="services-overview">
+            <div class="container">
+                <div class="services-overview__header">
+                    <h2>我们的验房服务</h2>
+                    <p>从住宅到商业物业的全面检验服务——所有报告当日电子交付。</p>
+                </div>
+                
+                <div class="services-grid">
+                    <!-- 购房前验房 -->
+                    <div class="service-card">
+                        <div class="service-card__icon">
+                            <i class="fas fa-search-dollar"></i>
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">购房前验房</h3>
+                            <p class="service-card__text">
+                                准备买房？我们的全面检验涵盖屋顶、地基、电气、管道、暖通空调等——在您做出决定前，为您提供所需的全部信息。
+                            </p>
+                            <a href="services.html#pre-purchase" class="service-card__link">
+                                了解更多 <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- 卖房前验房 -->
+                    <div class="service-card">
+                        <div class="service-card__icon">
+                            <i class="fas fa-house-circle-check"></i>
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">卖房前验房</h3>
+                            <p class="service-card__text">
+                                准备卖房？在买家发现问题之前先行了解。卖房前验房能增强买家信心，促成更快、更坚定的报价。
+                            </p>
+                            <a href="services.html#pre-listing" class="service-card__link">
+                                了解更多 <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- 公寓验房 -->
+                    <div class="service-card">
+                        <div class="service-card__icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">公寓验房</h3>
+                            <p class="service-card__text">
+                                公寓有其独特的注意事项。我们检验套内设施、家电、暖通空调、门窗，并帮助您了解哪些属于业主责任范围。
+                            </p>
+                            <a href="services.html#condo" class="service-card__link">
+                                了解更多 <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Tarion保修验房 -->
+                    <div class="service-card">
+                        <div class="service-card__icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Tarion保修验房</h3>
+                            <p class="service-card__text">
+                                购买新房？我们提供交房前PDI、30天、一年末和两年末验房服务，确保开发商在保修期内修复所有问题。
+                            </p>
+                            <a href="services.html#tarion" class="service-card__link">
+                                了解更多 <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- 红外热成像 -->
+                    <div class="service-card">
+                        <div class="service-card__icon">
+                            <i class="fas fa-thermometer-half"></i>
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">红外热成像</h3>
+                            <p class="service-card__text">
+                                发现肉眼看不到的问题。我们的红外摄像设备能检测墙后隐藏的水分渗入、保温层缺陷、电气过热点等问题。
+                            </p>
+                            <a href="services.html#thermal" class="service-card__link">
+                                了解更多 <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- 商业物业评估 -->
+                    <div class="service-card">
+                        <div class="service-card__icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">商业物业评估</h3>
+                            <p class="service-card__text">
+                                投资商业地产？我们的物业状况评估遵循ASTM E2018标准，帮助您识别风险并预测资本支出。
+                            </p>
+                            <a href="services.html#commercial" class="service-card__link">
+                                了解更多 <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="services-overview__cta">
+                    <a href="services.html" class="btn btn--secondary">查看所有服务及价格</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 验房实拍展示 -->
+        <section class="portfolio-section">
+            <div class="container">
+                <div class="portfolio-section__header">
+                    <h2>验房实拍展示</h2>
+                    <p>从屋顶到地基，我们不放过任何细节——一窥我们严谨细致的验房过程。</p>
+                </div>
+                
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="../Image Assets/Inspection Process/roof1.jpeg" alt="屋顶检查">
+                        <div class="portfolio-item__overlay">
+                            <span class="portfolio-item__label">屋顶检查</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="../Image Assets/Inspection Process/Exterior1.jpeg" alt="外墙评估">
+                        <div class="portfolio-item__overlay">
+                            <span class="portfolio-item__label">外墙评估</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="../Image Assets/Inspection Process/Structure1.jpeg" alt="结构分析">
+                        <div class="portfolio-item__overlay">
+                            <span class="portfolio-item__label">结构分析</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="../Image Assets/Inspection Process/roof2.jpeg" alt="屋顶评估">
+                        <div class="portfolio-item__overlay">
+                            <span class="portfolio-item__label">屋顶评估</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="../Image Assets/Inspection Process/Exterior2.jpeg" alt="房屋外观">
+                        <div class="portfolio-item__overlay">
+                            <span class="portfolio-item__label">房屋外观</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="../Image Assets/Inspection Process/Structure2.jpeg" alt="地基检查">
+                        <div class="portfolio-item__overlay">
+                            <span class="portfolio-item__label">地基检查</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="../Image Assets/Inspection Process/roof3.jpeg" alt="屋顶细节">
+                        <div class="portfolio-item__overlay">
+                            <span class="portfolio-item__label">屋顶细节</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="../Image Assets/Inspection Process/Exterior3.jpeg" alt="外部检验">
+                        <div class="portfolio-item__overlay">
+                            <span class="portfolio-item__label">外部检验</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="../Image Assets/Inspection Process/Structure3.jpeg" alt="结构审查">
+                        <div class="portfolio-item__overlay">
+                            <span class="portfolio-item__label">结构审查</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="../Image Assets/Inspection Process/roof4.jpeg" alt="屋顶状况">
+                        <div class="portfolio-item__overlay">
+                            <span class="portfolio-item__label">屋顶状况</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="../Image Assets/Inspection Process/Exterior4.jpeg" alt="建筑外观">
+                        <div class="portfolio-item__overlay">
+                            <span class="portfolio-item__label">建筑外观</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="../Image Assets/Inspection Process/Structure4.jpeg" alt="结构评估">
+                        <div class="portfolio-item__overlay">
+                            <span class="portfolio-item__label">结构评估</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Reviews Section -->
+        <section class="reviews-section">
+            <div class="container">
+                <div class="reviews-section__header">
+                    <h2>客户评价</h2>
+                    <p>不仅仅是我们的自述——听听大多伦多地区业主和投资者的真实反馈。</p>
+                </div>
+                
+                <div class="reviews-grid">
+                    <!-- 评价 1 -->
+                    <div class="review-card">
+                        <div class="review-card__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-card__text">
+                            "Michael非常细致，花时间解释了每一个发现。当日交付的报告内容详尽，配有清晰的照片。他发现了屋顶的问题，在谈判中为我们节省了数千元。强烈推荐！"
+                        </p>
+                        <div class="review-card__author">
+                            <div class="review-card__avatar">JL</div>
+                            <div>
+                                <div class="review-card__name">Jennifer L.</div>
+                                <div class="review-card__location">北约克</div>
+                                <div class="review-card__type">购房前验房</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 评价 2 -->
+                    <div class="review-card">
+                        <div class="review-card__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-card__text">
+                            "作为首次购房者，我对整个过程感到紧张。Michael带我走完了整个验房流程，回答了我所有的问题，并帮助我了解应该优先关注什么。红外热成像发现了一个我们肉眼根本看不到的水分问题。"
+                        </p>
+                        <div class="review-card__author">
+                            <div class="review-card__avatar">DW</div>
+                            <div>
+                                <div class="review-card__name">David W.</div>
+                                <div class="review-card__location">密西沙加</div>
+                                <div class="review-card__type">房屋检验 + 红外热成像</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 评价 3 -->
+                    <div class="review-card">
+                        <div class="review-card__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-card__text">
+                            "我们聘请Michael进行Tarion交房前和一年末验房。他发现了超过30个缺陷，开发商不得不在保修期内全部修复。他对Tarion流程的了解非常宝贵。这钱花得太值了！"
+                        </p>
+                        <div class="review-card__author">
+                            <div class="review-card__avatar">SC</div>
+                            <div>
+                                <div class="review-card__name">Sarah & Chris M.</div>
+                                <div class="review-card__location">旺市</div>
+                                <div class="review-card__type">Tarion保修验房</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Service Areas Preview -->
+        <section class="areas-preview">
+            <div class="container">
+                <div class="areas-preview__content">
+                    <div class="areas-preview__text">
+                        <div class="areas-preview__icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>服务覆盖大多伦多地区</h3>
+                            <p>从多伦多市中心到周边各区</p>
+                        </div>
+                    </div>
+                    <div class="areas-preview__list">
+                        <span class="areas-preview__tag">多伦多</span>
+                        <span class="areas-preview__tag">密西沙加</span>
+                        <span class="areas-preview__tag">宾顿</span>
+                        <span class="areas-preview__tag">万锦</span>
+                        <span class="areas-preview__tag">旺市</span>
+                        <span class="areas-preview__tag">列治文山</span>
+                        <span class="areas-preview__tag">奥克维尔</span>
+                        <span class="areas-preview__tag">皮克林</span>
+                        <a href="quote.html" class="areas-preview__tag" style="background: #1a1a1a; color: #ffffff; font-weight: 500;">+ 更多地区</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="home-cta">
+            <div class="container">
+                <h2>准备好预约验房了吗？</h2>
+                <p>
+                    凭借当日电子报告和专业红外热成像技术，我们为您提供清晰、真实的信息，让您自信做出决策。
+                </p>
+                <div class="home-cta__actions">
+                    <a href="quote.html" class="btn btn--primary" style="font-size: var(--text-lg);">获取报价</a>
+                    <a href="tel:+16475558888" class="home-cta__phone">
+                        <i class="fas fa-phone"></i> (647) 555-8888
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

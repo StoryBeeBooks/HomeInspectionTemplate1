@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TO Inspect Ltd. - Professional Home Inspection Services in Toronto and the GTA. Michael Heart, RHI. Same-day reports, thermal imaging, Tarion warranty experts.">
+    <meta name="keywords" content="home inspection Toronto, RHI, home inspector GTA, property inspection, Michael Heart, Tarion inspection, thermal imaging, commercial inspection">
+    <meta name="author" content="TO Inspect Ltd.">
+    
+    <title>TO Inspect Ltd. | Professional Home Inspection Services Toronto & GTA</title>
+    
+    <!-- Fonts - Elegant Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Home Page Specific Styles -->
+    <style>
+        /* Hero Section - Vivid Image with Readable Text */
+        .home-hero {
+            min-height: 90vh;
+            background: url('Image Assets/index1.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .home-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.1) 100%);
+        }
+        
+        .home-hero__container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 750px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .home-hero__content {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: var(--space-2xl) var(--space-3xl);
+            border-radius: 4px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            color: #1a1a1a;
+        }
+        
+        .home-hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            background: rgba(0, 0, 0, 0.06);
+            color: #666666;
+            padding: var(--space-xs) var(--space-md);
+            border-radius: var(--radius-full);
+            font-size: var(--text-sm);
+            font-weight: 500;
+            margin-bottom: var(--space-lg);
+            letter-spacing: 1px;
+        }
+        
+        .home-hero__title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: var(--space-lg);
+            letter-spacing: -0.02em;
+            color: #1a1a1a;
+        }
+        
+        .home-hero__title span {
+            color: #666666;
+        }
+        
+        .home-hero__text {
+            font-family: var(--font-body);
+            font-size: var(--text-lg);
+            line-height: 1.8;
+            color: #4a4a4a;
+            margin-bottom: var(--space-xl);
+            font-weight: 300;
+        }
+        
+        .home-hero__actions {
+            display: flex;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+        }
+        
+        .home-hero__actions .btn--outline {
+            background: transparent;
+            border: 1px solid #1a1a1a;
+            color: #1a1a1a;
+        }
+        
+        .home-hero__actions .btn--outline:hover {
+            background: #1a1a1a;
+            color: #ffffff;
+            border-color: #1a1a1a;
+        }
+        
+        .home-hero__stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+            margin-top: var(--space-2xl);
+            padding-top: var(--space-xl);
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .home-hero__stat {
+            text-align: center;
+        }
+        
+        .home-hero__stat-number {
+            font-family: var(--font-display);
+            font-size: var(--text-3xl);
+            font-weight: 500;
+            color: #1a1a1a;
+        }
+        
+        .home-hero__stat-label {
+            font-size: var(--text-sm);
+            color: #888888;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+        
+        @media (max-width: 992px) {
+            .home-hero__container {
+                text-align: center;
+            }
+            
+            .home-hero__actions {
+                justify-content: center;
+            }
+            
+            .home-hero {
+                background-attachment: scroll;
+            }
+        }
+        
+        /* About Mike Section - Refined Monochromatic */
+        .about-mike {
+            padding: var(--space-3xl) 0;
+            background: var(--color-white);
+        }
+        
+        .about-mike__grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: var(--space-3xl);
+            align-items: center;
+        }
+        
+        .about-mike__image {
+            position: relative;
+        }
+        
+        .about-mike__photo {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background: url('Image Assets/index3.jpeg');
+            background-size: cover;
+            background-position: center top;
+            border-radius: 2px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            color: #ffffff;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-mike__photo::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40%;
+            background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
+        }
+        
+        .about-mike__photo span {
+            position: relative;
+            z-index: 1;
+            padding-bottom: var(--space-md);
+            font-weight: 500;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        .about-mike__photo i {
+            display: none;
+        }
+        
+        .about-mike__credentials {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1a1a1a;
+            color: var(--color-white);
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: 0;
+            font-weight: 500;
+            font-size: var(--text-sm);
+            white-space: nowrap;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            letter-spacing: 1px;
+        }
+        
+        .about-mike__content h2 {
+            font-family: var(--font-display);
+            font-size: var(--text-3xl);
+            color: #1a1a1a;
+            margin-bottom: var(--space-md);
+            font-weight: 400;
+        }
+        
+        .about-mike__content h2 span {
+            color: #4a4a4a;
+        }
+        
+        .about-mike__subtitle {
+            font-family: var(--font-body);
+            font-size: var(--text-lg);
+            color: #888888;
+            margin-bottom: var(--space-lg);
+            font-weight: 300;
+        }
+        
+        .about-mike__text {
+            font-family: var(--font-body);
+            font-size: var(--text-base);
+            line-height: 1.9;
+            color: #4a4a4a;
+            margin-bottom: var(--space-lg);
+            font-weight: 300;
+        }
+        
+        .about-mike__badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .about-mike__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            background: #f5f5f5;
+            padding: var(--space-xs) var(--space-md);
+            border-radius: 0;
+            font-size: var(--text-sm);
+            font-weight: 400;
+            color: #4a4a4a;
+        }
+        
+        .about-mike__badge i {
+            color: #1a1a1a;
+        }
+        
+        @media (max-width: 768px) {
+            .about-mike__grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .about-mike__image {
+                max-width: 250px;
+                margin: 0 auto var(--space-xl);
+            }
+            
+            .about-mike__badges {
+                justify-content: center;
+            }
+        }
+        
+        /* Services Overview Section - Elegant Monochromatic */
+        .services-overview {
+            padding: var(--space-3xl) 0;
+            background: #fafafa;
+        }
+        
+        .services-overview__header {
+            text-align: center;
+            margin-bottom: var(--space-3xl);
+        }
+        
+        .services-overview__header h2 {
+            font-family: var(--font-display);
+            font-size: var(--text-3xl);
+            color: #1a1a1a;
+            margin-bottom: var(--space-md);
+            font-weight: 400;
+        }
+        
+        .services-overview__header p {
+            font-family: var(--font-body);
+            font-size: var(--text-lg);
+            color: #888888;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+            margin-bottom: var(--space-2xl);
+        }
+        
+        .service-card {
+            background: var(--color-white);
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card__icon {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Pastel colors for each service card */
+        .service-card:nth-child(1) .service-card__icon {
+            background: linear-gradient(135deg, #E8D5E2 0%, #F2E6EE 100%); /* Soft Mauve */
+        }
+        .service-card:nth-child(2) .service-card__icon {
+            background: linear-gradient(135deg, #D5E5E8 0%, #E6F0F2 100%); /* Soft Teal */
+        }
+        .service-card:nth-child(3) .service-card__icon {
+            background: linear-gradient(135deg, #E8E2D5 0%, #F2EDE6 100%); /* Soft Sand */
+        }
+        .service-card:nth-child(4) .service-card__icon {
+            background: linear-gradient(135deg, #D5E8DE 0%, #E6F2EB 100%); /* Soft Sage */
+        }
+        .service-card:nth-child(5) .service-card__icon {
+            background: linear-gradient(135deg, #E2D5E8 0%, #EDE6F2 100%); /* Soft Lavender */
+        }
+        .service-card:nth-child(6) .service-card__icon {
+            background: linear-gradient(135deg, #D5DEE8 0%, #E6EBF2 100%); /* Soft Sky */
+        }
+        
+        .service-card__icon i {
+            font-size: 2.5rem;
+            color: #3d3d3d;
+        }
+        
+        .service-card__content {
+            padding: var(--space-xl);
+        }
+        
+        .service-card__title {
+            font-family: var(--font-display);
+            font-size: var(--text-xl);
+            color: #1a1a1a;
+            margin-bottom: var(--space-sm);
+            font-weight: 500;
+        }
+        
+        .service-card__text {
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            color: #666666;
+            line-height: 1.8;
+            margin-bottom: var(--space-md);
+            font-weight: 300;
+        }
+        
+        .service-card__link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: #1a1a1a;
+            font-weight: 500;
+            font-size: var(--text-sm);
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+        
+        .service-card__link:hover {
+            color: #666666;
+            gap: var(--space-sm);
+        }
+        
+        .services-overview__cta {
+            text-align: center;
+        }
+        
+        /* Features Strip - Light Cream Background (matching Services Hero) */
+        .features-strip {
+            background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-warm-white) 100%);
+            padding: var(--space-xl) 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .features-strip::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232d2d2d' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        
+        .features-strip__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-xl);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .features-strip__item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            color: #1a1a1a;
+        }
+        
+        .features-strip__icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(26, 26, 26, 0.08);
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .features-strip__icon i {
+            font-size: var(--text-xl);
+            color: #1a1a1a;
+        }
+        
+        .features-strip__text {
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            font-weight: 500;
+            line-height: 1.4;
+            letter-spacing: 0.5px;
+            color: #4a4a4a;
+        }
+        
+        /* Reviews Section - Refined Monochromatic */
+        .reviews-section {
+            padding: var(--space-3xl) 0;
+            background: var(--color-white);
+        }
+        
+        .reviews-section__header {
+            text-align: center;
+            margin-bottom: var(--space-3xl);
+        }
+        
+        .reviews-section__header h2 {
+            font-family: var(--font-display);
+            font-size: var(--text-3xl);
+            color: #1a1a1a;
+            margin-bottom: var(--space-md);
+            font-weight: 400;
+        }
+        
+        .reviews-section__header p {
+            font-family: var(--font-body);
+            font-size: var(--text-lg);
+            color: #888888;
+            font-weight: 300;
+        }
+        
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--space-xl);
+        }
+        
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--space-xl);
+            align-items: stretch;
+        }
+        
+        .review-card {
+            background: #fafafa;
+            border-radius: 2px;
+            padding: var(--space-xl);
+            position: relative;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .review-card::before {
+            content: '"';
+            position: absolute;
+            top: var(--space-md);
+            right: var(--space-lg);
+            font-family: var(--font-display);
+            font-size: 5rem;
+            color: #d4d4d4;
+            line-height: 1;
+        }
+        
+        .review-card__stars {
+            margin-bottom: var(--space-md);
+        }
+        
+        .review-card__stars i {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.1rem;
+            position: relative;
+            margin-right: 2px;
+        }
+        
+        .review-card__stars i::before {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);
+        }
+        
+        .review-card__text {
+            font-family: var(--font-body);
+            font-size: var(--text-base);
+            line-height: 1.8;
+            color: #4a4a4a;
+            margin-bottom: var(--space-lg);
+            position: relative;
+            z-index: 1;
+            font-weight: 300;
+            flex-grow: 1;
+        }
+        
+        .review-card__author {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-top: auto;
+            padding-top: var(--space-md);
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        
+        .review-card__avatar {
+            width: 50px;
+            height: 50px;
+            background: #1a1a1a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-weight: 500;
+            font-size: var(--text-lg);
+        }
+        
+        .review-card__name {
+            font-weight: 500;
+            color: #1a1a1a;
+        }
+        
+        .review-card__location {
+            font-size: var(--text-sm);
+            color: #888888;
+        }
+        
+        .review-card__type {
+            font-size: var(--text-xs);
+            color: #666666;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        /* CTA Section - Matching Areas Preview */
+        .home-cta {
+            background: #fafafa;
+            padding: var(--space-3xl) 0;
+            text-align: center;
+            color: #1a1a1a;
+        }
+        
+        .home-cta h2 {
+            font-family: var(--font-display);
+            font-size: var(--text-3xl);
+            margin-bottom: var(--space-md);
+            font-weight: 400;
+            color: #1a1a1a;
+        }
+        
+        .home-cta p {
+            font-family: var(--font-body);
+            font-size: var(--text-lg);
+            color: #666666;
+            max-width: 600px;
+            margin: 0 auto var(--space-xl);
+            font-weight: 300;
+        }
+        
+        .home-cta__actions {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+        }
+        
+        .home-cta__phone {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            background: transparent;
+            border: 1px solid #1a1a1a;
+            color: #1a1a1a;
+            padding: var(--space-sm) var(--space-xl);
+            border-radius: 0;
+            font-size: var(--text-lg);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+        
+        .home-cta__phone:hover {
+            background: #1a1a1a;
+            color: #ffffff;
+            border-color: #1a1a1a;
+        }
+        
+        /* Service Areas Preview - Refined Monochromatic */
+        .areas-preview {
+            background: #fafafa;
+            padding: var(--space-2xl) 0;
+        }
+        
+        .areas-preview__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: var(--space-lg);
+        }
+        
+        .areas-preview__text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-md);
+        }
+        
+        .areas-preview__icon {
+            width: 50px;
+            height: 50px;
+            background: transparent;
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .areas-preview__icon i {
+            color: var(--color-red);
+            font-size: 2.5rem;
+        }
+        
+        .areas-preview h3 {
+            font-family: var(--font-display);
+            color: #1a1a1a;
+            margin-bottom: 2px;
+            font-weight: 500;
+        }
+        
+        .areas-preview p {
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            color: #888888;
+            font-weight: 300;
+        }
+        
+        .areas-preview__list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            justify-content: center;
+        }
+        
+        .areas-preview__tag {
+            background: var(--color-white);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: 0;
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            color: #4a4a4a;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        
+        /* Inspection Portfolio Section */
+        .portfolio-section {
+            padding: var(--space-3xl) 0;
+            background: #fafafa;
+        }
+        
+        .portfolio-section__header {
+            text-align: center;
+            margin-bottom: var(--space-2xl);
+        }
+        
+        .portfolio-section__header h2 {
+            font-family: var(--font-display);
+            font-size: var(--text-3xl);
+            color: #1a1a1a;
+            margin-bottom: var(--space-md);
+            font-weight: 400;
+        }
+        
+        .portfolio-section__header p {
+            font-family: var(--font-body);
+            font-size: var(--text-lg);
+            color: #888888;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-md);
+        }
+        
+        .portfolio-item {
+            position: relative;
+            aspect-ratio: 1;
+            overflow: hidden;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.08);
+        }
+        
+        .portfolio-item__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: var(--space-md);
+        }
+        
+        .portfolio-item:hover .portfolio-item__overlay {
+            opacity: 1;
+        }
+        
+        .portfolio-item__label {
+            color: #ffffff;
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            font-weight: 500;
+        }
+        
+        @media (max-width: 992px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Component -->
+    <div id="header-placeholder"></div>
+    
+    <!-- Hero Section -->
+    <section class="home-hero">
+        <div class="container">
+            <div class="home-hero__container">
+                <div class="home-hero__content">
+                    <span class="home-hero__badge">
+                        <i class="fas fa-shield-alt" style="color: #2d5a3d;"></i> Trusted Toronto Home Inspectors
+                    </span>
+                    <h1 class="home-hero__title">
+                        Your Partners in <span>Property Ownership</span>
+                    </h1>
+                    <p class="home-hero__text">
+                        Buying or maintaining a property in Toronto is a significant investment. We provide more than just a checklist; we provide peace of mind. Whether you are buying a resale home, taking possession of a newly built condo, or managing a commercial property, our inspections are rigorous, unbiased, and executed in accordance with the highest industry standards (OAHI & ASTM).
+                    </p>
+                    <div class="home-hero__actions">
+                        <a href="quote.html" class="btn btn--primary">Request a Quote</a>
+                        <a href="services.html" class="btn btn--outline">View Our Services</a>
+                    </div>
+                    
+                    <div class="home-hero__stats">
+                        <div class="home-hero__stat">
+                            <div class="home-hero__stat-number" style="color: var(--color-red);">1000+</div>
+                            <div class="home-hero__stat-label">Inspections Completed</div>
+                        </div>
+                        <div class="home-hero__stat">
+                            <div class="home-hero__stat-number" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">5.0</div>
+                            <div class="home-hero__stat-label">Google Rating</div>
+                        </div>
+                        <div class="home-hero__stat">
+                            <div class="home-hero__stat-number">Same-Day</div>
+                            <div class="home-hero__stat-label">Reports Available</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Strip -->
+    <section class="features-strip">
+        <div class="container">
+            <div class="features-strip__grid">
+                <div class="features-strip__item">
+                    <div class="features-strip__icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="features-strip__text">Same-Day Electronic Reports</div>
+                </div>
+                <div class="features-strip__item">
+                    <div class="features-strip__icon">
+                        <i class="fas fa-thermometer-half"></i>
+                    </div>
+                    <div class="features-strip__text">Advanced Thermal Imaging</div>
+                </div>
+                <div class="features-strip__item">
+                    <div class="features-strip__icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="features-strip__text">RHI & OAHI Certified</div>
+                </div>
+                <div class="features-strip__item">
+                    <div class="features-strip__icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div class="features-strip__text">English & Mandarin Service</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- About Mike Section -->
+        <section class="about-mike">
+            <div class="container">
+                <div class="about-mike__grid">
+                    <div class="about-mike__image">
+                        <div class="about-mike__photo">
+                            <span>Michael Heart</span>
+                        </div>
+                        <span class="about-mike__credentials">
+                            <i class="fas fa-certificate"></i> RHI Certified
+                        </span>
+                    </div>
+                    
+                    <div class="about-mike__content">
+                        <h2>Meet <span>Michael Heart</span>, RHI</h2>
+                        <p class="about-mike__subtitle">Registered Home Inspector & Founder of TO Inspect Ltd.</p>
+                        <p class="about-mike__text">
+                            With years of hands-on experience in construction and renovation, Michael brings a unique perspective to every inspection. As a Registered Home Inspector (RHI) and proud member of the Ontario Association of Home Inspectors (OAHI), he is committed to providing thorough, unbiased assessments that empower you to make confident real estate decisions.
+                        </p>
+                        <p class="about-mike__text">
+                            Michael is recognized as a Tarion warranty expert, having conducted hundreds of Pre-Delivery Inspections (PDIs) for new home buyers across the GTA. His philosophy is simple: an informed homeowner is an empowered homeowner.
+                        </p>
+                        
+                        <div class="about-mike__badges">
+                            <span class="about-mike__badge"><i class="fas fa-award"></i> OAHI Member</span>
+                            <span class="about-mike__badge"><i class="fas fa-fire"></i> WETT Certified</span>
+                            <span class="about-mike__badge"><i class="fas fa-thermometer-half"></i> Thermal Imaging</span>
+                            <span class="about-mike__badge"><i class="fas fa-home"></i> Tarion Expert</span>
+                        </div>
+                        
+                        <a href="about.html" class="btn btn--secondary">Learn More About Michael</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Overview Section -->
+        <section class="services-overview">
+            <div class="container">
+                <div class="services-overview__header">
+                    <h2>Our Inspection Services</h2>
+                    <p>Comprehensive coverage from residential homes to commercial properties—all backed by same-day electronic reporting.</p>
+                </div>
+                
+                <div class="services-grid">
+                    <!-- Pre-Purchase -->
+                    <div class="service-card">
+                        <div class="service-card__icon">
+                            <i class="fas fa-search-dollar"></i>
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Pre-Purchase Inspection</h3>
+                            <p class="service-card__text">
+                                Buying a home? Our comprehensive inspection covers the roof, foundation, electrical, plumbing, HVAC, and more—giving you the facts you need before you commit.
+                            </p>
+                            <a href="services.html#pre-purchase" class="service-card__link">
+                                Learn More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Pre-Listing -->
+                    <div class="service-card">
+                        <div class="service-card__icon">
+                            <i class="fas fa-house-circle-check"></i>
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Pre-Listing Inspection</h3>
+                            <p class="service-card__text">
+                                Selling your home? Find issues before your buyer does. A pre-listing inspection builds buyer confidence and can lead to faster, firmer offers.
+                            </p>
+                            <a href="services.html#pre-listing" class="service-card__link">
+                                Learn More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Condo -->
+                    <div class="service-card">
+                        <div class="service-card__icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Condo Inspection</h3>
+                            <p class="service-card__text">
+                                Condos have unique considerations. We inspect in-suite components, appliances, HVAC, windows, and help you understand what falls under your responsibility.
+                            </p>
+                            <a href="services.html#condo" class="service-card__link">
+                                Learn More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Tarion Warranty -->
+                    <div class="service-card">
+                        <div class="service-card__icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Tarion Warranty Inspections</h3>
+                            <p class="service-card__text">
+                                New build? We conduct PDI, 30-Day, Year-End, and Second-Year inspections to ensure your builder addresses deficiencies under warranty.
+                            </p>
+                            <a href="services.html#tarion" class="service-card__link">
+                                Learn More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Thermal Imaging -->
+                    <div class="service-card">
+                        <div class="service-card__icon">
+                            <i class="fas fa-thermometer-half"></i>
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Thermal Imaging</h3>
+                            <p class="service-card__text">
+                                See what the eye cannot. Our infrared cameras detect moisture intrusion, insulation gaps, electrical hot spots, and more hidden behind walls.
+                            </p>
+                            <a href="services.html#thermal" class="service-card__link">
+                                Learn More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Commercial -->
+                    <div class="service-card">
+                        <div class="service-card__icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Commercial PCA</h3>
+                            <p class="service-card__text">
+                                Investing in commercial real estate? Our Property Condition Assessments follow ASTM E2018 standards to identify risks and forecast capital expenditures.
+                            </p>
+                            <a href="services.html#commercial" class="service-card__link">
+                                Learn More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="services-overview__cta">
+                    <a href="services.html" class="btn btn--secondary">View All Services & Pricing</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Inspection Portfolio Section -->
+        <section class="portfolio-section">
+            <div class="container">
+                <div class="portfolio-section__header">
+                    <h2>Our Work in Action</h2>
+                    <p>A glimpse into our thorough inspection process—from rooftops to foundations, we leave no detail unchecked.</p>
+                </div>
+                
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="Image Assets/Inspection Process/roof1.jpeg" alt="Roof Inspection">
+                        <div class="portfolio-item__overlay">
+                            <span class="portfolio-item__label">Roof Inspection</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="Image Assets/Inspection Process/Exterior1.jpeg" alt="Exterior Assessment">
+                        <div class="portfolio-item__overlay">
+                            <span class="portfolio-item__label">Exterior Assessment</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="Image Assets/Inspection Process/Structure1.jpeg" alt="Structural Analysis">
+                        <div class="portfolio-item__overlay">
+                            <span class="portfolio-item__label">Structural Analysis</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="Image Assets/Inspection Process/roof2.jpeg" alt="Roof Assessment">
+                        <div class="portfolio-item__overlay">
+                            <span class="portfolio-item__label">Roof Assessment</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="Image Assets/Inspection Process/Exterior2.jpeg" alt="Property Exterior">
+                        <div class="portfolio-item__overlay">
+                            <span class="portfolio-item__label">Property Exterior</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="Image Assets/Inspection Process/Structure2.jpeg" alt="Foundation Check">
+                        <div class="portfolio-item__overlay">
+                            <span class="portfolio-item__label">Foundation Check</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="Image Assets/Inspection Process/roof3.jpeg" alt="Roofing Details">
+                        <div class="portfolio-item__overlay">
+                            <span class="portfolio-item__label">Roofing Details</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="Image Assets/Inspection Process/Exterior3.jpeg" alt="Exterior Inspection">
+                        <div class="portfolio-item__overlay">
+                            <span class="portfolio-item__label">Exterior Inspection</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="Image Assets/Inspection Process/Structure3.jpeg" alt="Structural Review">
+                        <div class="portfolio-item__overlay">
+                            <span class="portfolio-item__label">Structural Review</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="Image Assets/Inspection Process/roof4.jpeg" alt="Roof Condition">
+                        <div class="portfolio-item__overlay">
+                            <span class="portfolio-item__label">Roof Condition</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="Image Assets/Inspection Process/Exterior4.jpeg" alt="Building Exterior">
+                        <div class="portfolio-item__overlay">
+                            <span class="portfolio-item__label">Building Exterior</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="Image Assets/Inspection Process/Structure4.jpeg" alt="Structure Assessment">
+                        <div class="portfolio-item__overlay">
+                            <span class="portfolio-item__label">Structure Assessment</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Reviews Section -->
+        <section class="reviews-section">
+            <div class="container">
+                <div class="reviews-section__header">
+                    <h2>What Our Clients Say</h2>
+                    <p>Don't just take our word for it—hear from homeowners and investors across the GTA.</p>
+                </div>
+                
+                <div class="reviews-grid">
+                    <!-- Review 1 -->
+                    <div class="review-card">
+                        <div class="review-card__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-card__text">
+                            "Michael was incredibly thorough and took the time to explain every finding. The same-day report was detailed with clear photos. He found issues with the roof that saved us thousands in negotiations. Highly recommend!"
+                        </p>
+                        <div class="review-card__author">
+                            <div class="review-card__avatar">JL</div>
+                            <div>
+                                <div class="review-card__name">Jennifer L.</div>
+                                <div class="review-card__location">North York</div>
+                                <div class="review-card__type">Pre-Purchase Inspection</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Review 2 -->
+                    <div class="review-card">
+                        <div class="review-card__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-card__text">
+                            "As a first-time homebuyer, I was nervous about the process. Michael walked me through the entire inspection, answered all my questions, and helped me understand what to prioritize. The thermal imaging caught a moisture issue we never would have seen otherwise."
+                        </p>
+                        <div class="review-card__author">
+                            <div class="review-card__avatar">DW</div>
+                            <div>
+                                <div class="review-card__name">David W.</div>
+                                <div class="review-card__location">Mississauga</div>
+                                <div class="review-card__type">Home Inspection + Thermal</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Review 3 -->
+                    <div class="review-card">
+                        <div class="review-card__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-card__text">
+                            "We hired Michael for our Tarion PDI and Year-End inspection. He found over 30 deficiencies that our builder had to fix under warranty. His knowledge of the Tarion process was invaluable. Money very well spent!"
+                        </p>
+                        <div class="review-card__author">
+                            <div class="review-card__avatar">SC</div>
+                            <div>
+                                <div class="review-card__name">Sarah & Chris M.</div>
+                                <div class="review-card__location">Vaughan</div>
+                                <div class="review-card__type">Tarion Warranty Inspection</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Service Areas Preview -->
+        <section class="areas-preview">
+            <div class="container">
+                <div class="areas-preview__content">
+                    <div class="areas-preview__text">
+                        <div class="areas-preview__icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Serving the Greater Toronto Area</h3>
+                            <p>From downtown Toronto to the surrounding regions</p>
+                        </div>
+                    </div>
+                    <div class="areas-preview__list">
+                        <span class="areas-preview__tag">Toronto</span>
+                        <span class="areas-preview__tag">Mississauga</span>
+                        <span class="areas-preview__tag">Brampton</span>
+                        <span class="areas-preview__tag">Markham</span>
+                        <span class="areas-preview__tag">Vaughan</span>
+                        <span class="areas-preview__tag">Richmond Hill</span>
+                        <span class="areas-preview__tag">Oakville</span>
+                        <span class="areas-preview__tag">Pickering</span>
+                        <a href="quote.html" class="areas-preview__tag" style="background: #1a1a1a; color: #ffffff; font-weight: 500;">+ More Areas</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="home-cta">
+            <div class="container">
+                <h2>Ready to Schedule Your Inspection?</h2>
+                <p>
+                    With same-day electronic reports and advanced thermal imaging, we give you the clear, factual information you need to make decisions with confidence.
+                </p>
+                <div class="home-cta__actions">
+                    <a href="quote.html" class="btn btn--primary" style="font-size: var(--text-lg);">Request a Quote</a>
+                    <a href="tel:+16475558888" class="home-cta__phone">
+                        <i class="fas fa-phone"></i> (647) 555-8888
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

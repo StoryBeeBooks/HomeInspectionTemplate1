@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="关于TO Inspect Ltd. - 认识Michael Heart，注册房屋检验师(RHI)。以精准、诚信和专业教育服务多伦多及大多伦多地区的房屋检验专家。">
+    <meta name="keywords" content="Michael Heart RHI, 多伦多房屋检验师, TO Inspect, 房屋检验专家, OAHI认证">
+    
+    <title>关于我们 | TO Inspect Ltd.</title>
+    
+    <!-- Fonts - Elegant Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- About Page Styles - Elegant Monochromatic -->
+    <style>
+        /* About Hero - Light Cream Background (matching Services page) */
+        .about-hero {
+            background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-warm-white) 100%);
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            padding: var(--space-3xl) 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232d2d2d' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        
+        .about-hero__content {
+            text-align: center;
+            color: var(--color-charcoal);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .about-hero__eyebrow {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .about-hero__eyebrow::before,
+        .about-hero__eyebrow::after {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background: var(--color-secondary);
+        }
+        
+        .about-hero__title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 400;
+            margin-bottom: var(--space-md);
+            letter-spacing: -0.02em;
+            color: var(--color-charcoal);
+        }
+        
+        .about-hero__subtitle {
+            font-family: var(--font-body);
+            font-size: var(--text-lg);
+            color: var(--color-text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+        
+        /* Bio Section - Elegant Monochromatic */
+        .bio-section {
+            padding: var(--space-3xl) 0;
+            background: #ffffff;
+        }
+        
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: var(--space-3xl);
+            align-items: start;
+        }
+        
+        .bio-image-container {
+            position: sticky;
+            top: 100px;
+        }
+        
+        .bio-image {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background: url('../Image Assets/index3.jpeg') center center / cover no-repeat;
+            border-radius: 2px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+        
+        .bio-credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            margin-top: var(--space-lg);
+            justify-content: center;
+        }
+        
+        .credential-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            padding: var(--space-sm) var(--space-md);
+            border-radius: 0;
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            background: #ffffff;
+            color: #1a1a1a;
+            border: 1px solid #1a1a1a;
+            transition: all 0.3s ease;
+        }
+        
+        .credential-badge:hover {
+            background: #1a1a1a;
+            color: #ffffff;
+        }
+        
+        .credential-badge--primary,
+        .credential-badge--secondary {
+            background: #ffffff;
+            color: #1a1a1a;
+            border: 1px solid #1a1a1a;
+        }
+        
+        .credential-badge--primary:hover,
+        .credential-badge--secondary:hover {
+            background: #1a1a1a;
+            color: #ffffff;
+        }
+        
+        .bio-content h2 {
+            font-family: var(--font-display);
+            font-size: var(--text-3xl);
+            color: #1a1a1a;
+            margin-bottom: var(--space-lg);
+            font-weight: 400;
+        }
+        
+        .bio-content p {
+            font-family: var(--font-body);
+            font-size: var(--text-base);
+            line-height: 1.9;
+            color: #4a4a4a;
+            margin-bottom: var(--space-md);
+            font-weight: 300;
+        }
+        
+        .bio-content p:last-of-type {
+            margin-bottom: 0;
+        }
+        
+        /* Philosophy Section - Refined Monochromatic */
+        .philosophy-section {
+            background: #fafafa;
+            padding: var(--space-3xl) 0;
+        }
+        
+        .philosophy-header {
+            text-align: center;
+            margin-bottom: var(--space-3xl);
+        }
+        
+        .philosophy-header h2 {
+            font-family: var(--font-display);
+            font-size: var(--text-3xl);
+            color: #1a1a1a;
+            margin-bottom: var(--space-md);
+            font-weight: 400;
+        }
+        
+        .philosophy-header p {
+            font-family: var(--font-body);
+            font-size: var(--text-lg);
+            color: #888888;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+        
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-xl);
+        }
+        
+        .philosophy-card {
+            background: var(--color-white);
+            border-radius: 2px;
+            padding: var(--space-xl);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+        
+        .philosophy-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+        
+        .philosophy-card__icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-lg);
+        }
+        
+        /* Pastel colors for each philosophy card icon */
+        .philosophy-card:nth-child(1) .philosophy-card__icon {
+            background: linear-gradient(135deg, #E8D5E2 0%, #f5eef3 100%); /* Mauve */
+        }
+        .philosophy-card:nth-child(2) .philosophy-card__icon {
+            background: linear-gradient(135deg, #D5E5E8 0%, #eef5f6 100%); /* Teal */
+        }
+        .philosophy-card:nth-child(3) .philosophy-card__icon {
+            background: linear-gradient(135deg, #E8E2D5 0%, #f5f3ee 100%); /* Sand */
+        }
+        .philosophy-card:nth-child(4) .philosophy-card__icon {
+            background: linear-gradient(135deg, #D5E8DE 0%, #eef5f1 100%); /* Sage */
+        }
+        
+        .philosophy-card__icon i {
+            font-size: 1.5rem;
+            color: #3d3d3d;
+        }
+        
+        .philosophy-card h3 {
+            font-family: var(--font-display);
+            font-size: var(--text-xl);
+            color: #1a1a1a;
+            margin-bottom: var(--space-md);
+            font-weight: 500;
+        }
+        
+        .philosophy-card p {
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            line-height: 1.8;
+            color: #666666;
+            font-weight: 300;
+        }
+        
+        /* Knowledge Share Section - Elegant Monochromatic */
+        .knowledge-section {
+            padding: var(--space-3xl) 0;
+            background: #ffffff;
+        }
+        
+        .knowledge-header {
+            text-align: center;
+            margin-bottom: var(--space-3xl);
+        }
+        
+        .knowledge-header h2 {
+            font-family: var(--font-display);
+            font-size: var(--text-3xl);
+            color: #1a1a1a;
+            margin-bottom: var(--space-md);
+            font-weight: 400;
+        }
+        
+        .knowledge-header p {
+            font-family: var(--font-body);
+            font-size: var(--text-lg);
+            color: #888888;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+        
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--space-xl);
+        }
+        
+        .article-card {
+            background: var(--color-white);
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+        
+        .article-card__header {
+            background: linear-gradient(135deg, #E8D5E2 0%, #D5E5E8 100%);
+            padding: var(--space-xl);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-height: 180px;
+        }
+        
+        /* Pastel backgrounds for different article categories */
+        .article-card:nth-child(1) .article-card__header {
+            background: linear-gradient(135deg, #E8D5E2 0%, #f5eef3 100%); /* Mauve */
+        }
+        .article-card:nth-child(2) .article-card__header {
+            background: linear-gradient(135deg, #D5E5E8 0%, #eef5f6 100%); /* Teal */
+        }
+        .article-card:nth-child(3) .article-card__header {
+            background: linear-gradient(135deg, #E8E2D5 0%, #f5f3ee 100%); /* Sand */
+        }
+        .article-card:nth-child(4) .article-card__header {
+            background: linear-gradient(135deg, #D5E8DE 0%, #eef5f1 100%); /* Sage */
+        }
+        .article-card:nth-child(5) .article-card__header {
+            background: linear-gradient(135deg, #E2D5E8 0%, #f3eef5 100%); /* Lavender */
+        }
+        .article-card:nth-child(6) .article-card__header {
+            background: linear-gradient(135deg, #D5DEE8 0%, #eef1f5 100%); /* Sky */
+        }
+        
+        .article-card__category {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            background: rgba(26, 26, 26, 0.08);
+            color: #4a4a4a;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: 0;
+            font-family: var(--font-body);
+            font-size: var(--text-xs);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: var(--space-md);
+            align-self: flex-start;
+        }
+        
+        .article-card__title {
+            font-family: var(--font-display);
+            font-size: var(--text-xl);
+            color: #1a1a1a;
+            line-height: 1.3;
+            font-weight: 500;
+            margin-top: auto;
+        }
+        
+        .article-card__body {
+            padding: var(--space-xl);
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        
+        .article-card__excerpt {
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            line-height: 1.8;
+            color: #666666;
+            margin-bottom: var(--space-md);
+            font-weight: 300;
+            flex-grow: 1;
+        }
+        
+        .article-card__footer {
+            margin-top: auto;
+            padding-top: var(--space-md);
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        
+        .article-card__meta {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            font-family: var(--font-body);
+            font-size: var(--text-xs);
+            color: #888888;
+        }
+        
+        .article-card__meta span {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+        
+        .article-card__cta {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: #1a1a1a;
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: var(--text-sm);
+            margin-top: var(--space-sm);
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+        
+        .article-card__cta:hover {
+            color: #666666;
+            gap: var(--space-sm);
+        }
+        
+        /* Article Modal - Refined Monochromatic */
+        .article-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 10000;
+            overflow-y: auto;
+            padding: var(--space-xl);
+        }
+        
+        .article-modal.active {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        
+        .article-modal__content {
+            background: var(--color-white);
+            border-radius: 2px;
+            max-width: 800px;
+            width: 100%;
+            margin: var(--space-xl) auto;
+            position: relative;
+            animation: modalSlideIn 0.3s ease;
+        }
+        
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .article-modal__header {
+            background: linear-gradient(135deg, #E8D5E2 0%, #f5eef3 100%);
+            padding: var(--space-2xl);
+            border-radius: 2px 2px 0 0;
+        }
+        
+        /* Pastel variants for modal header */
+        .article-modal__header--mauve {
+            background: linear-gradient(135deg, #E8D5E2 0%, #f5eef3 100%);
+        }
+        .article-modal__header--teal {
+            background: linear-gradient(135deg, #D5E5E8 0%, #eef5f6 100%);
+        }
+        .article-modal__header--sand {
+            background: linear-gradient(135deg, #E8E2D5 0%, #f5f3ee 100%);
+        }
+        .article-modal__header--sage {
+            background: linear-gradient(135deg, #D5E8DE 0%, #eef5f1 100%);
+        }
+        .article-modal__header--lavender {
+            background: linear-gradient(135deg, #E2D5E8 0%, #f3eef5 100%);
+        }
+        .article-modal__header--sky {
+            background: linear-gradient(135deg, #D5DEE8 0%, #eef1f5 100%);
+        }
+        
+        .article-modal__close {
+            position: absolute;
+            top: var(--space-lg);
+            right: var(--space-lg);
+            width: 40px;
+            height: 40px;
+            background: rgba(26, 26, 26, 0.1);
+            border: none;
+            border-radius: 0;
+            color: #1a1a1a;
+            font-size: var(--text-lg);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .article-modal__close:hover {
+            background: rgba(26, 26, 26, 0.2);
+        }
+        
+        .article-modal__category {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            background: rgba(26, 26, 26, 0.08);
+            color: #4a4a4a;
+            padding: var(--space-xs) var(--space-md);
+            border-radius: 0;
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            font-weight: 500;
+            margin-bottom: var(--space-md);
+            letter-spacing: 1px;
+        }
+        
+        .article-modal__title {
+            font-family: var(--font-display);
+            font-size: var(--text-2xl);
+            color: #1a1a1a;
+            line-height: 1.3;
+            margin-bottom: var(--space-md);
+            font-weight: 400;
+        }
+        
+        .article-modal__meta {
+            display: flex;
+            gap: var(--space-lg);
+            color: rgba(255, 255, 255, 0.6);
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+        }
+        
+        .article-modal__meta span {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+        
+        .article-modal__body {
+            padding: var(--space-2xl);
+        }
+        
+        .article-content {
+            font-family: var(--font-body);
+            font-size: var(--text-base);
+            line-height: 1.9;
+            color: #4a4a4a;
+            font-weight: 300;
+        }
+        
+        .article-content h3 {
+            font-family: var(--font-display);
+            font-size: var(--text-xl);
+            color: #1a1a1a;
+            margin: var(--space-xl) 0 var(--space-md);
+            font-weight: 500;
+        }
+        
+        .article-content h3:first-child {
+            margin-top: 0;
+        }
+        
+        .article-content p {
+            margin-bottom: var(--space-md);
+        }
+        
+        .article-content ul,
+        .article-content ol {
+            margin: var(--space-md) 0;
+            padding-left: var(--space-xl);
+        }
+        
+        .article-content li {
+            margin-bottom: var(--space-sm);
+        }
+        
+        .article-content strong {
+            color: #1a1a1a;
+            font-weight: 500;
+        }
+        
+        /* CTA Section - Light Background */
+        .about-cta {
+            background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-warm-white) 100%);
+            padding: var(--space-3xl) 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232d2d2d' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        
+        .about-cta h2 {
+            font-family: var(--font-display);
+            font-size: var(--text-3xl);
+            color: #1a1a1a;
+            margin-bottom: var(--space-md);
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .about-cta p {
+            font-family: var(--font-body);
+            font-size: var(--text-lg);
+            color: #4a4a4a;
+            margin-bottom: var(--space-xl);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .about-cta .btn {
+            margin: 0 var(--space-sm);
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .bio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .bio-image-container {
+                position: static;
+                max-width: 350px;
+                margin: 0 auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .article-modal {
+                padding: var(--space-md);
+            }
+            
+            .article-modal__content {
+                margin: var(--space-md) auto;
+            }
+            
+            .article-modal__header {
+                padding: var(--space-xl);
+            }
+            
+            .article-modal__body {
+                padding: var(--space-xl);
+            }
+            
+            .about-cta .btn {
+                display: block;
+                margin: var(--space-sm) auto;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Component -->
+    <div id="header-placeholder"></div>
+    
+    <!-- Page Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero__content">
+                <span class="about-hero__eyebrow">我们的故事</span>
+                <h1 class="about-hero__title">关于 TO Inspect</h1>
+                <p class="about-hero__subtitle">
+                    以精准、诚信和专业的客户教育，为多伦多房屋提供专业检验服务。
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- Bio Section -->
+        <section class="bio-section">
+            <div class="container">
+                <div class="bio-grid">
+                    <div class="bio-image-container">
+                        <div class="bio-image"></div>
+                        <div class="bio-credentials">
+                            <span class="credential-badge">
+                                <i class="fas fa-certificate"></i> RHI 认证
+                            </span>
+                            <span class="credential-badge">
+                                <i class="fas fa-award"></i> OAHI 会员
+                            </span>
+                            <span class="credential-badge">
+                                <i class="fas fa-thermometer-half"></i> 热成像检测
+                            </span>
+                            <span class="credential-badge">
+                                <i class="fas fa-fire"></i> WETT 认证
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="bio-content">
+                        <h2>认识 Michael Heart，注册房屋检验师</h2>
+                        <p>
+                            Michael Heart 是一位注册房屋检验师（RHI），也是 TO Inspect Ltd. 的创始人，为多伦多及大多伦多地区的房主、买家和房地产专业人士提供服务。凭借对细节的敏锐洞察力和帮助客户做出明智决策的热情，Michael 以其全面、透明和出色的客户教育建立了良好的声誉。
+                        </p>
+                        <p>
+                            在进入房屋检验行业之前，Michael 在建筑和装修领域工作多年，从地基到屋顶，对住宅建筑系统积累了丰富的实践经验。这种实际背景使他能够深入了解房屋的建造方式、常见问题的发生位置，以及哪些维护措施可以延长房产的使用寿命。
+                        </p>
+                        <p>
+                            作为安大略省房屋检验师协会（OAHI）会员，并持有多项专业认证——包括木材燃烧设备的 WETT 认证和红外热成像的一级热成像认证——Michael 始终走在行业标准和检验技术的前沿。他定期参加继续教育研讨会，并及时了解安大略省建筑规范的变化。
+                        </p>
+                        <p>
+                            Michael 还是公认的 Tarion 保修专家，为新房买家进行了数百次交房前检验（PDI）和年末保修检验。他对 Tarion 建筑性能指南的熟悉程度可以帮助客户识别可保修的缺陷，并有效地完成保修索赔流程。
+                        </p>
+                        <p>
+                            在不进行房产检验时，Michael 喜欢通过本网站的知识分享栏目分享他的专业知识，发布有关季节性维护提示、常见检验发现和房主教育的文章。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Philosophy Section -->
+        <section class="philosophy-section">
+            <div class="container">
+                <div class="philosophy-header">
+                    <h2>我们的理念</h2>
+                    <p>
+                        在 TO Inspect Ltd.，我们深知房屋可能是您一生中最大的购买决定。我们的服务方法建立在四项核心原则之上。
+                    </p>
+                </div>
+                
+                <div class="philosophy-image" style="margin-bottom: var(--space-2xl);">
+                    <img src="../Image Assets/Index2.jpeg" alt="Home inspection cross section" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 2px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);">
+                </div>
+                
+                <div class="philosophy-grid">
+                    <div class="philosophy-card">
+                        <div class="philosophy-card__icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3>公正独立</h3>
+                        <p>
+                            我们只做检验——绝不承包工程。我们在推荐维修或服务方面没有任何经济利益。我们的唯一职责是为您提供对房产状况的诚实、公正的评估，让您能够自信地做出决定。
+                        </p>
+                    </div>
+                    
+                    <div class="philosophy-card">
+                        <div class="philosophy-card__icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3>标准与技术</h3>
+                        <p>
+                            我们按照 OAHI 和 CAN/CSA-A770-16 标准进行检验。我们还利用热成像技术来检测肉眼不可见的问题——湿气入侵、隔热缺陷、电气热点等——为您提供更全面的房产状况图景。
+                        </p>
+                    </div>
+                    
+                    <div class="philosophy-card">
+                        <div class="philosophy-card__icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3>本地专业知识</h3>
+                        <p>
+                            我们熟悉多伦多和大多伦多地区。从 Annex 区的百年老宅到 Liberty Village 的现代公寓，从万锦市的郊区住宅到奥克维尔的滨水物业——我们了解本地区房产的独特挑战和特点。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Knowledge Share Section -->
+        <section class="knowledge-section">
+            <div class="container">
+                <div class="knowledge-header">
+                    <h2>知识分享</h2>
+                    <p>
+                        Michael Heart 的专业文章和见解，帮助您维护和了解您的房屋。
+                    </p>
+                </div>
+                
+                <div class="articles-grid" id="articles-container">
+                    <!-- Articles will be loaded dynamically from JSON -->
+                    <div style="text-align: center; padding: var(--space-2xl); color: var(--color-medium-gray);">
+                        <i class="fas fa-spinner fa-spin" style="font-size: 2rem; margin-bottom: var(--space-md);"></i>
+                        <p>正在加载文章...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Article Modal -->
+        <div class="article-modal" id="article-modal">
+            <div class="article-modal__content">
+                <button class="article-modal__close" onclick="closeArticleModal()">&times;</button>
+                <div class="article-modal__header">
+                    <span class="article-modal__category" id="modal-category"></span>
+                    <h2 class="article-modal__title" id="modal-title"></h2>
+                    <div class="article-modal__meta">
+                        <span><i class="fas fa-calendar"></i> <span id="modal-date"></span></span>
+                        <span><i class="fas fa-clock"></i> <span id="modal-readtime"></span></span>
+                    </div>
+                </div>
+                <div class="article-modal__body">
+                    <div class="article-content" id="modal-content">
+                        <!-- Content will be injected here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CTA Section -->
+        <section class="about-cta">
+            <div class="container">
+                <h2>准备好预约您的检验了吗？</h2>
+                <p>
+                    让 Michael 和 TO Inspect 团队为您提供全面、专业的检验服务，让您安心无忧。
+                </p>
+                <a href="quote.html" class="btn btn--primary">获取报价</a>
+                <a href="services.html" class="btn btn--secondary">查看服务</a>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <!-- Knowledge Share JavaScript -->
+    <script>
+        // Store articles data globally
+        let articlesData = [];
+        
+        // Load articles from JSON
+        async function loadArticles() {
+            try {
+                const response = await fetch('data/knowledge-share.json');
+                const data = await response.json();
+                articlesData = data.articles;
+                renderArticles(articlesData);
+            } catch (error) {
+                console.error('Error loading articles:', error);
+                document.getElementById('articles-container').innerHTML = `
+                    <div style="text-align: center; padding: var(--space-2xl); color: var(--color-accent);">
+                        <i class="fas fa-exclamation-triangle" style="font-size: 2rem; margin-bottom: var(--space-md);"></i>
+                        <p>无法加载文章。请稍后重试。</p>
+                    </div>
+                `;
+            }
+        }
+        
+        // Render articles grid
+        function renderArticles(articles) {
+            const container = document.getElementById('articles-container');
+            
+            if (articles.length === 0) {
+                container.innerHTML = `
+                    <div style="text-align: center; padding: var(--space-2xl); color: var(--color-medium-gray);">
+                        <p>目前没有可用的文章。</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = articles.map((article, index) => `
+                <article class="article-card" onclick="openArticle('${article.id}', ${index})">
+                    <div class="article-card__header">
+                        <span class="article-card__category">
+                            <i class="fas ${article.icon}"></i>
+                            ${article.category}
+                        </span>
+                        <h3 class="article-card__title">${article.title}</h3>
+                    </div>
+                    <div class="article-card__body">
+                        <p class="article-card__excerpt">${article.excerpt}</p>
+                        <div class="article-card__footer">
+                            <div class="article-card__meta">
+                                <span><i class="fas fa-calendar"></i> ${formatDate(article.date)}</span>
+                                <span><i class="fas fa-clock"></i> ${article.readTime}</span>
+                            </div>
+                            <span class="article-card__cta">
+                                阅读文章 <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+        }
+        
+        // Format date for display
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'short', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString('en-US', options);
+        }
+        
+        // Open article modal
+        function openArticle(articleId, cardIndex) {
+            const article = articlesData.find(a => a.id === articleId);
+            if (!article) return;
+            
+            // Pastel color classes matching card order
+            const pastelClasses = ['mauve', 'teal', 'sand', 'sage', 'lavender', 'sky'];
+            const modalHeader = document.querySelector('.article-modal__header');
+            
+            // Remove any existing pastel classes
+            pastelClasses.forEach(cls => modalHeader.classList.remove(`article-modal__header--${cls}`));
+            
+            // Add the matching pastel class based on card index
+            const colorIndex = cardIndex % pastelClasses.length;
+            modalHeader.classList.add(`article-modal__header--${pastelClasses[colorIndex]}`);
+            
+            document.getElementById('modal-category').innerHTML = `<i class="fas ${article.icon}"></i> ${article.category}`;
+            document.getElementById('modal-title').textContent = article.title;
+            document.getElementById('modal-date').textContent = formatDate(article.date);
+            document.getElementById('modal-readtime').textContent = article.readTime;
+            document.getElementById('modal-content').innerHTML = article.content;
+            
+            document.getElementById('article-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // Close article modal
+        function closeArticleModal() {
+            document.getElementById('article-modal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        // Close modal on backdrop click
+        document.getElementById('article-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeArticleModal();
+            }
+        });
+        
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeArticleModal();
+            }
+        });
+        
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', loadArticles);
+    </script>
+</body>
+</html>

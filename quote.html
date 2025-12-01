@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Request a home inspection quote from TO Inspect Ltd. Professional inspection services in Toronto and the GTA. Same-day reporting available.">
+    <meta name="keywords" content="home inspection quote, inspection estimate, Toronto home inspector, GTA inspection">
+    
+    <title>Request a Quote | TO Inspect Ltd.</title>
+    
+    <!-- Fonts - Elegant Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Quote Page Specific Styles - Elegant Monochromatic -->
+    <style>
+        /* Hero Section - Light Cream Background */
+        .quote-hero {
+            background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-warm-white) 100%);
+            padding: var(--space-3xl) 0;
+            text-align: center;
+            color: var(--color-charcoal);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .quote-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232d2d2d' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        
+        .quote-hero__content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .quote-hero__eyebrow {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .quote-hero__eyebrow::before,
+        .quote-hero__eyebrow::after {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background: var(--color-secondary);
+        }
+        
+        .quote-hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: var(--space-md);
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            color: var(--color-charcoal);
+        }
+        
+        .quote-hero p {
+            font-family: var(--font-body);
+            font-size: var(--text-lg);
+            color: var(--color-text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+        
+        /* Call Banner - Monochromatic */
+        .call-banner {
+            background: #f5f5f5;
+            padding: var(--space-lg) 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .call-banner__content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: var(--space-lg);
+        }
+        
+        .call-banner__text {
+            font-family: var(--font-body);
+            font-size: var(--text-base);
+            font-weight: 400;
+            color: #666666;
+            letter-spacing: 0.5px;
+        }
+        
+        .call-banner__phone {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            background: #1a1a1a;
+            color: var(--color-white);
+            padding: var(--space-sm) var(--space-xl);
+            border-radius: 0;
+            font-family: var(--font-body);
+            font-size: var(--text-lg);
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        
+        .call-banner__phone:hover {
+            background: #2d2d2d;
+            color: var(--color-white);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Main Layout */
+        .quote-layout {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: var(--space-2xl);
+            align-items: start;
+        }
+        
+        @media (max-width: 1100px) {
+            .quote-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Form Styles - Monochromatic */
+        .quote-form {
+            background: var(--color-white);
+            border-radius: 2px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04);
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+        
+        .quote-form__header {
+            background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-warm-white) 100%);
+            padding: var(--space-xl);
+            color: #1a1a1a;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .quote-form__header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232d2d2d' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        
+        .quote-form__header h2 {
+            font-family: var(--font-display);
+            font-size: var(--text-2xl);
+            margin-bottom: var(--space-sm);
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .quote-form__header p {
+            color: #666666;
+            font-size: var(--text-sm);
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .quote-form__body {
+            padding: var(--space-xl);
+        }
+        
+        .form-section {
+            margin-bottom: var(--space-xl);
+            padding-bottom: var(--space-xl);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        
+        .form-section:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .form-section__title {
+            font-family: var(--font-display);
+            font-size: var(--text-lg);
+            color: #1a1a1a;
+            margin-bottom: var(--space-lg);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-weight: 500;
+        }
+        
+        .form-section__title i {
+            color: #888888;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-md);
+        }
+        
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .form-group {
+            margin-bottom: var(--space-md);
+        }
+        
+        .form-label {
+            display: block;
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: var(--text-sm);
+            color: #1a1a1a;
+            margin-bottom: var(--space-xs);
+            letter-spacing: 0.3px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: var(--space-sm) var(--space-md);
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            border-radius: 2px;
+            font-family: var(--font-body);
+            font-size: var(--text-base);
+            font-weight: 300;
+            transition: all 0.3s ease;
+            background: #fafafa;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #1a1a1a;
+            background: #ffffff;
+            box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.06);
+        }
+        
+        textarea.form-control {
+            min-height: 80px;
+            resize: vertical;
+        }
+        
+        /* Questionnaire Styles - Monochromatic */
+        .questionnaire-intro {
+            background: #f5f5f5;
+            border-radius: 2px;
+            padding: var(--space-md);
+            margin-bottom: var(--space-lg);
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            color: #666666;
+            border-left: 3px solid #1a1a1a;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+        
+        .question-item {
+            background: #fafafa;
+            border-radius: 2px;
+            padding: var(--space-md);
+            margin-bottom: var(--space-md);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+        
+        .question-item__label {
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: var(--text-sm);
+            color: #4a4a4a;
+            margin-bottom: var(--space-sm);
+            display: block;
+            line-height: 1.6;
+        }
+        
+        .question-item__label strong {
+            color: #1a1a1a;
+            font-weight: 500;
+        }
+        
+        .question-item textarea {
+            min-height: 60px;
+        }
+        
+        /* Submit Button - Monochromatic */
+        .submit-btn {
+            width: 100%;
+            padding: var(--space-md) var(--space-xl);
+            background: #1a1a1a;
+            color: var(--color-white);
+            border: none;
+            border-radius: 0;
+            font-family: var(--font-body);
+            font-size: var(--text-base);
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-sm);
+        }
+        
+        .submit-btn:hover {
+            background: #2d2d2d;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Sidebar - Monochromatic */
+        .quote-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+        
+        .sidebar-card {
+            background: var(--color-white);
+            border-radius: 2px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04);
+            margin-bottom: var(--space-lg);
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+        
+        .sidebar-card--primary {
+            background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-warm-white) 100%);
+            color: #1a1a1a;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .sidebar-card--primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232d2d2d' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        
+        .sidebar-card__header {
+            padding: var(--space-lg);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        
+        .sidebar-card--primary .sidebar-card__header {
+            border-bottom-color: rgba(0, 0, 0, 0.06);
+        }
+        
+        .sidebar-card__title {
+            font-family: var(--font-display);
+            font-size: var(--text-lg);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-weight: 500;
+        }
+        
+        .sidebar-card--primary .sidebar-card__title {
+            color: #1a1a1a;
+        }
+        
+        .sidebar-card__body {
+            padding: var(--space-lg);
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Contact Card - Monochromatic */
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .contact-item__icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(26, 26, 26, 0.08);
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .contact-item__icon i {
+            color: #4a4a4a;
+            font-size: var(--text-base);
+        }
+        
+        .contact-item__content {
+            flex: 1;
+        }
+        
+        .contact-item__label {
+            font-family: var(--font-body);
+            font-size: var(--text-xs);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.6;
+            margin-bottom: 4px;
+            font-weight: 400;
+        }
+        
+        .contact-item__value {
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: var(--text-base);
+        }
+        
+        .contact-item__value a {
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+        
+        .sidebar-card--primary .contact-item__value a:hover {
+            color: #666666;
+        }
+        
+        /* Features List - Monochromatic */
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .features-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-sm);
+            padding: var(--space-sm) 0;
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            font-weight: 300;
+            color: #4a4a4a;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            line-height: 1.6;
+        }
+        
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .features-list i {
+            color: #1a1a1a;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+        
+        .features-list li strong {
+            color: #1a1a1a;
+            font-weight: 500;
+        }
+        
+        /* Service Areas - Monochromatic */
+        .service-areas {
+            padding: var(--space-3xl) 0;
+            background: #fafafa;
+        }
+        
+        .service-areas__header {
+            text-align: center;
+            margin-bottom: var(--space-2xl);
+        }
+        
+        .service-areas__header h2 {
+            font-family: var(--font-display);
+            font-size: var(--text-3xl);
+            color: #1a1a1a;
+            margin-bottom: var(--space-sm);
+            font-weight: 400;
+        }
+        
+        .service-areas__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: var(--space-lg);
+        }
+        
+        .area-card {
+            background: var(--color-white);
+            border-radius: 2px;
+            padding: var(--space-lg);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+        
+        .area-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+        
+        .area-card__title {
+            font-family: var(--font-display);
+            font-size: var(--text-lg);
+            color: #1a1a1a;
+            margin-bottom: var(--space-md);
+            padding-bottom: var(--space-sm);
+            border-bottom: 1px solid #1a1a1a;
+            font-weight: 500;
+        }
+        
+        .area-card__list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .area-card__list li {
+            padding: var(--space-xs) 0;
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            color: #666666;
+            font-weight: 300;
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+        
+        .area-card__list li::before {
+            content: "•";
+            color: #888888;
+            font-weight: bold;
+        }
+        
+        /* Why Choose Us Section - Monochromatic */
+        .why-us-section {
+            padding: var(--space-3xl) 0;
+            background: #ffffff;
+        }
+        
+        .why-us__header {
+            text-align: center;
+            margin-bottom: var(--space-2xl);
+        }
+        
+        .why-us__header h2 {
+            font-family: var(--font-display);
+            font-size: var(--text-3xl);
+            color: #1a1a1a;
+            font-weight: 400;
+        }
+        
+        .why-us__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-xl);
+        }
+        
+        .why-us__item {
+            display: flex;
+            gap: var(--space-md);
+        }
+        
+        .why-us__icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        /* Pastel backgrounds for each why-us icon */
+        .why-us__item:nth-child(1) .why-us__icon {
+            background: linear-gradient(135deg, #E8D5E2 0%, #f5eef3 100%); /* Mauve */
+        }
+        .why-us__item:nth-child(2) .why-us__icon {
+            background: linear-gradient(135deg, #D5E5E8 0%, #eef5f6 100%); /* Teal */
+        }
+        .why-us__item:nth-child(3) .why-us__icon {
+            background: linear-gradient(135deg, #E8E2D5 0%, #f5f3ee 100%); /* Sand */
+        }
+        .why-us__item:nth-child(4) .why-us__icon {
+            background: linear-gradient(135deg, #D5E8DE 0%, #eef5f1 100%); /* Sage */
+        }
+        .why-us__item:nth-child(5) .why-us__icon {
+            background: linear-gradient(135deg, #E2D5E8 0%, #f3eef5 100%); /* Lavender */
+        }
+        .why-us__item:nth-child(6) .why-us__icon {
+            background: linear-gradient(135deg, #D5DEE8 0%, #eef1f5 100%); /* Sky */
+        }
+        
+        .why-us__icon i {
+            color: #1a1a1a;
+            font-size: var(--text-lg);
+        }
+        
+        .why-us__content h4 {
+            font-family: var(--font-display);
+            color: #1a1a1a;
+            margin-bottom: var(--space-xs);
+            font-weight: 500;
+        }
+        
+        .why-us__content p {
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            color: #666666;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Component -->
+    <div id="header-placeholder"></div>
+    
+    <!-- Page Hero -->
+    <section class="quote-hero">
+        <div class="container">
+            <div class="quote-hero__content">
+                <span class="quote-hero__eyebrow">Get Started</span>
+                <h1>Request a Quote</h1>
+                <p>Call us or fill out this Pre-Inspection Questionnaire, and we will give you a call ASAP.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call Banner -->
+    <section class="call-banner">
+        <div class="container">
+            <div class="call-banner__content">
+                <span class="call-banner__text"><i class="fas fa-bolt"></i> Call us for a quicker response!</span>
+                <a href="tel:+16475558888" class="call-banner__phone">
+                    <i class="fas fa-phone"></i> (647) 555-8888
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="section">
+            <div class="container">
+                <div class="quote-layout">
+                    
+                    <!-- Quote Form -->
+                    <div class="quote-form">
+                        <div class="quote-form__header">
+                            <h2><i class="fas fa-clipboard-list"></i> Pre-Inspection Questionnaire</h2>
+                            <p>Please fill out the form below and we'll contact you to discuss your inspection needs.</p>
+                        </div>
+                        
+                        <div class="quote-form__body">
+                            <form id="quoteForm" action="#" method="POST">
+                                
+                                <!-- Basic Information -->
+                                <div class="form-section">
+                                    <h3 class="form-section__title"><i class="fas fa-user"></i> Your Information</h3>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label class="form-label" for="name">Full Name *</label>
+                                            <input type="text" id="name" name="name" class="form-control" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="email">Email Address *</label>
+                                            <input type="email" id="email" name="email" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label class="form-label" for="phone">Phone Number *</label>
+                                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="relationship">Your Relationship to the Property *</label>
+                                            <select id="relationship" name="relationship" class="form-control" required>
+                                                <option value="">Select...</option>
+                                                <option value="buyer">Prospective Buyer</option>
+                                                <option value="seller">Current Owner / Seller</option>
+                                                <option value="owner">Property Owner</option>
+                                                <option value="agent">Real Estate Agent</option>
+                                                <option value="property-manager">Property Manager</option>
+                                                <option value="executor">Estate Executor</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Property Information -->
+                                <div class="form-section">
+                                    <h3 class="form-section__title"><i class="fas fa-home"></i> Property Information</h3>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label" for="address">Property Address *</label>
+                                        <input type="text" id="address" name="address" class="form-control" placeholder="Street Address, City, Postal Code" required>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label class="form-label" for="propertyType">Property Type *</label>
+                                            <select id="propertyType" name="propertyType" class="form-control" required>
+                                                <option value="">Select type...</option>
+                                                <option value="detached">Detached House</option>
+                                                <option value="semi-detached">Semi-Detached</option>
+                                                <option value="townhouse">Townhouse / Row House</option>
+                                                <option value="condo">Condo Unit</option>
+                                                <option value="multiplex">Duplex / Triplex / Multiplex</option>
+                                                <option value="commercial-retail">Commercial Retail</option>
+                                                <option value="commercial-office">Commercial Office</option>
+                                                <option value="industrial">Industrial / Warehouse</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="size">Approximate Size (sq ft)</label>
+                                            <input type="text" id="size" name="size" class="form-control" placeholder="e.g., 2,500 sq ft">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Pre-Inspection Questionnaire -->
+                                <div class="form-section">
+                                    <h3 class="form-section__title"><i class="fas fa-question-circle"></i> Property Condition Questions</h3>
+                                    
+                                    <div class="questionnaire-intro">
+                                        <strong>Please Note:</strong> If you answer "yes" to any of the questions below, please provide a brief description in the text field. This information helps us prepare for your inspection and provide a more accurate quote.
+                                    </div>
+                                    
+                                    <!-- Question a -->
+                                    <div class="question-item">
+                                        <label class="question-item__label">
+                                            <strong>a)</strong> Are you aware of any previous or outstanding <strong>building code or fire code violations</strong>?
+                                        </label>
+                                        <textarea class="form-control" name="q_code_violations" placeholder="If yes, please describe..."></textarea>
+                                    </div>
+                                    
+                                    <!-- Question b -->
+                                    <div class="question-item">
+                                        <label class="question-item__label">
+                                            <strong>b)</strong> Are you aware of any <strong>major upcoming repairs or replacements</strong>?
+                                        </label>
+                                        <textarea class="form-control" name="q_upcoming_repairs" placeholder="If yes, please describe..."></textarea>
+                                    </div>
+                                    
+                                    <!-- Question c -->
+                                    <div class="question-item">
+                                        <label class="question-item__label">
+                                            <strong>c)</strong> Are you aware of any <strong>major structural deficiencies</strong> in the building?
+                                        </label>
+                                        <textarea class="form-control" name="q_structural" placeholder="If yes, please describe..."></textarea>
+                                    </div>
+                                    
+                                    <!-- Question d -->
+                                    <div class="question-item">
+                                        <label class="question-item__label">
+                                            <strong>d)</strong> What is the <strong>age of the roof membrane</strong>?
+                                        </label>
+                                        <input type="text" class="form-control" name="q_roof_age" placeholder="e.g., 10 years, Unknown, etc.">
+                                    </div>
+                                    
+                                    <!-- Question e -->
+                                    <div class="question-item">
+                                        <label class="question-item__label">
+                                            <strong>e)</strong> Is there a <strong>roof warranty or bond</strong> available for the existing roof membrane?
+                                        </label>
+                                        <textarea class="form-control" name="q_roof_warranty" placeholder="If yes, please describe..."></textarea>
+                                    </div>
+                                    
+                                    <!-- Question f -->
+                                    <div class="question-item">
+                                        <label class="question-item__label">
+                                            <strong>f)</strong> Are you aware of any <strong>active roof leaks</strong>?
+                                        </label>
+                                        <textarea class="form-control" name="q_roof_leaks" placeholder="If yes, please describe..."></textarea>
+                                    </div>
+                                    
+                                    <!-- Question g -->
+                                    <div class="question-item">
+                                        <label class="question-item__label">
+                                            <strong>g)</strong> Is there a <strong>maintenance contract for the heating and air conditioning</strong> systems? If so, who is the service provider?
+                                        </label>
+                                        <textarea class="form-control" name="q_hvac_contract" placeholder="If yes, please describe..."></textarea>
+                                    </div>
+                                    
+                                    <!-- Question h -->
+                                    <div class="question-item">
+                                        <label class="question-item__label">
+                                            <strong>h)</strong> What is the <strong>age of the heating and air conditioning</strong> systems?
+                                        </label>
+                                        <input type="text" class="form-control" name="q_hvac_age" placeholder="e.g., Furnace: 8 years, A/C: 5 years">
+                                    </div>
+                                    
+                                    <!-- Question i -->
+                                    <div class="question-item">
+                                        <label class="question-item__label">
+                                            <strong>i)</strong> Is there a <strong>warranty on the heating or air conditioning</strong> systems?
+                                        </label>
+                                        <textarea class="form-control" name="q_hvac_warranty" placeholder="If yes, please describe..."></textarea>
+                                    </div>
+                                    
+                                    <!-- Question j -->
+                                    <div class="question-item">
+                                        <label class="question-item__label">
+                                            <strong>j)</strong> Are you aware of any <strong>aluminum wiring</strong> in the building?
+                                        </label>
+                                        <textarea class="form-control" name="q_aluminum_wiring" placeholder="If yes, please describe..."></textarea>
+                                    </div>
+                                    
+                                    <!-- Question k -->
+                                    <div class="question-item">
+                                        <label class="question-item__label">
+                                            <strong>k)</strong> Is there a <strong>maintenance contract for the elevator</strong>? If so, who is the service provider?
+                                        </label>
+                                        <textarea class="form-control" name="q_elevator" placeholder="If yes, please describe... (N/A if no elevator)"></textarea>
+                                    </div>
+                                    
+                                    <!-- Question l -->
+                                    <div class="question-item">
+                                        <label class="question-item__label">
+                                            <strong>l)</strong> Are you aware of any <strong>inoperative components or systems</strong> in the building?
+                                        </label>
+                                        <textarea class="form-control" name="q_inoperative" placeholder="If yes, please describe..."></textarea>
+                                    </div>
+                                    
+                                    <!-- Question m -->
+                                    <div class="question-item">
+                                        <label class="question-item__label">
+                                            <strong>m)</strong> Is there any <strong>ongoing or pending litigation</strong> related to the property's physical condition?
+                                        </label>
+                                        <textarea class="form-control" name="q_litigation" placeholder="If yes, please describe..."></textarea>
+                                    </div>
+                                    
+                                    <!-- Question n -->
+                                    <div class="question-item">
+                                        <label class="question-item__label">
+                                            <strong>n)</strong> Are you aware of any <strong>parking inadequacies</strong> at the property?
+                                        </label>
+                                        <textarea class="form-control" name="q_parking" placeholder="If yes, please describe..."></textarea>
+                                    </div>
+                                    
+                                    <!-- Question o -->
+                                    <div class="question-item">
+                                        <label class="question-item__label">
+                                            <strong>o)</strong> Do you have any <strong>other information</strong> about the physical condition of the building or property?
+                                        </label>
+                                        <textarea class="form-control" name="q_other_info" placeholder="Please share any additional details..."></textarea>
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" class="submit-btn">
+                                    <i class="fas fa-paper-plane"></i> Submit Questionnaire
+                                </button>
+                                
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- Sidebar -->
+                    <div class="quote-sidebar">
+                        
+                        <!-- Direct Contact Card -->
+                        <div class="sidebar-card sidebar-card--primary">
+                            <div class="sidebar-card__header">
+                                <h3 class="sidebar-card__title"><i class="fas fa-comments"></i> Prefer to Talk?</h3>
+                            </div>
+                            <div class="sidebar-card__body">
+                                <p style="color: #4a4a4a; margin-bottom: var(--space-lg); font-size: var(--text-sm);">
+                                    Reach out directly and we'll take care of everything.
+                                </p>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-item__icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div class="contact-item__content">
+                                        <div class="contact-item__label">Call Us</div>
+                                        <div class="contact-item__value">
+                                            <a href="tel:+16475558888">(647) 555-8888</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-item__icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-item__content">
+                                        <div class="contact-item__label">Email Us</div>
+                                        <div class="contact-item__value">
+                                            <a href="mailto:mike@TOInspect.ca">mike@TOInspect.ca</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-item__icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="contact-item__content">
+                                        <div class="contact-item__label">Hours of Operation</div>
+                                        <div class="contact-item__value">Mon–Sun: 8:00 AM – 9:00 PM</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-item__icon">
+                                        <i class="fas fa-language"></i>
+                                    </div>
+                                    <div class="contact-item__content">
+                                        <div class="contact-item__label">Languages Spoken</div>
+                                        <div class="contact-item__value">English & Mandarin (普通话)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Why Choose Us Card -->
+                        <div class="sidebar-card">
+                            <div class="sidebar-card__header">
+                                <h3 class="sidebar-card__title" style="color: #1a1a1a;"><i class="fas fa-star" style="color: #FFD700;"></i> Why TO Inspect?</h3>
+                            </div>
+                            <div class="sidebar-card__body">
+                                <ul class="features-list">
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span><strong>Same-Day Reporting:</strong> Detailed electronic report with annotated photos on the same day.</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span><strong>Comprehensive Coverage:</strong> From roof to foundation, plus Mould Testing, WETT, and Thermal Imaging.</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span><strong>New Build Experts:</strong> We navigate the Tarion Warranty process to ensure defects are fixed.</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span><strong>Commercial & Residential:</strong> Condos to retail spaces (ASTM E2018 compliant).</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span><strong>Safety First:</strong> We identify electrical, fire, and trip hazards to protect your family.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+        <!-- Service Areas Section -->
+        <section class="service-areas">
+            <div class="container">
+                <div class="service-areas__header">
+                    <h2><i class="fas fa-map-marker-alt" style="color: var(--color-red);"></i> Our Service Areas</h2>
+                    <p style="color: #888888;">Proudly serving the Greater Toronto Area and surrounding regions</p>
+                </div>
+                
+                <div class="service-areas__grid">
+                    
+                    <!-- City of Toronto -->
+                    <div class="area-card">
+                        <h3 class="area-card__title">City of Toronto</h3>
+                        <ul class="area-card__list">
+                            <li>Old Toronto</li>
+                            <li>Etobicoke</li>
+                            <li>North York</li>
+                            <li>Scarborough</li>
+                            <li>York</li>
+                            <li>East York</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Peel Region -->
+                    <div class="area-card">
+                        <h3 class="area-card__title">Peel Region</h3>
+                        <ul class="area-card__list">
+                            <li>Mississauga</li>
+                            <li>Brampton</li>
+                            <li>Caledon</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- York Region -->
+                    <div class="area-card">
+                        <h3 class="area-card__title">York Region</h3>
+                        <ul class="area-card__list">
+                            <li>Markham</li>
+                            <li>Richmond Hill</li>
+                            <li>Vaughan</li>
+                            <li>Newmarket</li>
+                            <li>Aurora</li>
+                            <li>King</li>
+                            <li>Whitchurch-Stouffville</li>
+                            <li>East Gwillimbury</li>
+                            <li>Georgina</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Durham Region -->
+                    <div class="area-card">
+                        <h3 class="area-card__title">Durham Region</h3>
+                        <ul class="area-card__list">
+                            <li>Pickering</li>
+                            <li>Ajax</li>
+                            <li>Whitby</li>
+                            <li>Oshawa</li>
+                            <li>Clarington</li>
+                            <li>Uxbridge</li>
+                            <li>Scugog</li>
+                            <li>Brock</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Halton Region -->
+                    <div class="area-card">
+                        <h3 class="area-card__title">Halton Region</h3>
+                        <ul class="area-card__list">
+                            <li>Oakville</li>
+                            <li>Burlington</li>
+                            <li>Milton</li>
+                            <li>Halton Hills</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+        <!-- Why Choose Us Section -->
+        <section class="why-us-section">
+            <div class="container">
+                <div class="why-us__header">
+                    <h2>What Sets Us Apart</h2>
+                </div>
+                
+                <div class="why-us__grid">
+                    <div class="why-us__item">
+                        <div class="why-us__icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="why-us__content">
+                            <h4>Same-Day Reporting</h4>
+                            <p>You receive a detailed electronic report, complete with annotated photos and clear descriptions, on the very same day as the inspection.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="why-us__item">
+                        <div class="why-us__icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="why-us__content">
+                            <h4>Comprehensive Coverage</h4>
+                            <p>From the roof to the foundation, including specialized options like Mould Testing, WETT Inspections, and Thermal Imaging.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="why-us__item">
+                        <div class="why-us__icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="why-us__content">
+                            <h4>New Build Experts</h4>
+                            <p>We navigate the Tarion Warranty process with you to ensure your builder fixes construction defects.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="why-us__item">
+                        <div class="why-us__icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="why-us__content">
+                            <h4>Commercial & Residential</h4>
+                            <p>Qualified to inspect everything from condos and detached homes to commercial retail and meeting halls (ASTM E2018 compliant).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="why-us__item">
+                        <div class="why-us__icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="why-us__content">
+                            <h4>Safety First</h4>
+                            <p>We identify safety hazards (electrical, fire, trip hazards) to protect your family and employees.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="why-us__item">
+                        <div class="why-us__icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div class="why-us__content">
+                            <h4>Bilingual Service</h4>
+                            <p>Full service available in both English and Mandarin (普通话) to serve our diverse Toronto community.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <!-- Form Handling Script -->
+    <script>
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get required fields
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const propertyType = document.getElementById('propertyType').value;
+            const relationship = document.getElementById('relationship').value;
+            
+            // Basic validation
+            if (!name || !email || !phone || !address || !propertyType || !relationship) {
+                alert('Please fill in all required fields marked with *');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // In production, this would submit to a server
+            alert('Thank you for submitting your Pre-Inspection Questionnaire!\n\nWe will review your information and contact you within 24 hours to discuss your inspection needs.\n\nFor faster service, call us at (647) 555-8888.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

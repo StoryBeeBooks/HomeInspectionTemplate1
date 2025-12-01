@@ -1,0 +1,202 @@
+{
+  "categories": [
+    {
+      "id": "residential",
+      "title": "Residential Home Inspections",
+      "tagline": "Buy, Sell, and Maintain with Confidence",
+      "icon": "fa-home",
+      "services": [
+        {
+          "id": "pre-purchase",
+          "title": "Pre-Purchase Inspection",
+          "subtitle": "For Home Buyers",
+          "icon": "fa-search-dollar",
+          "summary": "Buying a home is your biggest investment. Our comprehensive inspection covers all major systems—from roof to foundation—giving you the facts to make an informed decision.",
+          "pricing": {
+            "base": "$400.00",
+            "baseNote": "Homes (up to 2000 sq ft)",
+            "additions": [
+              { "item": "Each additional 500 sq.ft.", "price": "+ $50" },
+              { "item": "Finished Basement or Crawlspace", "price": "+ $50" },
+              { "item": "Houses older than 20 years", "price": "+ $50" },
+              { "item": "Houses older than 50 years", "price": "+ $75" }
+            ]
+          },
+          "details": "<h4>What Is a Pre-Purchase Inspection?</h4><p>A pre-purchase inspection is a non-invasive, visual examination of the accessible areas of a residential property. It is designed to identify material defects, safety hazards, and systems that are nearing the end of their service life.</p><p>All our inspections are executed in strict accordance with the <strong>Ontario Association of Home Inspectors (OAHI) Standards of Practice</strong> and the <strong>CAN/CSA-A770-16 Home Inspection Standard</strong>.</p><h4>What We Inspect</h4><p>We examine your potential home from top to bottom, covering hundreds of components:</p><ul><li><strong>Roofing Systems:</strong> Condition of shingles/coverings, flashings, chimneys, and roof penetrations</li><li><strong>Exterior Elements:</strong> Wall cladding (siding/brick/stucco), entry doors, and windows</li><li><strong>Structure & Foundation:</strong> Signs of shifting, cracking, or water penetration in basements and crawlspaces</li><li><strong>Drainage & Grading:</strong> Landscaping, walkways, and drainage patterns</li><li><strong>Heating & Cooling:</strong> Furnaces, air conditioners, heat pumps, and ductwork</li><li><strong>Plumbing System:</strong> Supply lines, waste pipes, water pressure, and fixtures</li><li><strong>Electrical System:</strong> Service panel, grounding, wiring type, and outlet safety (GFCI/AFCI)</li><li><strong>Insulation & Ventilation:</strong> Attic and visible insulation for energy efficiency</li><li><strong>Interior Spaces:</strong> Walls, ceilings, floors, stairs, and railings</li></ul><h4>Your Same-Day Electronic Report</h4><ul><li><strong>Same-Day Service:</strong> Full report via email on the day of inspection</li><li><strong>Visual Clarity:</strong> Digital reports with annotated photos—no confusing jargon</li><li><strong>Actionable Insights:</strong> Issues categorized by severity for clear prioritization</li></ul><h4>The Benefits</h4><ul><li><strong>Protection from Hidden Expenses:</strong> Identify issues like a failing roof or wet basement before you close</li><li><strong>Negotiation Leverage:</strong> Use findings to negotiate price or request repairs</li><li><strong>Family Safety:</strong> We look for electrical risks, fire hazards, mould potential, and trip hazards</li><li><strong>Long-Term Planning:</strong> Estimates for remaining life of major components help you budget</li></ul>"
+        },
+        {
+          "id": "pre-listing",
+          "title": "Pre-Listing Inspection",
+          "subtitle": "For Home Sellers",
+          "icon": "fa-clipboard-list",
+          "summary": "Take control of the sale process by identifying issues before the 'For Sale' sign goes up. Avoid surprises, justify your asking price, and facilitate multiple offers.",
+          "pricing": {
+            "base": "$400.00",
+            "baseNote": "Homes (up to 2000 sq ft)",
+            "additions": [
+              { "item": "Each additional 500 sq.ft.", "price": "+ $50" },
+              { "item": "Finished Basement or Crawlspace", "price": "+ $50" },
+              { "item": "Houses older than 20 years", "price": "+ $50" },
+              { "item": "Houses older than 50 years", "price": "+ $75" }
+            ],
+            "multiPlex": {
+              "base": "$500.00",
+              "baseNote": "Multi-Plexes (first unit)",
+              "additions": [
+                { "item": "Each additional unit", "price": "+ $125" },
+                { "item": "Multi-Plexes older than 20 years", "price": "+ $50" },
+                { "item": "Multi-Plexes older than 50 years", "price": "+ $75" }
+              ]
+            }
+          },
+          "details": "<h4>Why Get an Inspection Before You List?</h4><p>Most real estate transactions stall or fail because of what the buyer's inspector finds. By inspecting first, you gain four distinct advantages:</p><h4>1. Eliminate Last-Minute Surprises</h4><p>There is nothing worse than accepting an offer, only to have the buyer try to renegotiate—or walk away entirely—because their inspector found a damp basement or an electrical issue.</p><p>We identify these issues before a buyer ever sets foot in your home, allowing you to fix them, disclose them, or adjust your asking price upfront.</p><h4>2. Control Your Repair Costs</h4><p>When a buyer finds a defect, they often demand a rush repair by a licensed contractor of their choice (usually the most expensive option) or demand a massive price reduction.</p><p>When you find the defect first, you can shop around for competitive repair quotes or handle simple maintenance tasks yourself on your own timeline.</p><h4>3. Justify Your Asking Price</h4><p>In a competitive market, buyers want assurance. A clean inspection report serves as an unbiased third-party validation of your home's condition.</p><p>If your home is in great shape, our report proves it—you can confidently justify your listing price with documentation.</p><h4>4. Facilitate Multiple & Firm Offers</h4><p>In the Toronto and GTA market, transparency sells. By making our detailed report available to prospective buyers at the open house, you build immediate trust.</p><p>Buyers who have seen a credible report are often more comfortable submitting \"clean\" offers without inspection contingencies.</p><h4>What Is Included?</h4><p>We perform the same rigorous assessment for sellers as we do for buyers:</p><ul><li>Roofing and Exterior Cladding</li><li>Heating, Cooling, and Ventilation</li><li>Electrical and Plumbing Systems</li><li>Structure and Foundation</li><li>Insulation and Windows</li></ul><div class='highlight-box'><strong>The Outcome:</strong> A detailed electronic report the same day—acting as a powerful sales tool that distinguishes your property from others on the market.</div>"
+        },
+        {
+          "id": "condo",
+          "title": "Condo Inspections",
+          "subtitle": "Unit-Specific Assessment",
+          "icon": "fa-building",
+          "summary": "Toronto condo living has unique risks. While building management covers the exterior, you're responsible for the interior. We identify issues within your specific unit.",
+          "pricing": {
+            "base": "$300.00",
+            "baseNote": "High-Rise Apartment Condominiums (up to 2000 sq ft)",
+            "additions": [
+              { "item": "Each additional 500 sq.ft.", "price": "+ $20" }
+            ]
+          },
+          "details": "<h4>Why Condo Inspections Matter</h4><p>There is a common misconception that buying a condo means you do not need an inspection because the building management handles everything. This could not be further from the truth.</p><p>While the condo corporation is responsible for the building envelope and common areas, <strong>you are fully responsible for everything inside the four walls of your unit</strong>. In the Toronto market, where repairs to specialized condo systems can be incredibly expensive, a professional inspection is the only way to ensure you are not buying someone else's headache.</p><h4>What We Inspect Inside Your Unit</h4><p>Our Condo Inspection is a comprehensive assessment of the interior systems and finishes. We look beyond the cosmetic surface to identify malfunctioning components, poor workmanship, and safety hazards.</p><h4>1. Plumbing and Water Leakage</h4><p>Water is the biggest risk in condo living. A leak in your unit can damage your property and the units below you, leading to massive liability.</p><ul><li>All visible supply piping, drains, showers, bathtubs, and toilets</li><li>Tile work and caulking in wet areas to prevent water penetration</li></ul><h4>2. Electrical System</h4><ul><li>Electrical panel safety, labeling, and capacity</li><li>Outlets including GFCI in kitchens and bathrooms</li><li>Light fixtures for proper grounding and function</li></ul><h4>3. Heating and Cooling (HVAC)</h4><p>Condo HVAC systems such as Fan Coil Units or Heat Pumps are often the homeowner's responsibility to maintain and can be costly to replace.</p><ul><li>Testing heating and cooling effectiveness</li><li>Filter condition and signs of past leakage</li></ul><h4>4. Windows and Doors</h4><ul><li>Broken thermal seals or foggy glass</li><li>Damaged hardware or locking mechanisms</li><li>Drafts and air leakage</li><li>Water damage on sills or surrounding drywall</li></ul><h4>5. Interior Finishes</h4><ul><li>Floors, walls, and ceilings condition</li><li>Signs of warping flooring (may indicate past flooding)</li><li>Settlement cracks and water stains from above</li></ul><h4>A Word on Common Elements</h4><p>While we do not perform a technical inspection of common elements (roof, parking garage, elevators, pools), we do look for <strong>Red Flags</strong>.</p><p>If we spot obvious issues such as a worn out roof, deteriorating balconies, or blown window seals throughout the building exterior, we will note them in your report.</p><div class='highlight-box'><strong>Why this matters:</strong> Significant wear on common elements often leads to Special Assessments or increases in your monthly maintenance fees. Our observations help you understand potential long-term costs.</div>"
+        },
+        {
+          "id": "maintenance",
+          "title": "Maintenance Inspections",
+          "subtitle": "For Current Homeowners",
+          "icon": "fa-tools",
+          "summary": "Your home doesn't have a 'Check Engine' light. Our maintenance inspection helps you prioritize repairs and budget for the future before small issues become expensive disasters.",
+          "details": "<h4>Protect Your Investment and Plan for the Future</h4><p>Your home is likely the most valuable asset you own. Yet, unlike your car, your home does not come with a Check Engine light to warn you when something is wrong. As your house ages and endures the harsh weather cycles of Southern Ontario, wear and tear is inevitable.</p><p>Many homeowners only call an expert when a disaster happens—a flooded basement or a furnace failure in the middle of winter. Our Maintenance Inspection changes that approach from <strong>reactive to proactive</strong>.</p><h4>Who Is This Inspection For?</h4><ul><li><strong>Long-time homeowners</strong> who want to ensure their property remains in top condition</li><li><strong>New owners</strong> who bypassed an inspection during a competitive purchase and now want to know exactly what they bought</li><li><strong>Property investors</strong> looking to create a capital expenditure budget for rental units</li></ul><h4>The Goal: Prevention Over Repair</h4><p>Small defects have a way of spiraling into major renovations if left unchecked. A missing shingle can lead to water intrusion and mould. A small plumbing drip can rot out a subfloor.</p><p>Our inspection creates a defensive shield around your wallet by identifying these \"silent\" problems early.</p><h4>What We Inspect</h4><ul><li><strong>Exterior and Roof:</strong> Weather damage, drainage issues, and points of water entry</li><li><strong>HVAC Systems:</strong> Age and condition of heating/cooling equipment</li><li><strong>Plumbing and Electrical:</strong> Outdated wiring, slow leaks, and safety hazards</li><li><strong>Attic and Insulation:</strong> Ventilation to prevent ice damming and heat loss</li></ul><h4>Your Homeowner Playbook</h4><p>Our comprehensive report answers four critical questions:</p><ul><li><strong>What are my maintenance priorities?</strong> What needs immediate attention vs. cosmetic items</li><li><strong>What can wait?</strong> Items that are functional now but need attention in the next few years</li><li><strong>How much will it cost?</strong> Estimates for remaining life of major components</li><li><strong>Is my family safe?</strong> Fire hazards, electrical risks, and trip hazards identified</li></ul>"
+        }
+      ]
+    },
+    {
+      "id": "tarion",
+      "title": "New Home Warranty Inspections",
+      "tagline": "Hold Your Builder Accountable (Tarion)",
+      "icon": "fa-shield-alt",
+      "description": "New does not always mean perfect. As experts in Tarion Construction Guidelines and Ontario building codes, we ensure your new build is up to standard and help you document defects for warranty protection.",
+      "services": [
+        {
+          "id": "pdi",
+          "title": "Pre-Delivery Inspection (PDI)",
+          "subtitle": "Before Move-In",
+          "icon": "fa-key",
+          "summary": "We attend the PDI with you and the builder to ensure all defects are professionally documented before you take possession of your new home.",
+          "details": "<h4>Your First Defense Before You Move In</h4><p>There is a dangerous myth that a newly built home is perfect. The reality is that new homes are complex projects built by dozens of different tradespeople working under tight deadlines. Mistakes happen, corners get cut, and components are sometimes installed incorrectly.</p><p>The Pre-Delivery Inspection (PDI) is your <strong>single most important opportunity</strong> to document the condition of your home before you take possession.</p><h4>The Problem</h4><p>Most homeowners do not know what to look for beyond cosmetic scratches or missing cabinet handles. They often miss serious technical issues that could cause problems later.</p><h4>Our Solution</h4><p>We attend the PDI with you as your advocate. We inspect the home from top to bottom, ensuring that incomplete work, poor contracting, and safety hazards are officially recorded on the PDI Form.</p><div class='highlight-box'><strong>Important:</strong> If it is not written down, it can be difficult to get the builder to fix it later.</div><h4>Why Hire a Professional?</h4><p>Builders often push back on homeowner complaints, claiming that a defect is \"within tolerance\" or \"industry standard.\" We speak their language.</p><p>Our reports reference the specific sections of the <strong>Tarion Construction Performance Guidelines</strong>. When we flag a defect, we back it up with the technical data required to prove it is a valid warranty claim.</p>"
+        },
+        {
+          "id": "30-day-1-2-year",
+          "title": "30-Day, 1-Year & 2-Year Warranty",
+          "subtitle": "Post-Occupancy Inspections",
+          "icon": "fa-calendar-check",
+          "summary": "If your home develops issues after you move in, we provide the professional documentation required to get the builder to fix it under the Tarion protection plan.",
+          "details": "<h4>30-Day and 1-Year Warranty Inspections</h4><p><strong>Scope:</strong> These are the most comprehensive warranties available. They cover almost every type of defect, including poor workmanship, material defects, and Ontario Building Code violations.</p><h4>What We Look For</h4><p>We check for issues that typically appear after the house settles and is lived in for a few weeks:</p><ul><li>Nail pops in drywall</li><li>Door misalignment</li><li>Flooring gaps</li><li>Plumbing leaks</li><li>Poor finishes and workmanship</li></ul><p><strong>The Goal:</strong> To produce a complete list of deficiencies for your 30-Day or Year-End Form so your builder returns to fix everything at once.</p><h4>2-Year Warranty Inspection</h4><p><strong>Scope:</strong> As the home ages, the warranty coverage narrows to focus on critical systems and the building envelope.</p><h4>What We Look For</h4><ul><li><strong>Water Penetration:</strong> Leaks in the basement or foundation</li><li><strong>Building Envelope:</strong> Defects in windows, doors, and caulking that let water into walls</li><li><strong>Mechanical Systems:</strong> Problems with electrical, plumbing, and heating delivery</li><li><strong>Exterior Cladding:</strong> Detachment or deterioration of brick, siding, or stucco</li></ul><div class='highlight-box'><strong>Pro Tip:</strong> Our reports reference specific sections of the Tarion Construction Performance Guidelines, making it much harder for a builder to deny your request for repairs.</div>"
+        },
+        {
+          "id": "7-year",
+          "title": "7-Year Major Structural Warranty",
+          "subtitle": "Structural Defect Assessment",
+          "icon": "fa-home",
+          "summary": "Before your 7-year major structural warranty expires, let us inspect for any structural defects that may be covered under Tarion protection.",
+          "details": "<h4>Major Structural Defect (MSD) Warranty</h4><p>The 7-Year warranty covers the most serious category of construction defects—those that affect the structural integrity of your home.</p><h4>What We Look For</h4><p>We assess the load-bearing components of your home for signs of failure:</p><ul><li>Significant cracks in foundation walls</li><li>Severe distortion of roof structures</li><li>Shifting that compromises the structural integrity of the building</li><li>Foundation settlement issues</li><li>Load-bearing wall problems</li></ul><h4>Why This Inspection Matters</h4><p>Structural repairs are among the most expensive fixes a homeowner can face. Before your 7-year warranty expires, it's critical to have a professional assessment to document any potential claims.</p><div class='highlight-box'><strong>Don't Miss Your Deadline:</strong> Once the 7-year warranty expires, you lose your right to make claims for major structural defects. Schedule your inspection well in advance of your warranty expiration date.</div>"
+        }
+      ]
+    },
+    {
+      "id": "specialized",
+      "title": "Specialized Testing & Add-Ons",
+      "tagline": "Go Beyond the Visual Inspection",
+      "icon": "fa-microscope",
+      "services": [
+        {
+          "id": "thermal",
+          "title": "Thermal Imaging (Infrared)",
+          "subtitle": "See What the Eye Cannot",
+          "icon": "fa-thermometer-half",
+          "summary": "Using advanced infrared technology, we scan for latent defects hidden behind walls and ceilings—missing insulation, air leakage, overheating electrical, and hidden water leaks.",
+          "pricing": {
+            "standalone": "starting at $250.00",
+            "standaloneNote": "Stand Alone Thermography Inspection"
+          },
+          "details": "<h4>See Beyond the Surface</h4><p>A standard home inspection is a visual examination. While our inspectors are highly trained to spot defects, they cannot see through drywall, behind cabinets, or under floorboards.</p><p>We bridge this gap using advanced <strong>Thermal Imaging technology</strong> (Infrared Thermography). This non-invasive method detects subtle temperature differences that act as a roadmap to hidden issues.</p><h4>How It Works</h4><p>Everything in your home emits heat energy. Our industrial-grade infrared cameras translate this energy into a visible image:</p><ul><li><strong>Wet areas</strong> appear darker (colder) due to evaporation</li><li><strong>Missing insulation</strong> appears as hot or cold patches</li><li><strong>Overheating electrical</strong> parts appear bright white or red</li></ul><h4>What We Can Detect</h4><h4>1. Hidden Water Leaks and Moisture</h4><p>Small leaks behind shower walls, under sinks, or from the roof can go unnoticed for years until they cause structural rot or mould. We scan ceilings, walls, and floors to ensure your home is dry.</p><h4>2. Missing or Settled Insulation</h4><p>Common in both old and new homes—areas where insulation was missed or has settled over time. These voids cause significant heat loss and high energy bills.</p><h4>3. Electrical Overheating</h4><p>Electrical fires often start with a loose connection or overloaded circuit generating excess heat. We scan the electrical panel and switches to catch these safety hazards.</p><h4>4. Air Leakage and Drafts</h4><p>We pinpoint exactly where cold air is entering around windows, doors, and baseboards so you can seal those gaps.</p><h4>5. Radiant Floor Heating</h4><p>For homes with heated floors, thermal imaging verifies the heating coils are fully functional across the entire room.</p><h4>Service Availability</h4><ul><li><strong>As an Add-On:</strong> Best value when combined with a Pre-Purchase or Pre-Listing inspection</li><li><strong>As Stand-Alone:</strong> For specific issues like a mystery leak or cold room</li></ul>"
+        },
+        {
+          "id": "mould",
+          "title": "Mould Inspections & Air Quality Testing",
+          "subtitle": "Unbiased Testing for Peace of Mind",
+          "icon": "fa-wind",
+          "summary": "We provide unbiased air quality testing. As a non-remediation company, we have no incentive to find problems that don't exist. Lab-analyzed results you can trust.",
+          "details": "<h4>Unbiased Testing for Your Health</h4><p>Mould is more than just an unsightly issue; it is a potential health hazard that can affect the air quality of your entire home. For families with allergies, asthma, or respiratory sensitivities, hidden mould spores can cause ongoing health problems.</p><p>In the Toronto market, water damage in basements and condos is common. If left untreated, moisture leads to mould growth within <strong>24 to 48 hours</strong>.</p><div class='highlight-box'><strong>The Unbiased Advantage:</strong> We are NOT a mould remediation company. We make no money from repairs, so our results are 100% unbiased. If we find mould, it is because it is really there.</div><h4>Our Testing Process</h4><h4>1. Air Quality Testing (Spore Trap)</h4><ul><li><strong>Reference Sample:</strong> Air sample outside to establish a baseline</li><li><strong>Interior Sample:</strong> Air samples in areas of concern (basement, attic, bedrooms)</li><li><strong>Lab Comparison:</strong> Accredited laboratory compares indoor vs. outdoor spore counts</li></ul><h4>2. Surface Sampling</h4><p>For \"mystery stains\" on walls, ceilings, or baseboards:</p><ul><li>Swabs or tape lifts to collect direct samples</li><li>Lab analysis identifies specific mould species</li><li>Helps determine severity and remediation steps</li></ul><h4>When Should You Test?</h4><ul><li>Persistent musty or earthy odour in the home</li><li>History of water leaks, flooded basements, or roof leaks</li><li>Unexplained allergy symptoms (coughing, sneezing, eye irritation)</li><li>Buying a home that has been vacant without climate control</li></ul><h4>Transparent Pricing</h4><ul><li><strong>Basic Air Testing Package:</strong> One indoor + one outdoor sample with lab report</li><li><strong>Stand-Alone Service:</strong> $350</li><li><strong>Add-On to Home Inspection:</strong> $325</li><li><strong>Additional Air Samples:</strong> $125 each (for larger/multi-story properties)</li></ul>"
+        },
+        {
+          "id": "wett",
+          "title": "WETT Inspections",
+          "subtitle": "Wood Energy Transfer Technology",
+          "icon": "fa-fire",
+          "summary": "If your home has a wood-burning stove or fireplace, your insurance company will likely require a WETT inspection. We provide certified reports for insurance compliance.",
+          "pricing": {
+            "standalone": "$200.00",
+            "addon": "+ $100",
+            "addonNote": "with the purchase of a home inspection"
+          },
+          "details": "<h4>Certified Inspections for Wood-Burning Appliances</h4><p>There is nothing quite like the warmth of a wood-burning stove or fireplace during a Canadian winter. However, these appliances involve live fire inside your home, which carries inherent risks.</p><p>Almost every insurance company in Ontario now requires a <strong>WETT (Wood Energy Technical Training) inspection</strong> before they will insure a property with a wood-burning appliance.</p><h4>What is a WETT Inspection?</h4><p>WETT Inc. is the authority on wood energy safety in Canada. We perform a <strong>Level 1 Visual Inspection</strong>—the standard level required for real estate transactions and insurance compliance—verifying your system meets CSA B365 safety codes.</p><h4>What We Inspect</h4><h4>1. The Appliance</h4><p>We check the stove, insert, or fireplace to ensure it is certified and free from cracks or structural damage.</p><h4>2. Clearances to Combustibles</h4><p>The most common failure point. We measure distances between the appliance and combustible materials to ensure they meet manufacturer safety requirements.</p><h4>3. Floor Protection</h4><p>We verify the hearth pad is non-combustible and extends far enough to catch sparks or embers.</p><h4>4. Venting and Chimney</h4><p>We inspect the visible flue pipe and chimney system for proper assembly, secure connections, and signs of creosote buildup or corrosion.</p><h4>Why Is This Important?</h4><ul><li><strong>Insurance Compliance:</strong> Without this report, you may face higher premiums, policy cancellation, or refusal of coverage</li><li><strong>Family Safety:</strong> An improperly installed stove can ignite nearby walls without direct flame contact</li></ul><h4>The Outcome</h4><ul><li><strong>If it passes:</strong> Submit report immediately to your insurance broker</li><li><strong>If it fails:</strong> We identify exactly what needs to be fixed for compliance</li></ul><h4>Service Availability</h4><ul><li><strong>Add-On Service:</strong> Combined with home inspection at discounted rate</li><li><strong>Stand-Alone Service:</strong> For current homeowners with insurance requirements</li></ul>"
+        }
+      ]
+    },
+    {
+      "id": "commercial",
+      "title": "Commercial Building Inspections",
+      "tagline": "Due Diligence for Investors and Business Owners",
+      "icon": "fa-city",
+      "services": [
+        {
+          "id": "pca",
+          "title": "Property Condition Assessment",
+          "subtitle": "ASTM E2018-24 Standard",
+          "icon": "fa-chart-line",
+          "summary": "Comprehensive assessments for small-to-medium commercial properties including mixed-use, low-rise commercial, churches, and meeting halls. Includes 20-year capital expenditure outlook.",
+          "details": "<h4>Due Diligence for Investors and Business Owners</h4><p>Purchasing commercial real estate carries different risks than buying a home. The physical condition of the building directly impacts your bottom line.</p><p>We specialize in comprehensive inspections for small to medium commercial properties across Toronto and Southern Ontario.</p><h4>Who We Serve</h4><ul><li><strong>Mixed-Use Buildings:</strong> Retail on ground floor with residential above</li><li><strong>Low-Rise Commercial:</strong> Office buildings, strip plazas, standalone retail</li><li><strong>Special Purpose Buildings:</strong> Churches, meeting halls, community centers</li><li><strong>Live-Work Units:</strong> Converted lofts combining residential and commercial space</li></ul><h4>The Standard: ASTM E2018-24</h4><p>Our inspections strictly adhere to the <strong>ASTM E2018-24 Standard Guide for Property Condition Assessments</strong>—the industry gold standard for commercial due diligence that meets requirements of commercial lenders, banks, and institutional investors.</p><h4>What's Included in a PCA?</h4><h4>1. Site and Grounds</h4><p>Topography, drainage, landscaping, retaining walls, parking lots, driveways, and walkways.</p><h4>2. Structure and Envelope</h4><p>Foundation, structural framing, exterior wall cladding—checking for cracks, settlement, and water intrusion.</p><h4>3. Roofing Systems</h4><p>Commercial flat roofs are often the most expensive maintenance item. We inspect surface, flashings, parapets, and drainage systems.</p><h4>4. Mechanical and Electrical</h4><p>HVAC systems, main electrical service, and plumbing systems—verifying they are functional and safe.</p><h4>Your 20-Year Cost Outlook</h4><p>Unlike residential reports focused on immediate safety, our commercial report focuses on <strong>financial planning</strong>:</p><ul><li><strong>Immediate Costs:</strong> What needs fixing right now</li><li><strong>Short-Term (1-5 years):</strong> Aging roof, HVAC replacements</li><li><strong>Long-Term (5-20 years):</strong> Capital expenses to budget for</li></ul><div class='highlight-box'><strong>This financial roadmap allows you to:</strong> Adjust your offer price, secure financing with clear asset understanding, and plan Net Operating Income (NOI) accurately.</div>"
+        }
+      ]
+    },
+    {
+      "id": "additional",
+      "title": "Additional Services",
+      "tagline": "Specialized Assessments Available",
+      "icon": "fa-plus-circle",
+      "services": [
+        {
+          "id": "radon",
+          "title": "Radon Testing",
+          "subtitle": "Invisible Health Hazard Protection",
+          "icon": "fa-radiation",
+          "summary": "Radon is an invisible, odorless radioactive gas and the leading cause of lung cancer in non-smokers. We provide professional testing to ensure your home's air is safe.",
+          "details": "<h4>Protect Your Family from the Invisible Hazard</h4><p>Radon is a radioactive gas that is colorless, odorless, and tasteless. It is produced by the natural breakdown of uranium in soil, rock, and water. When it rises from the ground and gets trapped inside your home, it can accumulate to dangerous levels.</p><h4>Why You Need to Test</h4><p>Because homes in Southern Ontario are built to be airtight for energy efficiency, they often trap ground gases inside. Radon enters through cracks in the foundation, gaps around service pipes, floor drains, and sump pumps.</p><div class='highlight-box'><strong>The Health Risk:</strong> According to Health Canada, radon exposure is the #1 cause of lung cancer in non-smokers, responsible for more than 3,000 deaths in Canada every year.</div><h4>Our Testing Services</h4><h4>1. Short-Term Testing (Real Estate)</h4><p>For home buyers who can't wait months for a result:</p><ul><li>Continuous Radon Monitors or short-term electret devices</li><li>Testing period of 48 to 96 hours</li><li>Quick snapshot during conditional period</li><li>Negotiate remediation costs before closing</li></ul><h4>2. Long-Term Testing (Homeowners)</h4><p>For the most accurate assessment (Health Canada recommended):</p><ul><li>Minimum 91 days over winter months</li><li>Small, unobtrusive device in lowest lived-in level</li><li>Accredited laboratory analysis</li><li>True average of long-term exposure</li></ul><h4>Radon and Your New Home Warranty</h4><p>If your home is less than 7 years old and tests above Health Canada's guideline of <strong>200 Bq/m³</strong>, your builder is required to pay for the mitigation system under Tarion warranty. Our test provides the proof needed to file a claim.</p><h4>What If Levels Are High?</h4><p>Don't panic—radon problems are fixable. The solution is usually a straightforward ventilation system installed by a certified mitigation professional.</p>"
+        },
+        {
+          "id": "sewer",
+          "title": "Sewer Scope Inspection",
+          "subtitle": "Underground Pipe Assessment",
+          "icon": "fa-video",
+          "summary": "Video inspection of your sewer lateral to identify blockages, tree root intrusion, cracks, or bellied pipes that could lead to costly backups and repairs.",
+          "details": "<h4>Inspect the Underground Pipes Before You Buy</h4><p>The main sewer line connects the plumbing of the house to the city sewer system. In many older Toronto neighborhoods, these underground pipes are ticking time bombs waiting to fail.</p><p>A standard home inspection cannot predict the condition of buried sewer lines. A Sewer Scope Inspection is the only way to know the true condition before you inherit a disaster.</p><h4>Why Is This Critical in Toronto?</h4><p>Essential for anyone buying a home built before 1980:</p><h4>1. The Age of Materials</h4><p>Modern homes use durable PVC piping. Older Toronto homes used clay or cast iron pipes—brittle materials with limited lifespans that can crack, shift, or collapse.</p><h4>2. Tree Roots</h4><p>Toronto's beautiful mature trees have aggressive roots that seek water. They can penetrate small cracks in old clay lines, causing blockages that back raw sewage into your basement.</p><h4>What We Look For</h4><p>We use a high-definition, self-leveling camera fed through the main cleanout to the municipal connection:</p><ul><li><strong>Root Intrusion:</strong> Roots growing into the pipe blocking flow</li><li><strong>Offsets and Settlement:</strong> Shifted pipe sections creating ridges</li><li><strong>Cracks and Collapses:</strong> Structural failure requiring excavation</li><li><strong>Low Spots (Bellies):</strong> Areas where the pipe sags, pooling waste</li><li><strong>Blockages:</strong> Grease, wipes, or construction debris buildup</li></ul><h4>The Financial Risk</h4><p>Replacing a main sewer line typically costs <strong>$5,000 to over $20,000</strong>—involving excavation of front yard, driveway, or basement floor. A sewer scope inspection provides insurance against this massive expense.</p><h4>The Deliverable</h4><ul><li>Video footage of your sewer line</li><li>Written report detailing findings</li><li>Evidence for negotiating repairs or credits with the seller</li></ul>"
+        },
+        {
+          "id": "phase1",
+          "title": "Phase 1 Environmental Site Assessment",
+          "subtitle": "Commercial Due Diligence",
+          "icon": "fa-leaf",
+          "summary": "Environmental due diligence for commercial property transactions. Identifies potential contamination liabilities before you purchase or develop a property.",
+          "details": "<h4>Manage Environmental Risk and Secure Financing</h4><p>When buying commercial real estate, you inherit the history of the property. Current owners can be held liable for past environmental contamination—even if you didn't cause the pollution.</p><p>A Phase 1 ESA investigates the property history to determine if there is a risk of potential environmental contamination.</p><h4>Why Is This Required?</h4><h4>1. Financing Requirements</h4><p>Almost all banks and major lenders require a clean Phase 1 ESA before approving a commercial mortgage. They need assurance that collateral isn't devalued by toxic soil or groundwater.</p><h4>2. Liability Protection</h4><p>Conducting a Phase 1 ESA demonstrates \"All Appropriate Inquiries\" prior to purchase—a key legal defense if contamination is discovered later.</p><h4>Our Process: CSA Z768-01 Standard</h4><p>Non-intrusive assessment (no drilling or soil samples at this stage):</p><h4>1. Historical Records Review</h4><ul><li>Aerial photographs dating back decades</li><li>Fire insurance maps</li><li>City directories and land title records</li><li>Ministry of the Environment spill records</li></ul><h4>2. Site Visit</h4><p>Visual inspection looking for:</p><ul><li>Vent pipes or fill caps (underground storage tanks)</li><li>Stressed vegetation or stained soil</li><li>Chemical storage areas</li><li>Potential asbestos or mould</li></ul><h4>3. Interviews</h4><p>Conversations with current owners, occupants, and government officials about past activities and known spills.</p><h4>Common Red Flags in Toronto</h4><ul><li><strong>Former Gas Stations:</strong> Leaking underground fuel tanks</li><li><strong>Dry Cleaners:</strong> Solvent contamination (PERC)</li><li><strong>Industrial Sites:</strong> Chemical use, metal plating, auto repair</li><li><strong>Heating Oil Tanks:</strong> Older fuel oil systems</li></ul><h4>The Outcome</h4><ul><li><strong>No Further Action:</strong> Clean report satisfies your lender</li><li><strong>Phase 2 Recommended:</strong> If contamination suspected, physical testing (soil/groundwater sampling) to confirm</li></ul>"
+        }
+      ]
+    }
+  ]
+}

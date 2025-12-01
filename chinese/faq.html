@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently Asked Questions about home inspections in Toronto. Learn about qualifications, pricing, inspection scope, and what to expect from TO Inspect Ltd.">
+    <meta name="keywords" content="home inspection FAQ, Toronto home inspector questions, inspection pricing, knob and tube wiring, Kitec plumbing, home inspection process">
+    
+    <title>FAQ | TO Inspect Ltd. - Home Inspection Questions Answered</title>
+    
+    <!-- Fonts - Elegant Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- FAQ Page Styles -->
+    <style>
+        /* FAQ Hero */
+        .faq-hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            padding: var(--space-3xl) 0;
+            position: relative;
+        }
+        
+        .faq-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .faq-hero__content {
+            text-align: center;
+            color: var(--color-white);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .faq-hero__eyebrow {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #888888;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .faq-hero__eyebrow::before,
+        .faq-hero__eyebrow::after {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background: #4a4a4a;
+        }
+        
+        .faq-hero__title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 400;
+            margin-bottom: var(--space-md);
+            letter-spacing: -0.02em;
+        }
+        
+        .faq-hero__subtitle {
+            font-family: var(--font-body);
+            font-size: var(--text-lg);
+            opacity: 0.7;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+        
+        /* FAQ Navigation */
+        .faq-nav {
+            background: #fafafa;
+            padding: var(--space-lg) 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            position: sticky;
+            top: 80px;
+            z-index: 100;
+        }
+        
+        .faq-nav__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--space-sm);
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .faq-nav__link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            padding: var(--space-sm) var(--space-md);
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            color: #4a4a4a;
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            font-weight: 400;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-nav__link:hover,
+        .faq-nav__link.active {
+            background: #1a1a1a;
+            color: #ffffff;
+            border-color: #1a1a1a;
+        }
+        
+        .faq-nav__link i {
+            font-size: 0.875rem;
+        }
+        
+        /* FAQ Content */
+        .faq-content {
+            padding: var(--space-3xl) 0;
+            background: #ffffff;
+        }
+        
+        .faq-category {
+            margin-bottom: var(--space-3xl);
+            scroll-margin-top: 160px;
+        }
+        
+        .faq-category:last-child {
+            margin-bottom: 0;
+        }
+        
+        .faq-category__header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-xl);
+            padding-bottom: var(--space-md);
+            border-bottom: 2px solid #1a1a1a;
+        }
+        
+        .faq-category__icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        /* Pastel colors for each category icon */
+        .faq-category:nth-child(1) .faq-category__icon {
+            background: linear-gradient(135deg, #E8D5E2 0%, #F2E6EE 100%);
+        }
+        .faq-category:nth-child(2) .faq-category__icon {
+            background: linear-gradient(135deg, #D5E5E8 0%, #E6F0F2 100%);
+        }
+        .faq-category:nth-child(3) .faq-category__icon {
+            background: linear-gradient(135deg, #E8E2D5 0%, #F2EDE6 100%);
+        }
+        .faq-category:nth-child(4) .faq-category__icon {
+            background: linear-gradient(135deg, #D5E8DE 0%, #E6F2EB 100%);
+        }
+        .faq-category:nth-child(5) .faq-category__icon {
+            background: linear-gradient(135deg, #E2D5E8 0%, #EDE6F2 100%);
+        }
+        .faq-category:nth-child(6) .faq-category__icon {
+            background: linear-gradient(135deg, #D5DEE8 0%, #E6EBF2 100%);
+        }
+        
+        .faq-category__icon i {
+            font-size: 1.25rem;
+            color: #3d3d3d;
+        }
+        
+        .faq-category__title {
+            font-family: var(--font-display);
+            font-size: var(--text-2xl);
+            font-weight: 400;
+            color: #1a1a1a;
+        }
+        
+        /* Accordion Styles */
+        .faq-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+        }
+        
+        .faq-item {
+            background: #fafafa;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            border-color: rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-item.active {
+            background: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        }
+        
+        .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--space-md);
+            padding: var(--space-lg) var(--space-xl);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+        }
+        
+        .faq-question:hover {
+            background: rgba(0, 0, 0, 0.02);
+        }
+        
+        .faq-question__text {
+            font-family: var(--font-body);
+            font-size: var(--text-base);
+            font-weight: 500;
+            color: #1a1a1a;
+            line-height: 1.5;
+        }
+        
+        .faq-question__icon {
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1a1a1a;
+            color: #ffffff;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question__icon i {
+            font-size: 0.75rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-question__icon i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 1000px;
+        }
+        
+        .faq-answer__content {
+            padding: 0 var(--space-xl) var(--space-xl);
+            font-family: var(--font-body);
+            font-size: var(--text-base);
+            line-height: 1.9;
+            color: #4a4a4a;
+            font-weight: 300;
+        }
+        
+        .faq-answer__content p {
+            margin-bottom: var(--space-md);
+        }
+        
+        .faq-answer__content p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .faq-answer__content ul {
+            margin: var(--space-md) 0;
+            padding-left: var(--space-lg);
+        }
+        
+        .faq-answer__content li {
+            margin-bottom: var(--space-sm);
+            position: relative;
+        }
+        
+        .faq-answer__content li::marker {
+            color: #1a1a1a;
+        }
+        
+        .faq-answer__content strong {
+            color: #1a1a1a;
+            font-weight: 500;
+        }
+        
+        /* CTA Section */
+        .faq-cta {
+            background: #fafafa;
+            padding: var(--space-3xl) 0;
+            text-align: center;
+        }
+        
+        .faq-cta__content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .faq-cta__icon {
+            width: 70px;
+            height: 70px;
+            background: #1a1a1a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-lg);
+        }
+        
+        .faq-cta__icon i {
+            font-size: 1.75rem;
+            color: #ffffff;
+        }
+        
+        .faq-cta h2 {
+            font-family: var(--font-display);
+            font-size: var(--text-2xl);
+            font-weight: 400;
+            color: #1a1a1a;
+            margin-bottom: var(--space-md);
+        }
+        
+        .faq-cta p {
+            font-family: var(--font-body);
+            font-size: var(--text-base);
+            color: #666666;
+            line-height: 1.8;
+            margin-bottom: var(--space-xl);
+            font-weight: 300;
+        }
+        
+        .faq-cta__actions {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+        }
+        
+        .faq-cta__phone {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            background: transparent;
+            border: 1px solid #1a1a1a;
+            color: #1a1a1a;
+            padding: var(--space-sm) var(--space-xl);
+            font-size: var(--text-base);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+        
+        .faq-cta__phone:hover {
+            background: #1a1a1a;
+            color: #ffffff;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .faq-nav {
+                position: relative;
+                top: 0;
+                padding: var(--space-md) 0;
+            }
+            
+            .faq-nav__list {
+                gap: var(--space-xs);
+            }
+            
+            .faq-nav__link {
+                padding: var(--space-xs) var(--space-sm);
+                font-size: var(--text-xs);
+            }
+            
+            .faq-nav__link span {
+                display: none;
+            }
+            
+            .faq-category__header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .faq-question {
+                padding: var(--space-md);
+            }
+            
+            .faq-question__text {
+                font-size: var(--text-sm);
+            }
+            
+            .faq-answer__content {
+                padding: 0 var(--space-md) var(--space-md);
+                font-size: var(--text-sm);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Component -->
+    <div id="header-placeholder"></div>
+    
+    <!-- Hero Section -->
+    <section class="faq-hero">
+        <div class="container">
+            <div class="faq-hero__content">
+                <p class="faq-hero__eyebrow">Knowledge Center</p>
+                <h1 class="faq-hero__title">Frequently Asked Questions</h1>
+                <p class="faq-hero__subtitle">
+                    Everything you need to know about home inspections in Toronto. Can't find what you're looking for? Contact us directly.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Navigation -->
+    <nav class="faq-nav">
+        <div class="container">
+            <ul class="faq-nav__list">
+                <li><a href="#qualifications" class="faq-nav__link"><i class="fas fa-certificate"></i> <span>Qualifications</span></a></li>
+                <li><a href="#pricing" class="faq-nav__link"><i class="fas fa-dollar-sign"></i> <span>Pricing</span></a></li>
+                <li><a href="#scope" class="faq-nav__link"><i class="fas fa-clipboard-list"></i> <span>Scope</span></a></li>
+                <li><a href="#process" class="faq-nav__link"><i class="fas fa-tasks"></i> <span>Process</span></a></li>
+                <li><a href="#old-homes" class="faq-nav__link"><i class="fas fa-home"></i> <span>Old Homes</span></a></li>
+                <li><a href="#after" class="faq-nav__link"><i class="fas fa-handshake"></i> <span>After</span></a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- FAQ Content -->
+    <main class="faq-content">
+        <div class="container">
+            
+            <!-- Category 1: Qualifications, Training & Trust -->
+            <section id="qualifications" class="faq-category">
+                <div class="faq-category__header">
+                    <div class="faq-category__icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h2 class="faq-category__title">Qualifications, Training & Trust</h2>
+                </div>
+                
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">Are home inspectors licensed in Ontario?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>While the Province of Ontario has passed legislation regarding home inspectors, the government licensing program is not yet fully active. Therefore, trust and competence are determined by professional designations.</p>
+                                <p>I am a member in good standing of <strong>OAHI (Ontario Association of Home Inspectors)</strong>, which is a premier association for home inspectors. I strictly adhere to their rigorous Standards of Practice and Code of Ethics, ensuring you receive a professional, unbiased, and thorough inspection.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">What specific training have you completed?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>I have completed a comprehensive, college-level curriculum specifically designed for home inspection. This includes in-depth training on all major home systems, including:</p>
+                                <ul>
+                                    <li>Structural components and foundations</li>
+                                    <li>Roofing, flashing, and exterior waterproofing</li>
+                                    <li>Electrical systems (including older wiring types common in Toronto)</li>
+                                    <li>Plumbing and HVAC (Heating, Ventilation, and Air Conditioning)</li>
+                                    <li>Building envelope and insulation science</li>
+                                    <li>Specialized certification in Mold Inspection and Air Quality testing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">Are you insured?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>Yes, absolutely. We carry full <strong>Errors and Omissions (E&O) insurance</strong> as well as <strong>General Liability insurance</strong>. This provides protection and peace of mind for you, the homeowner, and the real estate agents involved in the transaction.</p>
+                                <p>We are happy to provide proof of insurance upon request.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">Do you perform repairs on the defects you find?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p><strong>No.</strong> To ensure a completely unbiased inspection, it is a strict conflict of interest for a home inspector to perform repairs on a property they have inspected.</p>
+                                <p>Our job is solely to provide you with an objective assessment of the home's condition so you can make an informed decision. We do not benefit financially from finding defects.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">What is the difference between a Home Inspector and a Mold Inspector?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>A standard <strong>Home Inspector</strong> performs a visual assessment of the home's accessible areas.</p>
+                                <p>A <strong>Certified Mold Inspector</strong> has undergone additional, specialized training to identify the conditions that allow mold to grow and is qualified to perform air-quality sampling and laboratory testing.</p>
+                                <p>We are qualified to provide both services, offering you a deeper level of insight into the home's safety and air quality.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">How do you stay current with building codes and standards?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>The construction industry is constantly evolving. As a professional inspector, I am required to complete <strong>Continuing Education (CE) credits</strong> every year.</p>
+                                <p>This ensures I stay up-to-date with the latest changes in the Ontario Building Code, new construction materials, and safety standards.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Category 2: Pricing, Quotes & Payment -->
+            <section id="pricing" class="faq-category">
+                <div class="faq-category__header">
+                    <div class="faq-category__icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h2 class="faq-category__title">Pricing, Quotes & Payment</h2>
+                </div>
+                
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">How much does a home inspection cost?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>Every home is unique, and so is every inspection. Because no two properties are the same, we do not have a "one-size-fits-all" price list.</p>
+                                <p>Our fees are calculated based on the specific circumstances of the property to ensure you receive the most accurate and fair quote possible. Please contact us directly for a <strong>free, no-obligation estimate</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">What factors determine the price of my inspection?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>We consider several variables to estimate the time and resources required to inspect your property thoroughly. These factors include:</p>
+                                <ul>
+                                    <li><strong>Dwelling Type:</strong> (e.g., Detached home, townhouse, or high-rise condo)</li>
+                                    <li><strong>Size:</strong> The total square footage of the home</li>
+                                    <li><strong>Age:</strong> Older homes (especially those built before 1950) often have complex systems that require more detailed evaluation</li>
+                                    <li><strong>Location:</strong> The distance of the property from our service base</li>
+                                    <li><strong>Add-on Services:</strong> If you require specialized testing such as Mold Air Quality testing or Thermal Imaging</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">Why don't you post a standard rate online?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>We believe in <strong>fair pricing based on the actual work required</strong>. A 5,000-square-foot Victorian home takes significantly longer to inspect than a 600-square-foot condo.</p>
+                                <p>By speaking with you briefly, we can ensure we understand the property's details and provide a quote that reflects the specific scope of work, rather than charging you a generic flat rate that might be too high.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">How can I get a quote?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>It's fast and easy. You can call us, text us, or fill out the <strong>"Request a Quote"</strong> form on our contact page.</p>
+                                <p>We typically provide a firm price estimate within minutes of discussing the property details with you.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">When is payment due?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>Payment is due upon completion of the physical inspection. Please note that the final inspection report cannot be released until payment has been received in full.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">What payment methods do you accept?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>For your convenience, we accept:</p>
+                                <ul>
+                                    <li><strong>Interac e-Transfer</strong> (Preferred)</li>
+                                    <li><strong>Major Credit Cards</strong> (Visa, MasterCard, Amex)</li>
+                                    <li><strong>Cash</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Category 3: Scope of Inspection -->
+            <section id="scope" class="faq-category">
+                <div class="faq-category__header">
+                    <div class="faq-category__icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h2 class="faq-category__title">Scope of Inspection (Managing Expectations)</h2>
+                </div>
+                
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">What exactly is included in a standard home inspection?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>Our inspections are comprehensive and adhere to the strict Standards of Practice defined by the industry. We visually examine the physical structure and major systems of the home, starting from the roof and working down to the foundation. This includes:</p>
+                                <ul>
+                                    <li><strong>Exterior:</strong> Siding, grading, driveways, and drainage</li>
+                                    <li><strong>Roofing:</strong> Shingles, flashings, skylights, and chimneys</li>
+                                    <li><strong>Structure:</strong> Foundation, footings, and framing</li>
+                                    <li><strong>Systems:</strong> Electrical panels and wiring, plumbing fixtures and piping, heating and cooling (HVAC) systems, and insulation/ventilation in attics</li>
+                                    <li><strong>Interior:</strong> Doors, windows, floors, walls, and built-in appliances</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">Do you look inside the walls or move furniture?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p><strong>No.</strong> A home inspection is defined as a visual, non-invasive assessment. We do not drill holes, remove drywall, tear up carpets, or move the seller's heavy furniture or personal belongings.</p>
+                                <p>We report on what can be visibly seen at the time of the inspection. However, we use specialized tools (such as moisture meters and thermal imaging) to detect potential anomalies behind finished surfaces without causing damage.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">Will you tell me if the house "passes" or "fails"?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p><strong>No.</strong> A professional home inspection is not a code-compliance pass/fail test. Our goal is to describe the physical condition of the property and identify significantly deficient components.</p>
+                                <p>Think of it as a "health check-up" for the home. We provide you with the information you need to decide if the home is the right investment for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">Can you tell me exactly how long the roof or furnace will last?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>We can provide an estimate based on the age, condition, and typical life expectancy of a component, but we cannot offer a guarantee. Systems can fail unexpectedly.</p>
+                                <p>For example, we might note that a furnace is 18 years old and nearing the end of its life, but it is impossible to predict the exact date it will stop working.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">Do you report on cosmetic issues?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>Our focus is on <strong>safety, structure, and function</strong>. We generally do not report on cosmetic imperfections such as peeling wallpaper, chipped paint, or worn carpeting, unless they indicate a larger underlying problem.</p>
+                                <p>For example, a water stain on the ceiling is "cosmetic" but indicates a plumbing or roof leak, which we would investigate.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">Is mold testing included in the standard inspection?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>A standard home inspection includes a visual check for visible microbial growth. However, mold often grows in hidden areas (like behind walls or under floors) or exists as airborne spores.</p>
+                                <p><strong>Air Quality Testing and Lab Analysis</strong> are separate, specialized services. If you have specific concerns about mold or allergies, we highly recommend adding our dedicated Mold Inspection service to your appointment.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">How does winter weather or snow affect the inspection?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>Living in Ontario, weather is a factor. If the roof is covered in snow or ice, it cannot be safely walked upon or visually inspected from the exterior.</p>
+                                <p>In these cases, we inspect the roof system from the underside (via the attic) to check for signs of leakage or structural issues. We make every effort to inspect all areas, but safety and accessibility are the primary constraints.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">Can I attend the inspection?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p><strong>Yes, we highly encourage it.</strong> While you don't need to be there for the entire duration, we recommend you arrive for the final 30–45 minutes.</p>
+                                <p>This allows us to walk you through the home, explain our findings in person, show you where the main shut-offs are, and answer your questions directly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Category 4: The Process & Logistics -->
+            <section id="process" class="faq-category">
+                <div class="faq-category__header">
+                    <div class="faq-category__icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h2 class="faq-category__title">The Process & Logistics</h2>
+                </div>
+                
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">How long does a home inspection take?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>Quality takes time. A thorough inspection of a standard single-family home typically takes between <strong>2.5 to 3.5 hours</strong>.</p>
+                                <p>This duration can vary depending on the size of the home, its age, and the complexity of its systems (such as multiple furnaces or added legal apartments). We do not rush; we stay as long as is necessary to inspect every accessible component properly.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">Should I be present for the inspection?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p><strong>Yes, absolutely.</strong> While you do not need to follow us around for the entire 3-hour process, we highly recommend you arrive for the last 30 to 45 minutes. This allows us to perform a "walkthrough" with you. During this time, we will:</p>
+                                <ul>
+                                    <li>Show you the major findings in person</li>
+                                    <li>Teach you how to operate the home's key systems (like the thermostat and main water shut-off)</li>
+                                    <li>Answer your questions while looking directly at the components</li>
+                                </ul>
+                                <p>This visual explanation is often much clearer than reading about it later in a report.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">When will I receive the inspection report?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>We understand that real estate transactions move fast. You will receive your full, digital report on the <strong>same day as the inspection</strong>—usually within a few hours of us leaving the property.</p>
+                                <p>Our reports are mobile-friendly, easy to read, and include high-resolution photos and detailed descriptions so you can make decisions immediately.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">Do you inspect in the winter? What if there is snow on the roof?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>Yes, we inspect homes year-round in all weather conditions. In Toronto and Ontario, snow is a reality of the business.</p>
+                                <ul>
+                                    <li><strong>Roof Visibility:</strong> If the roof is covered in snow or ice, it is unsafe to walk on and impossible to inspect visually from the outside. In these cases, we shift our focus to the attic. By inspecting the underside of the roof sheathing carefully, we can often detect signs of past or active leaks, water staining, and structural issues that might not be visible from the street.</li>
+                                    <li><strong>Exterior:</strong> We will inspect whatever is visible and note any limitations in the report to ensure you are fully informed of what was and was not accessible.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Category 5: Old Homes & Toronto-Specific Issues -->
+            <section id="old-homes" class="faq-category">
+                <div class="faq-category__header">
+                    <div class="faq-category__icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h2 class="faq-category__title">Old Homes & Toronto-Specific Issues</h2>
+                </div>
+                
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">My potential home is 100 years old. Do you check for "Knob and Tube" wiring?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p><strong>Yes.</strong> This is a critical check for any Toronto home built prior to 1950. Knob and Tube wiring is an obsolete method that lacks a ground wire.</p>
+                                <ul>
+                                    <li><strong>Why it matters:</strong> Most insurance companies in Ontario will not insure a home with active Knob and Tube, or they will charge a significantly higher premium until it is removed.</li>
+                                    <li><strong>How we check:</strong> We inspect the electrical panel, the basement ceiling, and the attic (where it is often left behind) to identify if this wiring is still active.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">Do you inspect for Kitec plumbing?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p><strong>Yes.</strong> Kitec was a brand of plastic plumbing widely used in the GTA—particularly in condos and townhouses—between 1995 and 2007.</p>
+                                <ul>
+                                    <li><strong>The Issue:</strong> It has a high failure rate and can lead to sudden, catastrophic bursts and flooding. Many condo boards now mandate its removal.</li>
+                                    <li><strong>Our Inspection:</strong> We know exactly what to look for (typically bright orange or blue piping with specific brass fittings). If we identify Kitec, we will highlight it immediately so you can budget for the necessary replacement.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">What about Vermiculite insulation and asbestos?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>Vermiculite is a pebble-like insulation often found in the attics of older homes. While not all vermiculite contains asbestos, a specific brand used heavily in Ontario (Zonolite) often does.</p>
+                                <ul>
+                                    <li><strong>Visual Identification:</strong> We are trained to visually identify vermiculite insulation.</li>
+                                    <li><strong>Next Steps:</strong> If found, we will flag it as a potential safety hazard. We generally recommend treating it as if it contains asbestos unless proven otherwise. If confirmation is needed, we can arrange for sampling and lab testing to determine the asbestos content.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">Do you inspect homes with Lead Pipes?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>Lead water supply pipes are a concern in Toronto homes built before the mid-1950s. While we cannot see the pipes buried underground, we check the main water service entry point in the basement.</p>
+                                <p>If we see the characteristic dull grey metal and "bulb" shape of a lead pipe entering the home, we will note it in the report, as the City of Toronto has programs in place to help homeowners replace these lines.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">The basement is finished. Can you still tell if it leaks?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>This is a common challenge in renovated Toronto homes. While we cannot look behind drywall, we use <strong>Thermal Imaging</strong> and <strong>moisture meters</strong> to scan finished walls.</p>
+                                <p>These tools can detect temperature anomalies that often indicate hidden moisture or active leaks that the naked eye cannot see. We also look for exterior clues—such as negative grading or disconnected downspouts—that significantly increase the risk of a wet basement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Category 6: The "After" Phase -->
+            <section id="after" class="faq-category">
+                <div class="faq-category__header">
+                    <div class="faq-category__icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h2 class="faq-category__title">The "After" Phase</h2>
+                </div>
+                
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">Do you offer repair services for the issues you find?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p><strong>No.</strong> This is a strict conflict of interest and is prohibited by our Code of Ethics.</p>
+                                <ul>
+                                    <li><strong>The Reason:</strong> If we offered repairs, we would have a financial incentive to "find" more problems just to generate extra work for ourselves.</li>
+                                    <li><strong>Our Promise:</strong> By sticking strictly to inspections, you can be 100% confident that our findings are unbiased and that we are working solely for your best interests, not our wallet.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">What if the inspection reveals major problems? Should I walk away?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p><strong>Not necessarily.</strong> It is important to remember that no home is perfect. Even brand-new construction homes have defects.</p>
+                                <ul>
+                                    <li><strong>Perspective:</strong> If we find a major issue (like a worn-out roof or a dated electrical panel), it doesn't mean the house is a "lemon." It simply means you now have the information needed to negotiate the price or budget for future repairs.</li>
+                                    <li><strong>Our Goal:</strong> We don't want to scare you; we want to educate you. Everything in a house can be fixed or replaced; our job is to make sure you know what those fixes are before you sign the final papers.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">Can I contact you after I receive the report?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p><strong>Yes, absolutely.</strong> We consider ourselves your "building consultant" for life.</p>
+                                <ul>
+                                    <li><strong>Immediate Support:</strong> If you have questions about the report the next day, or if your Realtor needs clarification during negotiations, we are just a phone call away.</li>
+                                    <li><strong>Long-Term Support:</strong> Even six months or a year after you move in, if you have a question about how to change your furnace filter or why a window is sticking, feel free to call us. We are happy to help our past clients.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question__text">Who else sees my report?</span>
+                            <span class="faq-question__icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer__content">
+                                <p>Your report is a <strong>confidential document</strong>. We will not release it to the seller, the seller's agent, or the city without your explicit permission. It belongs to you.</p>
+                                <p>Most clients authorize us to share it with their own Realtor to assist in the transaction, but that choice is entirely up to you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+    </main>
+    
+    <!-- CTA Section -->
+    <section class="faq-cta">
+        <div class="container">
+            <div class="faq-cta__content">
+                <div class="faq-cta__icon">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <h2>Still Have Questions?</h2>
+                <p>
+                    We're here to help. Contact us directly and we'll be happy to answer any questions you have about the inspection process or your specific property.
+                </p>
+                <div class="faq-cta__actions">
+                    <a href="quote.html" class="btn btn--primary">Request a Quote</a>
+                    <a href="tel:+16475558888" class="faq-cta__phone">
+                        <i class="fas fa-phone"></i> (647) 555-8888
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <!-- FAQ Accordion Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ Accordion functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // Close other items in the same category
+                    const category = item.closest('.faq-category');
+                    const siblingItems = category.querySelectorAll('.faq-item');
+                    
+                    siblingItems.forEach(sibling => {
+                        if (sibling !== item && sibling.classList.contains('active')) {
+                            sibling.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+            
+            // Smooth scroll for navigation links
+            const navLinks = document.querySelectorAll('.faq-nav__link');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                    
+                    // Update active state
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Update active nav link on scroll
+            const categories = document.querySelectorAll('.faq-category');
+            
+            window.addEventListener('scroll', () => {
+                let current = '';
+                
+                categories.forEach(category => {
+                    const sectionTop = category.offsetTop;
+                    const sectionHeight = category.clientHeight;
+                    
+                    if (pageYOffset >= sectionTop - 200) {
+                        current = category.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

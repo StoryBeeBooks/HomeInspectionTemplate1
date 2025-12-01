@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | TO Inspect Ltd.</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Privacy Policy Specific Styles */
+        .privacy-hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .privacy-hero__title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            letter-spacing: 0.02em;
+        }
+        
+        .privacy-hero__subtitle {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.1rem;
+            color: #888888;
+            font-weight: 300;
+        }
+        
+        .privacy-content {
+            background-color: #fafafa;
+            padding: 80px 0;
+        }
+        
+        .privacy-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .privacy-intro {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #1a1a1a;
+        }
+        
+        .privacy-intro__company {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+        
+        .privacy-intro__date {
+            font-family: 'Lato', sans-serif;
+            font-size: 0.95rem;
+            color: #666666;
+            margin-bottom: 1.5rem;
+        }
+        
+        .privacy-intro__text {
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #4a4a4a;
+        }
+        
+        .privacy-intro__text p {
+            margin-bottom: 1rem;
+        }
+        
+        .privacy-intro__text p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .privacy-section {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .privacy-section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        .privacy-section__header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .privacy-section__number {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ffffff;
+            flex-shrink: 0;
+        }
+        
+        .privacy-section__title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        
+        .privacy-section__content {
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #4a4a4a;
+        }
+        
+        .privacy-section__content p {
+            margin-bottom: 1rem;
+        }
+        
+        .privacy-section__content ul {
+            margin: 1rem 0;
+            padding-left: 0;
+            list-style: none;
+        }
+        
+        .privacy-section__content li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .privacy-section__content li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.6em;
+            width: 6px;
+            height: 6px;
+            background: #1a1a1a;
+            border-radius: 50%;
+        }
+        
+        .privacy-section__content strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        
+        .privacy-section__content .note {
+            background: #f5f5f5;
+            padding: 1rem 1.25rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: #666666;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+        
+        /* Contact Section */
+        .privacy-contact {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            border-radius: 16px;
+            padding: 3rem;
+            margin-top: 3rem;
+            text-align: center;
+            color: #ffffff;
+        }
+        
+        .privacy-contact__title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .privacy-contact__company {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .privacy-contact__info {
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+            color: #cccccc;
+            line-height: 1.8;
+        }
+        
+        .privacy-contact__info a {
+            color: #ffffff;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            transition: border-color 0.3s ease;
+        }
+        
+        .privacy-contact__info a:hover {
+            border-color: #ffffff;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .privacy-hero {
+                padding: 100px 0 60px;
+            }
+            
+            .privacy-intro,
+            .privacy-section {
+                padding: 1.75rem;
+            }
+            
+            .privacy-contact {
+                padding: 2rem;
+            }
+            
+            .privacy-section__header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="privacy-hero">
+            <div class="container">
+                <h1 class="privacy-hero__title">Privacy Policy</h1>
+                <p class="privacy-hero__subtitle">Your privacy and trust are important to us</p>
+            </div>
+        </section>
+
+        <!-- Privacy Content -->
+        <section class="privacy-content">
+            <div class="privacy-container">
+                
+                <!-- Introduction -->
+                <div class="privacy-intro">
+                    <p class="privacy-intro__company">Toronto Home Inspection Corp.</p>
+                    <p class="privacy-intro__date"><strong>Effective Date:</strong> November 29, 2025</p>
+                    <div class="privacy-intro__text">
+                        <p>At Toronto Home Inspection Corp. ("we," "us," or "our"), we are committed to maintaining the accuracy, confidentiality, and security of your personal information. This Privacy Policy describes the personal information that we collect from or about you, how we use and to whom we disclose that information, and how you can correct or access it.</p>
+                        <p>This policy has been developed in compliance with the Personal Information Protection and Electronic Documents Act (PIPEDA) and applicable provincial privacy legislation in Ontario.</p>
+                    </div>
+                </div>
+
+                <!-- Section 1: Information We Collect -->
+                <div class="privacy-section">
+                    <div class="privacy-section__header">
+                        <div class="privacy-section__number">1</div>
+                        <h2 class="privacy-section__title">Information We Collect</h2>
+                    </div>
+                    <div class="privacy-section__content">
+                        <p>We collect personal information that is necessary to provide our home inspection services and run our business. This includes:</p>
+                        <ul>
+                            <li><strong>Contact Information:</strong> Name, email address, phone number, and current mailing address.</li>
+                            <li><strong>Property Information:</strong> Address of the property to be inspected, access details (lockbox codes), and specific concerns regarding the property.</li>
+                            <li><strong>Transaction Information:</strong> Services purchased, pricing, and payment details.</li>
+                            <li><strong>Real Estate Professional Information:</strong> Name and contact details of the Real Estate Agent representing you (if applicable).</li>
+                        </ul>
+                        <p class="note">Note: We do not store full credit card numbers on our servers; payments are processed through secure third-party payment gateways (e.g., Stripe, Square).</p>
+                    </div>
+                </div>
+
+                <!-- Section 2: How We Use Your Information -->
+                <div class="privacy-section">
+                    <div class="privacy-section__header">
+                        <div class="privacy-section__number">2</div>
+                        <h2 class="privacy-section__title">How We Use Your Information</h2>
+                    </div>
+                    <div class="privacy-section__content">
+                        <p>We use your personal information for the following purposes:</p>
+                        <ul>
+                            <li>To schedule and perform home inspection services.</li>
+                            <li>To generate and deliver the Inspection Report.</li>
+                            <li>To communicate with you regarding appointments, quotes, and follow-up questions.</li>
+                            <li>To process payments and issue receipts.</li>
+                            <li>To verify your identity and prevent fraud.</li>
+                            <li>To comply with legal, insurance, and regulatory requirements (including tax reporting).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 3: Disclosure of Information -->
+                <div class="privacy-section">
+                    <div class="privacy-section__header">
+                        <div class="privacy-section__number">3</div>
+                        <h2 class="privacy-section__title">Disclosure of Information</h2>
+                    </div>
+                    <div class="privacy-section__content">
+                        <p>We value your trust. <strong>We do not sell, rent, or trade your personal information to third parties.</strong></p>
+                        <p>We may disclose your personal information in the following limited circumstances:</p>
+                        <ul>
+                            <li><strong>To Your Realtor:</strong> We may share the Inspection Report or summary with your Real Estate Agent only with your verbal or written consent.</li>
+                            <li><strong>Service Providers:</strong> We may transfer data to trusted third-party service providers who assist us in running our business (e.g., report-writing software companies like Horizon/Spectora, payment processors, or cloud storage providers). These providers are contractually bound to protect your information.</li>
+                            <li><strong>Legal & Insurance:</strong> We may disclose information if required by law, court order, or to our insurance providers in the event of a liability claim.</li>
+                            <li><strong>The Seller:</strong> We do not share the inspection report with the seller or the seller's agent without your explicit permission.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 4: Storage and Retention -->
+                <div class="privacy-section">
+                    <div class="privacy-section__header">
+                        <div class="privacy-section__number">4</div>
+                        <h2 class="privacy-section__title">Storage and Retention</h2>
+                    </div>
+                    <div class="privacy-section__content">
+                        <p>Your personal information and Inspection Reports are stored electronically on secure servers.</p>
+                        <ul>
+                            <li><strong>Retention Period:</strong> We retain your personal information and inspection reports for a minimum period of seven (7) years to comply with Canada Revenue Agency (CRA) requirements and professional liability (insurance) standards.</li>
+                            <li>After the retention period expires, data is securely destroyed or anonymized.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 5: Security Safeguards -->
+                <div class="privacy-section">
+                    <div class="privacy-section__header">
+                        <div class="privacy-section__number">5</div>
+                        <h2 class="privacy-section__title">Security Safeguards</h2>
+                    </div>
+                    <div class="privacy-section__content">
+                        <p>We implement industry-standard security measures to protect your data against loss, theft, and unauthorized access. This includes:</p>
+                        <ul>
+                            <li>Secure Sockets Layer (SSL) encryption on our website.</li>
+                            <li>Password-protected software and devices.</li>
+                            <li>Restricted access to personal information (only authorized personnel have access).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 6: Cookies and Website Data -->
+                <div class="privacy-section">
+                    <div class="privacy-section__header">
+                        <div class="privacy-section__number">6</div>
+                        <h2 class="privacy-section__title">Cookies and Website Data</h2>
+                    </div>
+                    <div class="privacy-section__content">
+                        <p>When you visit our website, we may use "cookies" to analyze web traffic and improve your experience. These cookies do not collect personally identifiable information.</p>
+                        <p>You can choose to decline cookies through your browser settings, though this may affect your ability to use certain features of our site.</p>
+                    </div>
+                </div>
+
+                <!-- Section 7: Access and Correction -->
+                <div class="privacy-section">
+                    <div class="privacy-section__header">
+                        <div class="privacy-section__number">7</div>
+                        <h2 class="privacy-section__title">Access and Correction</h2>
+                    </div>
+                    <div class="privacy-section__content">
+                        <p>You have the right to request access to the personal information we hold about you and to request corrections if you believe it is inaccurate.</p>
+                        <p>To make a request, please contact our Privacy Officer at the email listed below.</p>
+                    </div>
+                </div>
+
+                <!-- Section 8: Changes to this Policy -->
+                <div class="privacy-section">
+                    <div class="privacy-section__header">
+                        <div class="privacy-section__number">8</div>
+                        <h2 class="privacy-section__title">Changes to this Policy</h2>
+                    </div>
+                    <div class="privacy-section__content">
+                        <p>We reserve the right to modify this Privacy Policy at any time. Any changes will be posted on this page with an updated "Effective Date."</p>
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="privacy-contact">
+                    <h2 class="privacy-contact__title">Contact Us</h2>
+                    <p class="privacy-contact__company">Toronto Home Inspection Corp.</p>
+                    <div class="privacy-contact__info">
+                        <p>Attention: Mike</p>
+                        <p>Email: <a href="mailto:mike@homeinspection.ca">mike@homeinspection.ca</a></p>
+                        <p>Location: Toronto, Ontario</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

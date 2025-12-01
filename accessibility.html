@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Policy (AODA) | TO Inspect Ltd.</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Accessibility Policy Specific Styles */
+        .accessibility-hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .accessibility-hero__title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            letter-spacing: 0.02em;
+        }
+        
+        .accessibility-hero__subtitle {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.1rem;
+            color: #888888;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .accessibility-hero__badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.85rem;
+            color: #cccccc;
+            margin-top: 1.5rem;
+            letter-spacing: 0.05em;
+        }
+        
+        .accessibility-content {
+            background-color: #fafafa;
+            padding: 80px 0;
+        }
+        
+        .accessibility-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .accessibility-intro {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #1a1a1a;
+        }
+        
+        .accessibility-intro__company {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+        
+        .accessibility-intro__meta {
+            font-family: 'Lato', sans-serif;
+            font-size: 0.95rem;
+            color: #666666;
+            margin-bottom: 0.25rem;
+        }
+        
+        .accessibility-intro__meta a {
+            color: #1a1a1a;
+            text-decoration: none;
+            border-bottom: 1px solid #cccccc;
+            transition: border-color 0.3s ease;
+        }
+        
+        .accessibility-intro__meta a:hover {
+            border-color: #1a1a1a;
+        }
+        
+        .accessibility-section {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .accessibility-section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        .accessibility-section__header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .accessibility-section__icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .accessibility-section__icon i {
+            font-size: 1.25rem;
+            color: #1a1a1a;
+        }
+        
+        /* Pastel icon backgrounds */
+        .accessibility-section:nth-child(1) .accessibility-section__icon {
+            background: linear-gradient(135deg, #E8D5E0 0%, #F2E6ED 100%);
+        }
+        .accessibility-section:nth-child(2) .accessibility-section__icon {
+            background: linear-gradient(135deg, #D5E0E8 0%, #E6EDF2 100%);
+        }
+        .accessibility-section:nth-child(3) .accessibility-section__icon {
+            background: linear-gradient(135deg, #E8E0D5 0%, #F2EDE6 100%);
+        }
+        .accessibility-section:nth-child(4) .accessibility-section__icon {
+            background: linear-gradient(135deg, #D5E8DE 0%, #E6F2EB 100%);
+        }
+        .accessibility-section:nth-child(5) .accessibility-section__icon {
+            background: linear-gradient(135deg, #E2D5E8 0%, #EDE6F2 100%);
+        }
+        .accessibility-section:nth-child(6) .accessibility-section__icon {
+            background: linear-gradient(135deg, #D5DEE8 0%, #E6EBF2 100%);
+        }
+        .accessibility-section:nth-child(7) .accessibility-section__icon {
+            background: linear-gradient(135deg, #E8D8D5 0%, #F2E9E6 100%);
+        }
+        .accessibility-section:nth-child(8) .accessibility-section__icon {
+            background: linear-gradient(135deg, #D5E8E5 0%, #E6F2EF 100%);
+        }
+        .accessibility-section:nth-child(9) .accessibility-section__icon {
+            background: linear-gradient(135deg, #E0E0D5 0%, #EDEDF2 100%);
+        }
+        
+        .accessibility-section__title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        
+        .accessibility-section__number {
+            font-family: 'Lato', sans-serif;
+            font-size: 0.8rem;
+            color: #888888;
+            font-weight: 400;
+            display: block;
+            margin-top: 0.25rem;
+        }
+        
+        .accessibility-section__content {
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #4a4a4a;
+        }
+        
+        .accessibility-section__content p {
+            margin-bottom: 1rem;
+        }
+        
+        .accessibility-section__content ul {
+            margin: 1rem 0;
+            padding-left: 0;
+            list-style: none;
+        }
+        
+        .accessibility-section__content li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .accessibility-section__content li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.6em;
+            width: 6px;
+            height: 6px;
+            background: #1a1a1a;
+            border-radius: 50%;
+        }
+        
+        .accessibility-section__content strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        
+        .accessibility-section__content .note {
+            background: #f5f5f5;
+            padding: 1.25rem 1.5rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: #4a4a4a;
+            margin-top: 1rem;
+            border-left: 3px solid #888888;
+        }
+        
+        .accessibility-section__content .note-title {
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        /* Contact Section */
+        .accessibility-contact {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            border-radius: 16px;
+            padding: 3rem;
+            margin-top: 3rem;
+            text-align: center;
+            color: #ffffff;
+        }
+        
+        .accessibility-contact__title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .accessibility-contact__text {
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+            color: #cccccc;
+            max-width: 500px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .accessibility-contact__info {
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+            color: #ffffff;
+        }
+        
+        .accessibility-contact__info a {
+            color: #ffffff;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            transition: border-color 0.3s ease;
+        }
+        
+        .accessibility-contact__info a:hover {
+            border-color: #ffffff;
+        }
+        
+        .accessibility-contact__response {
+            font-family: 'Lato', sans-serif;
+            font-size: 0.9rem;
+            color: #888888;
+            margin-top: 1rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .accessibility-hero {
+                padding: 100px 0 60px;
+            }
+            
+            .accessibility-intro,
+            .accessibility-section {
+                padding: 1.75rem;
+            }
+            
+            .accessibility-contact {
+                padding: 2rem;
+            }
+            
+            .accessibility-section__header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="accessibility-hero">
+            <div class="container">
+                <h1 class="accessibility-hero__title">Accessibility Policy</h1>
+                <p class="accessibility-hero__subtitle">Our commitment to accessible service for all Ontarians</p>
+                <span class="accessibility-hero__badge">AODA Compliant</span>
+            </div>
+        </section>
+
+        <!-- Accessibility Content -->
+        <section class="accessibility-content">
+            <div class="accessibility-container">
+                
+                <!-- Introduction -->
+                <div class="accessibility-intro">
+                    <p class="accessibility-intro__company">Toronto Home Inspection Corp.</p>
+                    <p class="accessibility-intro__meta"><strong>Effective Date:</strong> November 29, 2025</p>
+                    <p class="accessibility-intro__meta"><strong>Contact:</strong> <a href="mailto:mike@homeinspection.ca">mike@homeinspection.ca</a></p>
+                </div>
+
+                <!-- Section 1: Our Commitment -->
+                <div class="accessibility-section">
+                    <div class="accessibility-section__header">
+                        <div class="accessibility-section__icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div>
+                            <h2 class="accessibility-section__title">Our Commitment</h2>
+                            <span class="accessibility-section__number">Section 1</span>
+                        </div>
+                    </div>
+                    <div class="accessibility-section__content">
+                        <p>Toronto Home Inspection Corp. is committed to treating all people in a way that allows them to maintain their dignity and independence. We believe in integration and equal opportunity.</p>
+                        <p>We are committed to meeting the needs of people with disabilities in a timely manner and will do so by preventing and removing barriers to accessibility and meeting accessibility requirements under the <strong>Accessibility for Ontarians with Disabilities Act (AODA)</strong>.</p>
+                    </div>
+                </div>
+
+                <!-- Section 2: Communication -->
+                <div class="accessibility-section">
+                    <div class="accessibility-section__header">
+                        <div class="accessibility-section__icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div>
+                            <h2 class="accessibility-section__title">Communication</h2>
+                            <span class="accessibility-section__number">Section 2</span>
+                        </div>
+                    </div>
+                    <div class="accessibility-section__content">
+                        <p>We will communicate with people with disabilities in ways that take into account their disability.</p>
+                        <ul>
+                            <li>We will train staff who communicate with customers on how to interact and communicate with people with various types of disabilities.</li>
+                            <li>Upon request, we will provide inspection reports or invoices in alternative formats (e.g., Large Print or text-only for screen readers).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 3: Assistive Devices -->
+                <div class="accessibility-section">
+                    <div class="accessibility-section__header">
+                        <div class="accessibility-section__icon">
+                            <i class="fas fa-universal-access"></i>
+                        </div>
+                        <div>
+                            <h2 class="accessibility-section__title">Assistive Devices</h2>
+                            <span class="accessibility-section__number">Section 3</span>
+                        </div>
+                    </div>
+                    <div class="accessibility-section__content">
+                        <p>We are committed to serving people with disabilities who use assistive devices to obtain, use, or benefit from our services. We ensure that our staff are trained and familiar with various assistive devices that may be used by customers while accessing our services.</p>
+                        <div class="note">
+                            <span class="note-title">Note Regarding Inspection Sites:</span>
+                            While we strive to make our service accessible, please note that as Home Inspectors, we inspect third-party private properties (the homes being sold). We do not control the accessibility of these private dwellings (e.g., lack of ramps, narrow doorways). However, we will make every reasonable effort to accommodate clients, such as reviewing photos/videos of inaccessible areas (like attics or basements) with the client in an accessible area of the home or virtually.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4: Service Animals -->
+                <div class="accessibility-section">
+                    <div class="accessibility-section__header">
+                        <div class="accessibility-section__icon">
+                            <i class="fas fa-dog"></i>
+                        </div>
+                        <div>
+                            <h2 class="accessibility-section__title">Service Animals</h2>
+                            <span class="accessibility-section__number">Section 4</span>
+                        </div>
+                    </div>
+                    <div class="accessibility-section__content">
+                        <p>We welcome people with disabilities and their service animals. Service animals are allowed on the parts of our premises that are open to the public.</p>
+                        <ul>
+                            <li>When conducting an inspection at a private residence, we will respect the homeowner's property while advocating for the client's right to be accompanied by their service animal, provided it is safe to do so.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 5: Support Persons -->
+                <div class="accessibility-section">
+                    <div class="accessibility-section__header">
+                        <div class="accessibility-section__icon">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <div>
+                            <h2 class="accessibility-section__title">Support Persons</h2>
+                            <span class="accessibility-section__number">Section 5</span>
+                        </div>
+                    </div>
+                    <div class="accessibility-section__content">
+                        <p>A person with a disability who is accompanied by a support person will be allowed to have that person accompany them on our premises or during the inspection.</p>
+                        <ul>
+                            <li><strong>Fees:</strong> No admission fee or additional surcharge will be charged for support persons attending a home inspection.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 6: Notice of Temporary Disruption -->
+                <div class="accessibility-section">
+                    <div class="accessibility-section__header">
+                        <div class="accessibility-section__icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div>
+                            <h2 class="accessibility-section__title">Notice of Temporary Disruption</h2>
+                            <span class="accessibility-section__number">Section 6</span>
+                        </div>
+                    </div>
+                    <div class="accessibility-section__content">
+                        <p>In the event of a planned or unexpected disruption to services or facilities for customers with disabilities (e.g., if our website or report download portal is down), Toronto Home Inspection Corp. will notify customers promptly.</p>
+                        <p>This clearly posted notice will include information about the reason for the disruption, its anticipated length of time, and a description of alternative facilities or services, if available.</p>
+                    </div>
+                </div>
+
+                <!-- Section 7: Training -->
+                <div class="accessibility-section">
+                    <div class="accessibility-section__header">
+                        <div class="accessibility-section__icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h2 class="accessibility-section__title">Training</h2>
+                            <span class="accessibility-section__number">Section 7</span>
+                        </div>
+                    </div>
+                    <div class="accessibility-section__content">
+                        <p>Toronto Home Inspection Corp. will provide training to employees, volunteers, and others who deal with the public or other third parties on our behalf.</p>
+                        <p><strong>Training will include:</strong></p>
+                        <ul>
+                            <li>An overview of the Accessibility for Ontarians with Disabilities Act, 2005 and the requirements of the customer service standard.</li>
+                            <li>Toronto Home Inspection Corp.'s plan related to the customer service standard.</li>
+                            <li>How to interact and communicate with people with various types of disabilities.</li>
+                            <li>How to interact with people with disabilities who use an assistive device or require the assistance of a service animal or a support person.</li>
+                            <li>What to do if a person with a disability is having difficulty in accessing our services.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 8: Feedback Process -->
+                <div class="accessibility-section">
+                    <div class="accessibility-section__header">
+                        <div class="accessibility-section__icon">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <div>
+                            <h2 class="accessibility-section__title">Feedback Process</h2>
+                            <span class="accessibility-section__number">Section 8</span>
+                        </div>
+                    </div>
+                    <div class="accessibility-section__content">
+                        <p>Customers who wish to provide feedback on the way Toronto Home Inspection Corp. provides goods and services to people with disabilities can contact us via:</p>
+                        <ul>
+                            <li><strong>Email:</strong> <a href="mailto:mike@homeinspection.ca" style="color: #1a1a1a;">mike@homeinspection.ca</a></li>
+                            <li><strong>Phone:</strong> Contact us directly</li>
+                        </ul>
+                        <p>All feedback, including complaints, will be directed to Mike. Customers can expect to hear back within <strong>5 business days</strong>.</p>
+                    </div>
+                </div>
+
+                <!-- Section 9: Modifications to Policies -->
+                <div class="accessibility-section">
+                    <div class="accessibility-section__header">
+                        <div class="accessibility-section__icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div>
+                            <h2 class="accessibility-section__title">Modifications to This or Other Policies</h2>
+                            <span class="accessibility-section__number">Section 9</span>
+                        </div>
+                    </div>
+                    <div class="accessibility-section__content">
+                        <p>Any policy of Toronto Home Inspection Corp. that does not respect and promote the dignity and independence of people with disabilities will be modified or removed.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="accessibility-contact">
+                    <h2 class="accessibility-contact__title">Questions or Feedback?</h2>
+                    <p class="accessibility-contact__text">We welcome your input on how we can better serve customers with disabilities.</p>
+                    <div class="accessibility-contact__info">
+                        <p>Email: <a href="mailto:mike@homeinspection.ca">mike@homeinspection.ca</a></p>
+                    </div>
+                    <p class="accessibility-contact__response">Response within 5 business days</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
