@@ -590,12 +590,14 @@ p {
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    z-index: 1000;
+    z-index: 1001;
+    pointer-events: none;
 }
 
 .menu-overlay.active {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
 }
 
 /* Mobile menu close button */
@@ -1130,6 +1132,7 @@ textarea.form-control {
         transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 1002;
         overflow-y: auto;
+        pointer-events: auto;
     }
     
     .navbar__menu.active {
@@ -1143,6 +1146,7 @@ textarea.form-control {
         list-style: none;
         padding: 0;
         margin: 0;
+        pointer-events: auto;
     }
     
     .navbar__links li {
@@ -1150,8 +1154,7 @@ textarea.form-control {
         display: block;
         margin: 0;
         padding: 0;
-        position: relative;
-        z-index: 1;
+        pointer-events: auto;
     }
     
     .navbar__link {
@@ -1163,9 +1166,10 @@ textarea.form-control {
         color: #1a1a1a;
         letter-spacing: 0.5px;
         transition: all 0.2s ease;
-        position: relative;
-        z-index: 2;
+        pointer-events: auto !important;
         cursor: pointer;
+        position: relative;
+        z-index: 5;
     }
     
     .navbar__link:hover,
@@ -1183,8 +1187,7 @@ textarea.form-control {
         width: 100%;
         margin-top: 30px;
         gap: 12px;
-        position: relative;
-        z-index: 2;
+        pointer-events: auto;
     }
     
     .navbar__actions .btn {
@@ -1192,9 +1195,10 @@ textarea.form-control {
         justify-content: center;
         padding: 14px 20px;
         font-size: 0.875rem;
-        position: relative;
-        z-index: 2;
+        pointer-events: auto !important;
         cursor: pointer;
+        position: relative;
+        z-index: 5;
     }
     
     .navbar__actions .btn--lang {
@@ -1202,12 +1206,15 @@ textarea.form-control {
         padding: 12px 20px;
     }
     
-    /* Close button styling */
+    /* Close button styling - constrained size */
     .navbar__close {
         position: absolute;
         top: 20px;
         right: 20px;
+        width: 40px;
+        height: 40px;
         z-index: 10;
+        pointer-events: auto;
     }
 }
 
