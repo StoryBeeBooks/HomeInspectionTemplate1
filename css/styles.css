@@ -35,23 +35,29 @@
     --color-charcoal-light: #3d3d3d;
     --color-ink: #0d0d0d;                /* Rich Black */
     
+    /* Text Colors for Accessibility */
+    --text-heading: #1a1a1a;             /* Dark heading text */
+    --text-body: #3d3d3d;                /* Body text */
+    --text-muted: #666666;               /* Muted text */
+    --text-on-dark: #ffffff;             /* Text on dark backgrounds */
+    
     /* Typography - Elegant Serifs */
     --font-display: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif;
     --font-heading: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif;
     --font-body: 'Lato', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-chinese: 'Noto Serif SC', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
     
-    /* Font Sizes - Refined Scale (Optimized for Readability) */
-    --text-xs: 0.8125rem;    /* 13px - minimum readable size */
-    --text-sm: 0.9375rem;    /* 15px */
-    --text-base: 1.0625rem;  /* 17px - comfortable reading */
-    --text-lg: 1.1875rem;    /* 19px */
-    --text-xl: 1.375rem;     /* 22px */
-    --text-2xl: 1.625rem;    /* 26px */
-    --text-3xl: 2.125rem;    /* 34px */
-    --text-4xl: 2.625rem;    /* 42px */
-    --text-5xl: 3.5rem;      /* 56px */
-    --text-6xl: 4.5rem;      /* 72px */
+    /* Font Sizes - Fluid Scale using clamp() */
+    --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);      /* 12-13px */
+    --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 0.9375rem);     /* 14-15px */
+    --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.0625rem);      /* 16-17px */
+    --text-lg: clamp(1.0625rem, 1rem + 0.5vw, 1.1875rem);       /* 17-19px */
+    --text-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.375rem);       /* 20-22px */
+    --text-2xl: clamp(1.375rem, 1.2rem + 1vw, 1.625rem);        /* 22-26px */
+    --text-3xl: clamp(1.75rem, 1.5rem + 1.25vw, 2.125rem);      /* 28-34px */
+    --text-4xl: clamp(2rem, 1.7rem + 1.5vw, 2.625rem);          /* 32-42px */
+    --text-5xl: clamp(2.5rem, 2rem + 2.5vw, 3.5rem);            /* 40-56px */
+    --text-6xl: clamp(3rem, 2.5rem + 3vw, 4.5rem);              /* 48-72px */
     
     /* Font Weights */
     --weight-light: 300;
@@ -75,16 +81,16 @@
     --leading-relaxed: 1.8;
     --leading-loose: 2;
     
-    /* Spacing - Generous & Luxurious */
-    --space-xs: 0.25rem;
-    --space-sm: 0.5rem;
-    --space-md: 1rem;
-    --space-lg: 1.5rem;
-    --space-xl: 2rem;
-    --space-2xl: 3rem;
-    --space-3xl: 4rem;
-    --space-4xl: 6rem;
-    --space-5xl: 8rem;
+    /* Spacing - Fluid Scale using clamp() */
+    --space-xs: clamp(0.2rem, 0.15rem + 0.25vw, 0.25rem);
+    --space-sm: clamp(0.4rem, 0.35rem + 0.25vw, 0.5rem);
+    --space-md: clamp(0.75rem, 0.7rem + 0.5vw, 1rem);
+    --space-lg: clamp(1rem, 0.9rem + 0.75vw, 1.5rem);
+    --space-xl: clamp(1.5rem, 1.25rem + 1vw, 2rem);
+    --space-2xl: clamp(2rem, 1.75rem + 1.5vw, 3rem);
+    --space-3xl: clamp(2.5rem, 2rem + 2vw, 4rem);
+    --space-4xl: clamp(3.5rem, 3rem + 2.5vw, 6rem);
+    --space-5xl: clamp(5rem, 4rem + 3vw, 8rem);
     
     /* Layout */
     --max-width: 1280px;
@@ -320,7 +326,7 @@ p {
 }
 
 /* --------------------------------------------------------------------------
-   Navigation Bar - Elegant Monochromatic
+   Navigation Bar - Elegant Monochromatic with Fluid Scaling
    -------------------------------------------------------------------------- */
 .navbar {
     background-color: #ffffff;
@@ -336,8 +342,8 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: var(--space-lg);
-    padding-bottom: var(--space-lg);
+    padding-top: clamp(0.75rem, 0.5rem + 1vw, 1.5rem);
+    padding-bottom: clamp(0.75rem, 0.5rem + 1vw, 1.5rem);
 }
 
 .navbar__logo {
@@ -353,10 +359,11 @@ p {
 
 .navbar__logo-text {
     font-family: var(--font-display);
-    font-size: var(--text-2xl);
+    font-size: clamp(1.25rem, 1rem + 1vw, 1.625rem);
     font-weight: 400;
     color: #1a1a1a;
     letter-spacing: var(--tracking-wide);
+    white-space: nowrap;
 }
 
 .navbar__logo-text span {
@@ -366,25 +373,26 @@ p {
 .navbar__menu {
     display: flex;
     align-items: center;
-    gap: var(--space-2xl);
+    gap: clamp(1rem, 0.75rem + 1.5vw, 3rem);
 }
 
 .navbar__links {
     display: flex;
     align-items: center;
-    gap: var(--space-xl);
+    gap: clamp(0.75rem, 0.5rem + 1vw, 2rem);
 }
 
 .navbar__link {
     font-family: var(--font-body);
     font-weight: 400;
-    font-size: var(--text-sm);
-    letter-spacing: var(--tracking-wider);
+    font-size: clamp(0.7rem, 0.6rem + 0.5vw, 0.9375rem);
+    letter-spacing: clamp(0.05em, 0.03em + 0.05vw, 0.1em);
     text-transform: uppercase;
     color: #4a4a4a;
     padding: var(--space-sm) 0;
     position: relative;
     transition: color var(--transition-base);
+    white-space: nowrap;
 }
 
 .navbar__link::after {
@@ -410,28 +418,29 @@ p {
 .navbar__actions {
     display: flex;
     align-items: center;
-    gap: var(--space-md);
+    gap: clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
 }
 
 /* --------------------------------------------------------------------------
-   Buttons - Elegant Monochromatic
+   Buttons - Elegant Monochromatic with Fluid Scaling
    -------------------------------------------------------------------------- */
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: var(--space-sm);
-    padding: var(--space-md) var(--space-xl);
+    padding: clamp(0.5rem, 0.4rem + 0.5vw, 1rem) clamp(1rem, 0.75rem + 1vw, 2rem);
     font-family: var(--font-body);
-    font-size: var(--text-sm);
+    font-size: clamp(0.7rem, 0.6rem + 0.4vw, 0.9375rem);
     font-weight: 500;
-    letter-spacing: var(--tracking-wider);
+    letter-spacing: clamp(0.05em, 0.03em + 0.05vw, 0.1em);
     text-transform: uppercase;
     border: 1px solid transparent;
     border-radius: 0;
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .btn--primary {
@@ -515,12 +524,13 @@ p {
 }
 
 .btn--lang {
-    padding: var(--space-xs) var(--space-md);
-    font-size: var(--text-xs);
+    padding: clamp(0.25rem, 0.2rem + 0.25vw, 0.5rem) clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
+    font-size: clamp(0.65rem, 0.55rem + 0.35vw, 0.8125rem);
     background-color: transparent;
     color: #4a4a4a;
     border-color: #888888;
     border-radius: 0;
+    min-width: auto;
 }
 
 .btn--lang:hover {
@@ -717,6 +727,19 @@ p {
     border-color: #ffffff;
 }
 
+.footer__logo {
+    color: #ffffff;
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 400;
+    letter-spacing: var(--tracking-wide);
+    margin-bottom: var(--space-lg);
+}
+
+.footer__logo span {
+    color: #a8a8a8;
+}
+
 .footer__bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     padding: var(--space-xl) 0;
@@ -725,7 +748,7 @@ p {
 
 .footer__copyright {
     font-size: var(--text-sm);
-    color: #666666;
+    color: #888888;
     font-weight: 300;
     letter-spacing: var(--tracking-wide);
 }
@@ -1123,6 +1146,9 @@ textarea.form-control {
     
     .navbar__links li {
         width: 100%;
+        display: block;
+        margin: 0;
+        padding: 0;
     }
     
     .navbar__link {
@@ -1157,13 +1183,21 @@ textarea.form-control {
         width: 100%;
         justify-content: center;
         padding: 14px 20px;
+        font-size: 0.875rem;
+    }
+    
+    .navbar__actions .btn--lang {
+        width: 100%;
+        padding: 12px 20px;
     }
 }
 
+/* --------------------------------------------------------------------------
+   768px Breakpoint - Tablets
+   -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
-    :root {
-        --space-4xl: 4rem;
-        --space-5xl: 5rem;
+    .container {
+        padding: 0 clamp(1rem, 3vw, 2rem);
     }
     
     .top-info-bar .container {
@@ -1173,6 +1207,7 @@ textarea.form-control {
     .top-info-bar__content {
         justify-content: center;
         text-align: center;
+        gap: var(--space-lg);
     }
     
     .top-info-bar__item {
@@ -1187,6 +1222,7 @@ textarea.form-control {
     .footer__content {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: var(--space-2xl);
     }
     
     .footer__contact-item {
@@ -1201,22 +1237,21 @@ textarea.form-control {
         grid-template-columns: 1fr;
     }
     
-    /* Improve button sizing on mobile */
-    .btn {
-        padding: var(--space-sm) var(--space-lg);
-        font-size: var(--text-xs);
+    .section {
+        padding: var(--space-3xl) 0;
+    }
+    
+    .section__header {
+        margin-bottom: var(--space-2xl);
     }
 }
 
+/* --------------------------------------------------------------------------
+   480px Breakpoint - Large Mobile
+   -------------------------------------------------------------------------- */
 @media (max-width: 480px) {
-    :root {
-        --text-5xl: 2.25rem;
-        --text-4xl: 1.875rem;
-        --text-3xl: 1.5rem;
-    }
-    
     .container {
-        padding: 0 var(--space-lg);
+        padding: 0 clamp(0.75rem, 4vw, 1.5rem);
     }
     
     .top-info-bar__content {
@@ -1225,7 +1260,180 @@ textarea.form-control {
     }
     
     .section {
-        padding: var(--space-3xl) 0;
+        padding: var(--space-2xl) 0;
+    }
+    
+    .card__content {
+        padding: var(--space-lg);
+    }
+    
+    .form-group {
+        margin-bottom: var(--space-lg);
+    }
+    
+    .form-control {
+        padding: var(--space-sm) var(--space-md);
+    }
+    
+    /* Hero adjustments */
+    .hero {
+        padding: var(--space-2xl) 0;
+        min-height: 300px;
+    }
+    
+    /* Footer adjustments */
+    .footer {
+        padding-top: var(--space-2xl);
+    }
+    
+    .footer__content {
+        gap: var(--space-xl);
+        padding-bottom: var(--space-xl);
+    }
+}
+
+/* --------------------------------------------------------------------------
+   360px Breakpoint - Small Mobile
+   -------------------------------------------------------------------------- */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 clamp(0.5rem, 3vw, 1rem);
+    }
+    
+    .top-info-bar {
+        padding: var(--space-xs) 0;
+    }
+    
+    .top-info-bar__item {
+        font-size: 0.6875rem;
+    }
+    
+    .navbar .container {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    
+    .navbar__logo-text {
+        font-size: 1rem;
+    }
+    
+    .navbar__toggle {
+        width: 36px;
+        height: 36px;
+        padding: 6px;
+    }
+    
+    .navbar__toggle span {
+        width: 18px;
+    }
+    
+    .section {
+        padding: var(--space-xl) 0;
+    }
+    
+    .footer__section h4 {
+        font-size: var(--text-base);
+        margin-bottom: var(--space-md);
+    }
+    
+    .footer__bottom {
+        padding: var(--space-md) 0;
+    }
+    
+    .footer__copyright {
+        font-size: 0.6875rem;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Landscape Mobile Orientation
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) and (orientation: landscape) {
+    .navbar__menu {
+        width: 50%;
+        max-width: 320px;
+        padding: 60px 25px 30px;
+    }
+    
+    .navbar__link {
+        padding: 12px 0;
+        font-size: 0.875rem;
+    }
+    
+    .navbar__actions {
+        margin-top: 20px;
+        gap: 8px;
+    }
+    
+    .navbar__actions .btn {
+        padding: 10px 16px;
+        font-size: 0.8125rem;
+    }
+    
+    .hero {
+        min-height: 80vh;
+        padding: var(--space-xl) 0;
+    }
+    
+    .section {
+        padding: var(--space-xl) 0;
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .navbar__menu {
+        width: 45%;
+        padding: 50px 20px 25px;
+    }
+    
+    .navbar__link {
+        padding: 10px 0;
+        font-size: 0.8125rem;
+    }
+    
+    .navbar__actions {
+        margin-top: 15px;
+        gap: 6px;
+    }
+    
+    .navbar__actions .btn {
+        padding: 8px 14px;
+        font-size: 0.75rem;
+    }
+    
+    .top-info-bar__content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--space-md);
+    }
+    
+    .hero {
+        min-height: 100vh;
+        min-height: 100dvh;
+    }
+}
+
+@media (max-width: 480px) and (orientation: landscape) {
+    .navbar__menu {
+        width: 55%;
+        max-width: 280px;
+        padding: 45px 15px 20px;
+    }
+    
+    .navbar__link {
+        padding: 8px 0;
+        font-size: 0.75rem;
+    }
+    
+    .navbar__close {
+        top: 10px;
+        right: 10px;
+        width: 32px;
+        height: 32px;
+    }
+    
+    .navbar__close span {
+        width: 18px;
     }
 }
 

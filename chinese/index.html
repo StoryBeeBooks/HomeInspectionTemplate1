@@ -160,6 +160,96 @@
             }
         }
         
+        @media (max-width: 768px) {
+            .home-hero {
+                min-height: 80vh;
+                padding: var(--space-lg) 0;
+            }
+            
+            .home-hero__content {
+                padding: var(--space-xl);
+            }
+            
+            .home-hero__title {
+                font-size: clamp(1.75rem, 5vw, 2.5rem);
+                margin-bottom: var(--space-md);
+            }
+            
+            .home-hero__text {
+                font-size: var(--text-base);
+                margin-bottom: var(--space-lg);
+            }
+            
+            .home-hero__stats {
+                gap: var(--space-md);
+                margin-top: var(--space-lg);
+                padding-top: var(--space-lg);
+            }
+            
+            .home-hero__stat-number {
+                font-size: var(--text-2xl);
+            }
+            
+            .home-hero__stat-label {
+                font-size: var(--text-xs);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .home-hero {
+                min-height: 85vh;
+            }
+            
+            .home-hero__content {
+                padding: var(--space-lg);
+            }
+            
+            .home-hero__badge {
+                font-size: 0.65rem;
+                padding: var(--space-xs) var(--space-sm);
+            }
+            
+            .home-hero__actions {
+                flex-direction: column;
+                gap: var(--space-sm);
+            }
+            
+            .home-hero__actions .btn {
+                width: 100%;
+            }
+            
+            .home-hero__stats {
+                grid-template-columns: 1fr;
+                gap: var(--space-sm);
+            }
+        }
+        
+        @media (max-width: 360px) {
+            .home-hero__content {
+                padding: var(--space-md);
+            }
+            
+            .home-hero__title {
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* Landscape mobile */
+        @media (max-width: 992px) and (orientation: landscape) {
+            .home-hero {
+                min-height: 100vh;
+                min-height: 100dvh;
+            }
+            
+            .home-hero__content {
+                padding: var(--space-lg);
+            }
+            
+            .home-hero__stats {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
         /* About Mike Section - Refined Monochromatic */
         .about-mike {
             padding: var(--space-3xl) 0;
