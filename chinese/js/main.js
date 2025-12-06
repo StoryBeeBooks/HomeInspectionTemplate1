@@ -50,13 +50,14 @@ function initNavigation() {
     const navClose = document.getElementById('navClose');
     
     if (navToggle && navMenu) {
-        // Create overlay element
-        let overlay = document.querySelector('.menu-overlay');
-        if (!overlay) {
-            overlay = document.createElement('div');
-            overlay.className = 'menu-overlay';
-            document.body.appendChild(overlay);
-        }
+        // Remove any existing overlays first to prevent duplicates
+        const existingOverlays = document.querySelectorAll('.menu-overlay');
+        existingOverlays.forEach(el => el.remove());
+        
+        // Create single overlay element
+        const overlay = document.createElement('div');
+        overlay.className = 'menu-overlay';
+        document.body.appendChild(overlay);
         
         // Function to close menu
         function closeMenu() {
@@ -76,6 +77,7 @@ function initNavigation() {
         
         // Toggle menu on hamburger button click
         navToggle.addEventListener('click', function(e) {
+            e.preventDefault();
             e.stopPropagation();
             if (navMenu.classList.contains('active')) {
                 closeMenu();
@@ -87,18 +89,34 @@ function initNavigation() {
         // Close menu on X button click
         if (navClose) {
             navClose.addEventListener('click', function(e) {
+                e.preventDefault();
                 e.stopPropagation();
                 closeMenu();
             });
         }
         
         // Close menu when clicking overlay
-        overlay.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', function(e) {
+            e.preventDefault();
+            closeMenu();
+        });
         
-        // Close menu when clicking on a link
-        const navLinks = navMenu.querySelectorAll('.navbar__link, .btn');
+        // Handle link clicks - close menu but allow navigation
+        const navLinks = navMenu.querySelectorAll('.navbar__link');
         navLinks.forEach(link => {
-            link.addEventListener('click', closeMenu);
+            link.addEventListener('click', function(e) {
+                // Don't prevent default - allow the link to work
+                closeMenu();
+            });
+        });
+        
+        // Handle button clicks separately
+        const navBtns = navMenu.querySelectorAll('.navbar__actions .btn');
+        navBtns.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                // Don't prevent default - allow the link to work
+                closeMenu();
+            });
         });
         
         // Close menu on escape key

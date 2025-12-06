@@ -1112,6 +1112,7 @@ textarea.form-control {
     
     .navbar__toggle {
         display: flex;
+        z-index: 1003;
     }
     
     .navbar__menu {
@@ -1127,7 +1128,7 @@ textarea.form-control {
         padding: 80px 30px 40px;
         box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
         transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 1001;
+        z-index: 1002;
         overflow-y: auto;
     }
     
@@ -1149,6 +1150,8 @@ textarea.form-control {
         display: block;
         margin: 0;
         padding: 0;
+        position: relative;
+        z-index: 1;
     }
     
     .navbar__link {
@@ -1160,6 +1163,9 @@ textarea.form-control {
         color: #1a1a1a;
         letter-spacing: 0.5px;
         transition: all 0.2s ease;
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
     }
     
     .navbar__link:hover,
@@ -1177,6 +1183,8 @@ textarea.form-control {
         width: 100%;
         margin-top: 30px;
         gap: 12px;
+        position: relative;
+        z-index: 2;
     }
     
     .navbar__actions .btn {
@@ -1184,11 +1192,22 @@ textarea.form-control {
         justify-content: center;
         padding: 14px 20px;
         font-size: 0.875rem;
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
     }
     
     .navbar__actions .btn--lang {
         width: 100%;
         padding: 12px 20px;
+    }
+    
+    /* Close button styling */
+    .navbar__close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 10;
     }
 }
 
