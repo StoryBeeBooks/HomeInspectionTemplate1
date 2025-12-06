@@ -50,20 +50,10 @@ function initNavigation() {
     const navClose = document.getElementById('navClose');
     
     if (navToggle && navMenu) {
-        // Remove any existing overlays first to prevent duplicates
-        const existingOverlays = document.querySelectorAll('.menu-overlay');
-        existingOverlays.forEach(el => el.remove());
-        
-        // Create single overlay element
-        const overlay = document.createElement('div');
-        overlay.className = 'menu-overlay';
-        document.body.appendChild(overlay);
-        
         // Function to close menu
         function closeMenu() {
             navMenu.classList.remove('active');
             navToggle.classList.remove('active');
-            overlay.classList.remove('active');
             document.body.style.overflow = '';
         }
         
@@ -71,7 +61,6 @@ function initNavigation() {
         function openMenu() {
             navMenu.classList.add('active');
             navToggle.classList.add('active');
-            overlay.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
         
@@ -94,30 +83,6 @@ function initNavigation() {
                 closeMenu();
             });
         }
-        
-        // Close menu when clicking overlay
-        overlay.addEventListener('click', function(e) {
-            e.preventDefault();
-            closeMenu();
-        });
-        
-        // Handle link clicks - close menu but allow navigation
-        const navLinks = navMenu.querySelectorAll('.navbar__link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                // Don't prevent default - allow the link to work
-                closeMenu();
-            });
-        });
-        
-        // Handle button clicks separately
-        const navBtns = navMenu.querySelectorAll('.navbar__actions .btn');
-        navBtns.forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                // Don't prevent default - allow the link to work
-                closeMenu();
-            });
-        });
         
         // Close menu on escape key
         document.addEventListener('keydown', function(e) {

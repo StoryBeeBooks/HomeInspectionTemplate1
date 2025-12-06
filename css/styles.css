@@ -579,27 +579,6 @@ p {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Mobile menu overlay */
-.menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 1001;
-    pointer-events: none;
-}
-
-.menu-overlay.active {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-}
-
 /* Mobile menu close button */
 .navbar__close {
     display: none;
@@ -1114,7 +1093,6 @@ textarea.form-control {
     
     .navbar__toggle {
         display: flex;
-        z-index: 1003;
     }
     
     .navbar__menu {
@@ -1130,9 +1108,8 @@ textarea.form-control {
         padding: 80px 30px 40px;
         box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
         transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 1002;
+        z-index: 1001;
         overflow-y: auto;
-        pointer-events: auto;
     }
     
     .navbar__menu.active {
@@ -1146,15 +1123,10 @@ textarea.form-control {
         list-style: none;
         padding: 0;
         margin: 0;
-        pointer-events: auto;
     }
     
     .navbar__links li {
         width: 100%;
-        display: block;
-        margin: 0;
-        padding: 0;
-        pointer-events: auto;
     }
     
     .navbar__link {
@@ -1166,10 +1138,6 @@ textarea.form-control {
         color: #1a1a1a;
         letter-spacing: 0.5px;
         transition: all 0.2s ease;
-        pointer-events: auto !important;
-        cursor: pointer;
-        position: relative;
-        z-index: 5;
     }
     
     .navbar__link:hover,
@@ -1187,7 +1155,6 @@ textarea.form-control {
         width: 100%;
         margin-top: 30px;
         gap: 12px;
-        pointer-events: auto;
     }
     
     .navbar__actions .btn {
@@ -1195,26 +1162,11 @@ textarea.form-control {
         justify-content: center;
         padding: 14px 20px;
         font-size: 0.875rem;
-        pointer-events: auto !important;
-        cursor: pointer;
-        position: relative;
-        z-index: 5;
     }
     
     .navbar__actions .btn--lang {
         width: 100%;
         padding: 12px 20px;
-    }
-    
-    /* Close button styling - constrained size */
-    .navbar__close {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        width: 40px;
-        height: 40px;
-        z-index: 10;
-        pointer-events: auto;
     }
 }
 
