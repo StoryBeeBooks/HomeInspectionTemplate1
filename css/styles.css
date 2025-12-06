@@ -565,18 +565,10 @@ p {
     transform-origin: center;
 }
 
-/* Toggle animation when active */
-.navbar__toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
-}
-
-.navbar__toggle.active span:nth-child(2) {
+/* Hide toggle when menu is active (close button inside menu handles closing) */
+.navbar__toggle.active {
     opacity: 0;
-    transform: scaleX(0);
-}
-
-.navbar__toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
+    pointer-events: none;
 }
 
 /* Mobile menu close button */
